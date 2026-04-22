@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>競馬学校入学式スピーチ｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+  }
+  .header-meta {
+    margin-top: 14px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ── LEGEND ── */
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot {
+    width: 10px; height: 10px; border-radius: 1px;
+    display: inline-block; flex-shrink: 0;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 36px 40px 60px;
+  }
+
+  /* ── SECTION BLOCK ── */
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  /* ── BILINGUAL GRID ── */
+  .bilingual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh {
+    padding: 22px 24px;
+    background: var(--navy-ultra);
+  }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+
+  /* ── QUOTE STYLE ── */
+  .col-jp p.is-quote {
+    border-left: 3px solid var(--navy);
+    padding-left: 14px;
+    margin-left: 2px;
+  }
+  .col-zh p.is-quote {
+    border-left: 3px solid var(--navy-light);
+    padding-left: 14px;
+    margin-left: 2px;
+    color: var(--ink);
+  }
+
+  /* ── RUBY ── */
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  /* ── HIGHLIGHT WORDS ── */
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* ── VOCAB SECTION ── */
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── PRINT CSS ── */
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+    a { text-decoration: none; color: inherit; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">ケイバラプソディー｜學習教材</div>
+    <div class="header-title">競馬学校入学式スピーチ</div>
+    <div class="header-subtitle">賽馬學校入學典禮致詞・日語精讀教材</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:var(--highlight-bg); border:1px solid var(--navy)"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">前言と背景</span>
+      <span class="section-title-zh">前言與背景</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>祝<rt>いわ</rt></ruby>いの<ruby>場<rt>ば</rt></ruby>で、<span class="hl">あえて</span><ruby>厳<rt>きび</rt></ruby>しい<ruby>言葉<rt>ことば</rt></ruby>を<ruby>発<rt>はっ</rt></ruby>した<span class="hl"><ruby>意図<rt>いと</rt></ruby></span>は—。「ケイバラプソディー～<ruby>楽<rt>たの</rt></ruby>しい<ruby>競馬<rt>けいば</rt></ruby>～」は、<ruby>先日<rt>せんじつ</rt></ruby><ruby>行<rt>おこな</rt></ruby>われた JRA <ruby>競馬学校<rt>がっこう</rt></ruby><ruby>入学式<rt>にゅうがくしき</rt></ruby>でのスピーチについて<ruby>奥岡幹浩<rt>おくおかみきひろ</rt></ruby><ruby>記者<rt>きしゃ</rt></ruby>が<ruby>取材<rt>しゅざい</rt></ruby>した。<ruby>騎手<rt>きしゅ</rt></ruby>の<ruby>卵<rt>たまご</rt></ruby>たちに<ruby>向<rt>む</rt></ruby>けた<ruby>約<rt>やく</rt></ruby>3<ruby>分間<rt>ふんかん</rt></ruby>の<ruby>訓示<rt>くんじ</rt></ruby>。<ruby>校長<rt>こうちょう</rt></ruby>がそこに<span class="hl"><ruby>込<rt>こ</rt></ruby>めた</span><ruby>思<rt>おも</rt></ruby>いとは。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在慶祝的場合中，刻意發表嚴厲言辭的意圖是—。「賽馬狂想曲～快樂的賽馬～」專欄針對日前舉行的 JRA 賽馬學校入學典禮上的致詞，由記者奧岡幹浩進行了採訪。這是一段向未來即將成為騎師的學子們發表的約3分鐘訓示。校長在其中蘊含的想法究竟為何。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term">あえて</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">刻意、硬是。在不必要或困難的情況下，依然特意去做某事。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>意図<rt>いと</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">意圖、企圖。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>込<rt>こ</rt></ruby>める</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">包含、注入（情感、想法等）。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>卵<rt>たまご</rt></ruby></span><span class="vocab-level">N2 慣用</span>
+          <span class="vocab-meaning">原意為雞蛋，引申為「未來的接班人」或「還在學習階段的人」。如：医者の卵（未來的醫生）。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ケイバラプソディー ／ <ruby>競馬<rt>けいば</rt></ruby> ／ スピーチ ／ <ruby>騎手<rt>きしゅ</rt></ruby> ／ <ruby>訓示<rt>くんじ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">賽馬狂想曲（專欄名）、賽馬、演講、騎師、長官對下屬的教導指示。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">典礼の現場の雰囲気</span>
+      <span class="section-title-zh">典禮現場氣氛</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>学校<rt>がっこう</rt></ruby>トップの<ruby>言葉<rt>ことば</rt></ruby>を<ruby>取材<rt>しゅざい</rt></ruby>ノートに<span class="hl"><ruby>書<rt>か</rt></ruby>き<ruby>留<rt>と</rt></ruby>めながら</span>、<ruby>記者<rt>きしゃ</rt></ruby>も<span class="hl"><ruby>背筋<rt>せすじ</rt></ruby>が<ruby>伸<rt>の</rt></ruby>びた</span>。<ruby>今月<rt>こんげつ</rt></ruby>2<ruby>日<rt>ふつか</rt></ruby>、JRA <ruby>競馬学校<rt>けいばがっこう</rt></ruby><ruby>騎手<rt>きしゅ</rt></ruby><ruby>課程<rt>かてい</rt></ruby>の<ruby>入学式<rt>にゅうがくしき</rt></ruby>。<ruby>騎手<rt>きしゅ</rt></ruby>の<ruby>卵<rt>たまご</rt></ruby>たちの<span class="hl"><ruby>門出<rt>かどで</rt></ruby></span>を<ruby>祝福<rt>しゅくふく</rt></ruby>した<ruby>緒方一徳<rt>おがたかずのり</rt></ruby><ruby>校長<rt>こうちょう</rt></ruby>（58）は、<ruby>手綱<rt>たづな</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>き<ruby>締<rt>し</rt></ruby>める<span class="hl">かのように</span><ruby>語<rt>かた</rt></ruby>った。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>一邊將學校高層的話語記在採訪筆記上，記者也不禁挺直了背脊。本月2日，JRA 賽馬學校騎師課程的入學典禮。祝福未來騎師們踏上新旅程的緒方一徳校長（58歲），彷彿在拉緊韁繩般地說道。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>書<rt>か</rt></ruby>き<ruby>留<rt>と</rt></ruby>める</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">記下、寫下。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>背筋<rt>せすじ</rt></ruby>が<ruby>伸<rt>の</rt></ruby>びる</span><span class="vocab-level">N1 慣用</span>
+          <span class="vocab-meaning">挺直背脊。常形容因緊張、嚴肅而端正姿勢。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>門出<rt>かどで</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">出發、邁向新生活。常於畢業、入學、結婚時使用。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～かのように</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">彷彿⋯一般、就好像⋯一樣。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">トップ ／ ノート ／ <ruby>手綱<rt>たづな</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">頂層・高層 / 筆記本 / 韁繩（引申：繃緊神經、嚴格管教）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">校長の厳しい事実宣告</span>
+      <span class="section-title-zh">校長的嚴厲事實宣告</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p class="is-quote">「ここで<ruby>皆<rt>みな</rt></ruby>さんに<span class="hl">あえて</span><ruby>厳<rt>きび</rt></ruby>しい<ruby>話<rt>はなし</rt></ruby>をします。<ruby>今年<rt>ことし</rt></ruby><ruby>卒業<rt>そつぎょう</rt></ruby><ruby>予定<rt>よてい</rt></ruby>だった42<ruby>期生<rt>きせい</rt></ruby>は、<span class="hl"><ruby>結果<rt>けっか</rt></ruby>として</span><ruby>卒業生<rt>そつぎょうせい</rt></ruby>がゼロ<ruby>名<rt>めい</rt></ruby>となりました。これは<ruby>競馬学校<rt>けいばがっこう</rt></ruby><ruby>開校<rt>かいこう</rt></ruby><span class="hl"><ruby>以来<rt>いらい</rt></ruby></span>、<ruby>初<rt>はじ</rt></ruby>めてのことです。<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>残念<rt>ざんねん</rt></ruby>であり、<ruby>重<rt>おも</rt></ruby>く<span class="hl"><ruby>受<rt>う</rt></ruby>け<ruby>止<rt>と</rt></ruby>めなければならない</span><ruby>事実<rt>じじつ</rt></ruby>です」</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p class="is-quote">「在這裡我要刻意向大家說些嚴厲的話。原定今年畢業的第42期生，結果畢業生人數為零名。這是賽馬學校開校以來第一次發生的事。這是非常遺憾，且我們必須沉重面對（嚴肅對待）的事實。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>結果<rt>けっか</rt></ruby>として</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">結果、結果變成⋯。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term">～<ruby>以来<rt>いらい</rt></ruby></span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">自從⋯以來。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>受<rt>う</rt></ruby>け<ruby>止<rt>と</rt></ruby>める</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">接住；引申為「接受、面對（現實、事實等）」。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4–5 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04–05</span>
+      <span class="section-title-jp">職業倫理への期待</span>
+      <span class="section-title-zh">職業道德的期許</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><span class="hl"><ruby>晴<rt>は</rt></ruby>れやか</span>な<ruby>席<rt>せき</rt></ruby>に<span class="hl"><ruby>張<rt>は</rt></ruby>り<ruby>詰<rt>つ</rt></ruby>めた</span><ruby>空気<rt>くうき</rt></ruby>が<span class="hl"><ruby>漂<rt>ただよ</rt></ruby>う</span><ruby>中<rt>なか</rt></ruby>、スピーチはさらに<ruby>続<rt>つづ</rt></ruby>いた。</p>
+        <p class="is-quote" style="margin-top:12px">「<ruby>騎手<rt>きしゅ</rt></ruby>はただ<ruby>乗<rt>の</rt></ruby>るのがうまいだけでは<span class="hl"><ruby>務<rt>つと</rt></ruby>まりません</span>。<ruby>公正<rt>こうせい</rt></ruby><ruby>確保<rt>かくほ</rt></ruby>は<ruby>皆<rt>みな</rt></ruby>さんの<ruby>命題<rt>めいだい</rt></ruby>です。ルールを<ruby>守<rt>まも</rt></ruby>り、<ruby>自分<rt>じぶん</rt></ruby>を<span class="hl"><ruby>律<rt>りっ</rt></ruby>することができない</span><ruby>者<rt>もの</rt></ruby>に、ファンの<ruby>夢<rt>ゆめ</rt></ruby>を<span class="hl"><ruby>背負<rt>せお</rt></ruby>う</span><ruby>資格<rt>しかく</rt></ruby>はないのです」</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在充滿喜悅的場合中瀰漫著緊繃的氣氛，演講繼續進行。</p>
+        <p class="is-quote" style="margin-top:12px">「騎師不是只要騎得好就能勝任的。確保公平是你們的命題。無法遵守規則、無法自律的人，是沒有資格背負粉絲夢想的。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04–05</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>晴<rt>は</rt></ruby>れやか</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">晴朗的；引申為「充滿喜悅、光彩的」。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>張<rt>は</rt></ruby>り<ruby>詰<rt>つ</rt></ruby>める</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">拉緊；常形容氣氛「非常緊張、緊繃」。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>漂<rt>ただよ</rt></ruby>う</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">漂浮、瀰漫（氣氛、香氣等）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>務<rt>つと</rt></ruby>まる</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">能勝任、能擔當。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>律<rt>りっ</rt></ruby>する</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">約束、管理。自分を律する＝自律。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>背負<rt>せお</rt></ruby>う</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">背著；引申為「背負（責任、夢想等）」。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>命題<rt>めいだい</rt></ruby> ／ ルール ／ ファン</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">必須解決的重大課題 / 規則 / 粉絲。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 6 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 06</span>
+      <span class="section-title-jp">一糸乱れぬ姿勢</span>
+      <span class="section-title-zh">一絲不苟的態度</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>3<ruby>分間<rt>ふんかん</rt></ruby>ほどの<ruby>訓示<rt>くんじ</rt></ruby>では、一つの<span class="hl"><ruby>不祥事<rt>ふしょうじ</rt></ruby></span>や<span class="hl"><ruby>甘<rt>あま</rt></ruby>え</span>が<ruby>競馬<rt>けいば</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>の<ruby>信頼<rt>しんらい</rt></ruby>を<span class="hl"><ruby>揺<rt>ゆ</rt></ruby>るがすことにも</span><span class="hl"><ruby>言及<rt>げんきゅう</rt></ruby>した</span>。<ruby>厳<rt>きび</rt></ruby>しい<ruby>言葉<rt>ことば</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<span class="hl"><ruby>貫<rt>つらぬ</rt></ruby>かれた</span><ruby>真理<rt>しんり</rt></ruby>。<ruby>新入生<rt>しんにゅうせい</rt></ruby>たちは、<span class="hl"><ruby>微動<rt>びどう</rt></ruby>だにせず</span><span class="hl"><ruby>聞<rt>き</rt></ruby>き<ruby>入<rt>い</rt></ruby>った</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在約3分鐘的訓示中，也提及了一件醜聞或心態鬆懈，都會動搖整體賽馬界信任的嚴重性。嚴厲言詞中貫徹的真理。新生們一動也不動地專心聽著。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 06</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>不祥事<rt>ふしょうじ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">醜聞、不名譽的事件。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>甘<rt>あま</rt></ruby>え</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">撒嬌；此處指「心態鬆懈、天真、不夠嚴謹」。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>揺<rt>ゆ</rt></ruby>るがす</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">震動、動搖（常接「信頼」或「根底」）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>言及<rt>げんきゅう</rt></ruby>する</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">提及、談及。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>貫<rt>つらぬ</rt></ruby>く</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">貫穿、貫徹。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～だにしない</span><span class="vocab-level">N1 文法</span>
+          <span class="vocab-meaning">連⋯都不⋯。微動だにせず＝連稍微動一下都沒有。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>聞<rt>き</rt></ruby>き<ruby>入<rt>い</rt></ruby>る</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">聽得入神、專心聽。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 7 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 07</span>
+      <span class="section-title-jp">校長の真意</span>
+      <span class="section-title-zh">校長的初衷</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>緒方<rt>おがた</rt></ruby><ruby>校長<rt>こうちょう</rt></ruby><span class="hl">によれば</span>、スピーチ<ruby>文<rt>ぶん</rt></ruby>は2<ruby>週間<rt>しゅうかん</rt></ruby>ほどかけて<ruby>作成<rt>さくせい</rt></ruby>した。「<ruby>今春<rt>こんしゅん</rt></ruby><ruby>卒業生<rt>そつぎょうせい</rt></ruby>がいなかったことは、とくに<ruby>伝<rt>つた</rt></ruby>える<ruby>必要<rt>ひつよう</rt></ruby>があると<ruby>思<rt>おも</rt></ruby>っていました。<ruby>生徒<rt>せいと</rt></ruby>たちに<ruby>強<rt>つよ</rt></ruby>く<span class="hl"><ruby>自覚<rt>じかく</rt></ruby></span>してほしかったし、われわれもしっかり<ruby>対応<rt>たいおう</rt></ruby>していかなければなりません」。<ruby>入学式<rt>にゅうがくしき</rt></ruby>だからこそ<ruby>強調<rt>きょうちょう</rt></ruby>したかったのが、<ruby>卒業式<rt>そつぎょうしき</rt></ruby>がゴールではないということ。「<ruby>卒業<rt>そつぎょう</rt></ruby>し<span class="hl">てはじめて</span>スタートラインに<ruby>立<rt>た</rt></ruby>てる。<ruby>騎手<rt>きしゅ</rt></ruby>になるだけでなく、<ruby>信頼<rt>しんらい</rt></ruby>され、<span class="hl"><ruby>活躍<rt>かつやく</rt></ruby></span>できるようになってほしい」と<ruby>熱<rt>あつ</rt></ruby>く<ruby>語<rt>かた</rt></ruby>る。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>據緒方校長表示，這份演講稿花了約兩週的時間擬定。「我認為今年春天沒有畢業生這件事，特別有傳達的必要。希望能讓學生們有強烈的自覺，而我們校方也必須妥善應對。」正因為是入學典禮才想強調的是，畢業典禮並不是終點。「畢業後才算是首次站上起跑線。希望你們不只是成為騎師，而是成為能被信任並大放異彩的人才。」他熱情地說道。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 07</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～によれば</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">根據⋯（表示消息來源）。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>自覚<rt>じかく</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">自覺、意識到。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～てはじめて</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">直到⋯才⋯。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>活躍<rt>かつやく</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">活躍、大展身手。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ゴール ／ スタートライン</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">終點（Goal）、起跑線（Start line）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 8 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 08</span>
+      <span class="section-title-jp">保護者（現役騎手）の反響</span>
+      <span class="section-title-zh">家長（現役騎師）的迴響</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>入学<rt>にゅうがく</rt></ruby>した<ruby>次男<rt>じなん</rt></ruby>の<ruby>保護者<rt>ほごしゃ</rt></ruby>として<span class="hl"><ruby>参列<rt>さんれつ</rt></ruby></span>した、J・G1・11<ruby>勝<rt>しょう</rt></ruby>の<ruby>石神深一<rt>いしがみしんいち</rt></ruby><ruby>騎手<rt>きしゅ</rt></ruby>はどう<ruby>受<rt>う</rt></ruby>け<ruby>止<rt>と</rt></ruby>めたか。「<ruby>口調<rt>くちょう</rt></ruby>は<ruby>強<rt>つよ</rt></ruby>いけれど、<ruby>校長<rt>こうちょう</rt></ruby>が<ruby>話<rt>はな</rt></ruby>していたのは<span class="hl"><ruby>当<rt>あ</rt></ruby>たり<ruby>前<rt>まえ</rt></ruby></span>の<ruby>内容<rt>ないよう</rt></ruby>。<ruby>普通<rt>ふつう</rt></ruby>の<ruby>高校<rt>こうこう</rt></ruby>とはぜんぜん<ruby>違<rt>ちが</rt></ruby>うわけですからね。<ruby>甘<rt>あま</rt></ruby>い<ruby>気持<rt>きも</rt></ruby>ちで<ruby>入<rt>はい</rt></ruby>ってきていないか。3<ruby>年間<rt>ねんかん</rt></ruby>でプロになってほしい。そんな<ruby>気持<rt>きも</rt></ruby>ちを<ruby>伝<rt>つた</rt></ruby>えたかったんだと<ruby>思<rt>おも</rt></ruby>う」。25<ruby>年<rt>ねん</rt></ruby>ほど<ruby>前<rt>まえ</rt></ruby>に<ruby>石神<rt>いしがみ</rt></ruby><ruby>騎手<rt>きしゅ</rt></ruby><ruby>自身<rt>じしん</rt></ruby>が<ruby>同校<rt>どうこう</rt></ruby>で<ruby>学<rt>まな</rt></ruby>んでいた<ruby>当時<rt>とうじ</rt></ruby>、<ruby>緒方<rt>おがた</rt></ruby><ruby>校長<rt>こうちょう</rt></ruby>は<ruby>教官<rt>きょうかん</rt></ruby>として<ruby>別<rt>べつ</rt></ruby>の<ruby>期<rt>き</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>していたとも<span class="hl"><ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>る</span>。「<ruby>厳<rt>きび</rt></ruby>しいけれど、しっかりと<ruby>人<rt>ひと</rt></ruby>を<ruby>育<rt>そだ</rt></ruby>てる<ruby>方<rt>かた</rt></ruby>。<ruby>人格者<rt>じんかくしゃ</rt></ruby>です」と<ruby>信頼<rt>しんらい</rt></ruby>を<span class="hl"><ruby>寄<rt>よ</rt></ruby>せる</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>以入學次男家長身分出席，曾獲 J·G1 賽事11勝的石神深一騎師是如何看待的呢？「雖然語氣很強烈，但校長所說的都是理所當然的內容。畢竟這裡和普通的高中完全不同。是不是抱著隨便的心態進來的呢？希望你們能在3年內成為專業人士。我想校長是想傳達這樣的心情。」25年前石神騎師自己在該校學習時，緒方校長當時是擔任其他期數的教官，他如此回顧道。「雖然嚴格，但是一位能好好培育人才的人。是一位品格高尚的人。」對校長寄予了厚望與信任。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 08</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>参列<rt>さんれつ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">參加、出席（儀式等）。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>当<rt>あ</rt></ruby>たり<ruby>前<rt>まえ</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">理所當然。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>る</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">回顧、回首（過去）。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>寄<rt>よ</rt></ruby>せる</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">靠近；引申為「寄予（信任、期待等）」。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">プロ ／ <ruby>教官<rt>きょうかん</rt></ruby> ／ <ruby>人格者<rt>じんかくしゃ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">專業人士 / 教練・教職員 / 品格高尚的人。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 9 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 09</span>
+      <span class="section-title-jp">結語</span>
+      <span class="section-title-zh">結語</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>今春<rt>こんしゅん</rt></ruby><ruby>入学<rt>にゅうがく</rt></ruby>した<ruby>騎手<rt>きしゅ</rt></ruby><ruby>課程<rt>かてい</rt></ruby>第45<ruby>期生<rt>きせい</rt></ruby>は7<ruby>人<rt>にん</rt></ruby>。<span class="hl"><ruby>自覚<rt>じかく</rt></ruby></span>と<span class="hl"><ruby>覚悟<rt>かくご</rt></ruby></span>と<ruby>大志<rt>たいし</rt></ruby>を<ruby>胸<rt>むね</rt></ruby>に、<span class="hl"><ruby>濃密<rt>のうみつ</rt></ruby>な</span>3<ruby>年間<rt>ねんかん</rt></ruby>を<span class="hl"><ruby>過<rt>す</rt></ruby>ごす</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>今春入學的騎師課程第45期生共有7人。他們將把自覺、覺悟與遠大志向放在心中，度過充實濃密的3年。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 09</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>覚悟<rt>かくご</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">覺悟、心理準備。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>濃密<rt>のうみつ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">濃密、充實。常用於形容度過的時間很有份量。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>過<rt>す</rt></ruby>ごす</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">度過。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>大志<rt>たいし</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">遠大的志向。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  ケイバラプソディー 學習教材　｜　奥岡幹浩 記者　｜　JRA 競馬学校入学式スピーチ
+</footer>
+
+</body>
+</html>
