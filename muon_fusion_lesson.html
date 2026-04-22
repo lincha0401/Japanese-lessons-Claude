@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミュオン核融合研究｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">科学ニュース｜學習教材</div>
+    <div class="header-title">ミュオンを使う核融合の共鳴状態を直接観測</div>
+    <div class="header-subtitle">渺子核融合共鳴狀態直接觀測・日語精讀教材　｜　中部大学・東北大学 国際共同研究</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:var(--highlight-bg); border:1px solid var(--navy)"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">研究概要</span>
+      <span class="section-title-zh">研究概要</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>中部大学<rt>ちゅうぶだいがく</rt></ruby>や<ruby>東北大学<rt>とうほくだいがく</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>とする<ruby>国際<rt>こくさい</rt></ruby><ruby>共同<rt>きょうどう</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>グループは、<ruby>物質<rt>ぶっしつ</rt></ruby>を<ruby>構成<rt>こうせい</rt></ruby>する<ruby>最小<rt>さいしょう</rt></ruby><ruby>単位<rt>たんい</rt></ruby>の<ruby>素粒子<rt>そりゅうし</rt></ruby>の<ruby>一種<rt>いっしゅ</rt></ruby>「ミュオン」を<ruby>使<rt>つか</rt></ruby>う<ruby>核融合<rt>かくゆうごう</rt></ruby>について、<ruby>反応率<rt>はんのうりつ</rt></ruby>を<span class="hl"><ruby>左右<rt>さゆう</rt></ruby>する</span>ミュオン<ruby>分子<rt>ぶんし</rt></ruby>の<ruby>共鳴<rt>きょうめい</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>観測<rt>かんそく</rt></ruby>することに<ruby>成功<rt>せいこう</rt></ruby>した。<ruby>極低温<rt>きょくていおん</rt></ruby><ruby>検出器<rt>けんしゅつき</rt></ruby>を<ruby>使<rt>つか</rt></ruby>った<ruby>高分解能<rt>こうぶんかいのう</rt></ruby>X<ruby>線<rt>せん</rt></ruby><ruby>分光<rt>ぶんこう</rt></ruby>を<ruby>活用<rt>かつよう</rt></ruby>。ミュオン<ruby>分子<rt>ぶんし</rt></ruby>の<ruby>量子<rt>りょうし</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>ごとの<ruby>存在比<rt>そんざいひ</rt></ruby>を<ruby>定量的<rt>ていりょうてき</rt></ruby>に<ruby>同定<rt>どうてい</rt></ruby>できた。<ruby>核融合<rt>かくゆうごう</rt></ruby>の<ruby>実現<rt>じつげん</rt></ruby><span class="hl">に<ruby>向<rt>む</rt></ruby>けた</span><ruby>研究<rt>けんきゅう</rt></ruby>の<span class="hl"><ruby>促進<rt>そくしん</rt></ruby></span>につながると<ruby>期待<rt>きたい</rt></ruby>される。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>以中部大學與東北大學為中心的國際共同研究團隊，針對使用構成物質最小單位的基本粒子之一「渺子（Muon）」進行的核融合，成功直接觀測到會影響反應率的渺子分子共鳴狀態。該研究活用了使用極低溫探測器的高解析度 X 光光譜儀。能夠定量地確認出渺子分子在各個量子狀態下的存在比例。此成果被期待能促進實現核融合的相關研究。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>左右<rt>さゆう</rt></ruby>する</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">左右、影響（事物發展的結果）。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～に<ruby>向<rt>む</rt></ruby>けた</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">朝向～、為了實現～（而做的努力或研究）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>促進<rt>そくしん</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">促進、推動。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>素粒子<rt>そりゅうし</rt></ruby> ／ ミュオン ／ <ruby>核融合<rt>かくゆうごう</rt></ruby> ／ <ruby>極低温<rt>きょくていおん</rt></ruby> ／ <ruby>分解能<rt>ぶんかいのう</rt></ruby> ／ <ruby>分光<rt>ぶんこう</rt></ruby> ／ <ruby>定量的<rt>ていりょうてき</rt></ruby> ／ <ruby>同定<rt>どうてい</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">基本粒子 / 渺子（Muon）/ 核融合 / 極低溫 / 解析度 / 光譜分析 / 定量的（以數值測量）/ 科學上的鑑定確認。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">期刊発表</span>
+      <span class="section-title-zh">期刊發表</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>成果<rt>せいか</rt></ruby>は、<ruby>米<rt>べい</rt></ruby><ruby>科学誌<rt>かがくし</rt></ruby>サイエンス・アドバンシズに<span class="hl"><ruby>掲載<rt>けいさい</rt></ruby>された</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>該研究成果已刊登於美國科學期刊《Science Advances（科學進展）》上。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>掲載<rt>けいさい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">刊登、發表（於報章雜誌、網站或學術期刊上）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">観測手法と実験成果</span>
+      <span class="section-title-zh">觀測手法與實驗成果</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><span class="hl"><ruby>従来<rt>じゅうらい</rt></ruby></span>の<ruby>半導体<rt>はんどうたい</rt></ruby><ruby>検出器<rt>けんしゅつき</rt></ruby>の10<ruby>倍<rt>ばい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>の<ruby>分解能<rt>ぶんかいのう</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>装置<rt>そうち</rt></ruby>で、ミュオン<ruby>分子<rt>ぶんし</rt></ruby>とミュオン<ruby>原子<rt>げんし</rt></ruby>に<span class="hl"><ruby>由来<rt>ゆらい</rt></ruby>する</span>X<ruby>線<rt>せん</rt></ruby><ruby>成分<rt>せいぶん</rt></ruby>を<ruby>分離<rt>ぶんり</rt></ruby>して<ruby>検出<rt>けんしゅつ</rt></ruby>することに<ruby>成功<rt>せいこう</rt></ruby>。<ruby>観測<rt>かんそく</rt></ruby>したデータを<ruby>理論<rt>りろん</rt></ruby><ruby>計算<rt>けいさん</rt></ruby>と<ruby>比較<rt>ひかく</rt></ruby>し、<ruby>共鳴<rt>きょうめい</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>の2<ruby>個<rt>こ</rt></ruby>の<ruby>重水素<rt>じゅうすいそ</rt></ruby><ruby>原子核<rt>げんしかく</rt></ruby>とミュオン<ruby>分子<rt>ぶんし</rt></ruby>の<ruby>振動<rt>しんどう</rt></ruby><ruby>量子<rt>りょうし</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>を<ruby>同定<rt>どうてい</rt></ruby>し、<ruby>存在比<rt>そんざいひ</rt></ruby>を<ruby>定量的<rt>ていりょうてき</rt></ruby>に<ruby>評価<rt>ひょうか</rt></ruby>。これまで<span class="hl"><ruby>考慮<rt>こうりょ</rt></ruby></span>されていなかった<ruby>共鳴<rt>きょうめい</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>を<span class="hl"><ruby>経由<rt>けいゆ</rt></ruby></span>する<ruby>反応<rt>はんのう</rt></ruby><ruby>経路<rt>けいろ</rt></ruby>が、ミュオンを<ruby>使<rt>つか</rt></ruby>う<ruby>核融合<rt>かくゆうごう</rt></ruby>で<ruby>主要<rt>しゅよう</rt></ruby>な<ruby>分子<rt>ぶんし</rt></ruby><ruby>生成<rt>せいせい</rt></ruby><ruby>過程<rt>かてい</rt></ruby>として<ruby>役割<rt>やくわり</rt></ruby>を<ruby>果<rt>は</rt></ruby>たすことを<span class="hl"><ruby>実証<rt>じっしょう</rt></ruby></span>した。これまで<ruby>不明確<rt>ふめいかく</rt></ruby>だった<ruby>分子<rt>ぶんし</rt></ruby><ruby>生成<rt>せいせい</rt></ruby><ruby>過程<rt>かてい</rt></ruby>の<ruby>実像<rt>じつぞう</rt></ruby>が<span class="hl"><ruby>解明<rt>かいめい</rt></ruby></span>し、<ruby>理論<rt>りろん</rt></ruby>と<ruby>実験<rt>じっけん</rt></ruby>の<span class="hl"><ruby>不一致<rt>ふいっち</rt></ruby></span>を<span class="hl"><ruby>解消<rt>かいしょう</rt></ruby></span>できた。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>利用解析度為傳統半導體探測器10倍以上的裝置，成功將源自渺子分子與渺子原子的 X 光成分分離並探測出來。將觀測到的數據與理論計算進行比較，確認了共鳴狀態下2個重氫（氘）原子核與渺子分子的振動量子狀態，並定量評估了其存在比例。實證了過去未被考慮進去的「經由共鳴狀態的反應路徑」，在渺子核融合中扮演了主要分子生成過程的角色。過去不夠明確的分子生成過程之真實面貌得以解開，成功消除了理論與實驗之間的不一致。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>従来<rt>じゅうらい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">歷來、以往、傳統的。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>由来<rt>ゆらい</rt></ruby>する</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">由來、源自於。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>考慮<rt>こうりょ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">考慮。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>経由<rt>けいゆ</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">經由、經過。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>実証<rt>じっしょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">實證、透過實際試驗證明。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>解明<rt>かいめい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">查明、解開（謎團、真相、科學原理等）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>不一致<rt>ふいっち</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">不一致、分歧。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>解消<rt>かいしょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">解除、消除（問題、矛盾或不滿等）。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>重水素<rt>じゅうすいそ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">重氫 / 氘（Deuterium），氫的同位素。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">常温核融合の原理と過去の課題</span>
+      <span class="section-title-zh">常溫核融合的原理與過去課題</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>ミュオンを<ruby>使<rt>つか</rt></ruby>う<ruby>核融合<rt>かくゆうごう</rt></ruby>は<ruby>水素<rt>すいそ</rt></ruby><ruby>分子<rt>ぶんし</rt></ruby>の<ruby>中<rt>なか</rt></ruby>の<ruby>電子<rt>でんし</rt></ruby>をミュオンに<ruby>置換<rt>ちかん</rt></ruby>して200<ruby>分<rt>ぶん</rt></ruby>の1<ruby>程度<rt>ていど</rt></ruby>の<ruby>小<rt>ちい</rt></ruby>さな<ruby>分子<rt>ぶんし</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り、その<ruby>分子<rt>ぶんし</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>原子核<rt>げんしかく</rt></ruby><span class="hl"><ruby>同士<rt>どうし</rt></ruby></span>が<ruby>近距離<rt>きんきょり</rt></ruby>に<ruby>閉<rt>と</rt></ruby>じ<ruby>込<rt>こ</rt></ruby>められることでプラズマを<ruby>使<rt>つか</rt></ruby>わずに<span class="hl"><ruby>常温<rt>じょうおん</rt></ruby></span>で<ruby>反応<rt>はんのう</rt></ruby>できる。<ruby>化学<rt>かがく</rt></ruby><ruby>反応<rt>はんのう</rt></ruby>の<ruby>効率<rt>こうりつ</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるにはミュオン<ruby>原子<rt>げんし</rt></ruby>・<ruby>分子<rt>ぶんし</rt></ruby>を<span class="hl"><ruby>速<rt>すみ</rt></ruby>やかに</span><ruby>生成<rt>せいせい</rt></ruby>することが<ruby>重要<rt>じゅうよう</rt></ruby>だが、ミュオン<ruby>分子<rt>ぶんし</rt></ruby>を<ruby>生成<rt>せいせい</rt></ruby>する<ruby>反応<rt>はんのう</rt></ruby><ruby>過程<rt>かてい</rt></ruby>が<ruby>理論<rt>りろん</rt></ruby>と<ruby>実験<rt>じっけん</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>が<ruby>不一致<rt>ふいっち</rt></ruby>であり<ruby>共鳴<rt>きょうめい</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>の<ruby>役割<rt>やくわり</rt></ruby>も<span class="hl"><ruby>未解明<rt>みかいめい</rt></ruby></span>だという<ruby>課題<rt>かだい</rt></ruby>があった。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>使用渺子的核融合，是將氫分子中的電子替換成渺子，製造出約 200 分之 1 大小的微小分子，透過讓該分子中的原子核彼此被侷限在極近的距離內，使得不需使用電漿也能在常溫下產生反應。為了提高化學反應的效率，迅速生成渺子原子與分子是非常重要的，但過去一直存在著一個課題：生成渺子分子的反應過程中，理論與實驗結果不一致，且共鳴狀態所扮演的角色也尚未被查明。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term">～<ruby>同士<rt>どうし</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">彼此、互相。例：原子核同士＝原子核彼此之間；友達同士＝朋友之間。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>常温<rt>じょうおん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">常溫、室溫。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>速<rt>すみ</rt></ruby>やか</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">迅速地、盡快地。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>未解明<rt>みかいめい</rt></ruby></span><span class="vocab-level">N1 複合詞</span>
+          <span class="vocab-meaning">尚未查明、尚未解開。「未～」為 N2 級別常見前綴詞。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>置換<rt>ちかん</rt></ruby> ／ プラズマ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">化學上的替換、置換 / 電漿（Plasma，物質的第四態）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  科学ニュース 學習教材　｜　中部大学・東北大学 国際共同研究　｜　Science Advances 掲載
+</footer>
+
+</body>
+</html>
