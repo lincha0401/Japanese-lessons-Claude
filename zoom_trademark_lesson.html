@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ズーム商標訴訟｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">法律ニュース｜學習教材</div>
+    <div class="header-title">「ロゴが似ている」と日本の上場会社が「Ｚｏｏｍ」米運営会社など訴え、東京地裁が１・８億円支払い命じる</div>
+    <div class="header-subtitle">日本上市公司以「商標相似」起訴美國 Zoom・東京地方法院判決賠償 1.8 億日圓・日語精讀教材</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:var(--highlight-bg); border:1px solid var(--navy)"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">判決の概要</span>
+      <span class="section-title-zh">判決摘要</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>東証スタンダード<span class="hl"><ruby>上場<rt>じょうじょう</rt></ruby></span>の<ruby>音楽用<rt>おんがくよう</rt></ruby><ruby>電子機器<rt>でんしきき</rt></ruby><ruby>会社<rt>がいしゃ</rt></ruby>ズーム（<ruby>東京<rt>とうきょう</rt></ruby>）が、<ruby>自社<rt>じしゃ</rt></ruby>と<ruby>似<rt>に</rt></ruby>たロゴを<span class="hl"><ruby>無断<rt>むだん</rt></ruby></span>で<ruby>使<rt>つか</rt></ruby>われたとして、ウェブ<ruby>会議<rt>かいぎ</rt></ruby>サービスＺｏｏｍの<ruby>米<rt>べい</rt></ruby><ruby>運営<rt>うんえい</rt></ruby><ruby>会社<rt>がいしゃ</rt></ruby>など２<ruby>社<rt>しゃ</rt></ruby>を<span class="hl"><ruby>相手取<rt>あいてど</rt></ruby>り</span>、<ruby>損害賠償<rt>そんがいばいしょう</rt></ruby>やロゴの<ruby>使用<rt>しよう</rt></ruby><ruby>差<rt>さ</rt></ruby>し<ruby>止<rt>と</rt></ruby>めを<ruby>求<rt>もと</rt></ruby>めた<span class="hl"><ruby>訴訟<rt>そしょう</rt></ruby></span>で、<ruby>東京地裁<rt>とうきょうちさい</rt></ruby>は２４<ruby>日<rt>にち</rt></ruby>、<ruby>計<rt>けい</rt></ruby><ruby>約<rt>やく</rt></ruby>１<ruby>億<rt>おく</rt></ruby>８０００<ruby>万<rt>まん</rt></ruby><ruby>円<rt>えん</rt></ruby>の<ruby>支払<rt>しはら</rt></ruby>いを<ruby>命<rt>めい</rt></ruby>じる<ruby>判決<rt>はんけつ</rt></ruby>を<ruby>言<rt>い</rt></ruby>い<ruby>渡<rt>わた</rt></ruby>した。ロゴの<ruby>使用<rt>しよう</rt></ruby><ruby>差<rt>さ</rt></ruby>し<ruby>止<rt>と</rt></ruby>めは<span class="hl"><ruby>認<rt>みと</rt></ruby>めなかった</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在東京證券交易所 Standard 市場上市的音樂電子設備公司「ZOOM」（東京），因認為自家相似的商標遭他人擅自使用，向提供視訊會議服務「Zoom」的美國營運公司等兩家企業提起訴訟，要求損害賠償並禁止使用該商標。對此，東京地方法院於 24 日做出判決，要求被告支付總計約 1 億 8000 萬日圓，但未准許禁止使用該商標的要求。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>上場<rt>じょうじょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">上市（指公司股票在證券交易所交易）。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>無断<rt>むだん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">擅自、未經許可。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>相手取<rt>あいてど</rt></ruby>る</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">以……為對手（多指提起訴訟、挑戰）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>訴訟<rt>そしょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">訴訟、打官司。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>認<rt>みと</rt></ruby>める</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">承認、認可。在此指法院准許某項請求。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">東証スタンダード ／ <ruby>損害賠償<rt>そんがいばいしょう</rt></ruby> ／ <ruby>差<rt>さ</rt></ruby>し<ruby>止<rt>と</rt></ruby>め ／ <ruby>判決<rt>はんけつ</rt></ruby>を<ruby>言<rt>い</rt></ruby>い<ruby>渡<rt>わた</rt></ruby>す</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">東京證交所上市版塊之一 / 損害賠償 / 禁止・停止某項行為 / 宣判。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">原告の主張</span>
+      <span class="section-title-zh">原告的主張</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>ズーム<ruby>社<rt>しゃ</rt></ruby>は、２００６<ruby>年<rt>ねん</rt></ruby>に<ruby>社名<rt>しゃめい</rt></ruby>をアルファベットで<span class="hl"><ruby>表記<rt>ひょうき</rt></ruby></span>したＺＯＯＭをデザイン<ruby>化<rt>か</rt></ruby>し、<ruby>横<rt>よこ</rt></ruby>に<ruby>並<rt>なら</rt></ruby>べたロゴを<ruby>商標登録<rt>しょうひょうとうろく</rt></ruby>した。<ruby>訴訟<rt>そしょう</rt></ruby>では、ズーム<ruby>社<rt>しゃ</rt></ruby>とウェブ<ruby>会議<rt>かいぎ</rt></ruby>サービスＺｏｏｍのロゴは、いずれも<ruby>同<rt>おな</rt></ruby>じアルファベット４<ruby>文字<rt>もじ</rt></ruby>を<ruby>横書<rt>よこが</rt></ruby>きに<span class="hl"><ruby>配置<rt>はいち</rt></ruby></span>したもので、<ruby>見<rt>み</rt></ruby>た<ruby>目<rt>め</rt></ruby>も<ruby>似<rt>に</rt></ruby>ていると<span class="hl"><ruby>指摘<rt>してき</rt></ruby></span>。ズーム<ruby>社<rt>しゃ</rt></ruby>の<ruby>商標権<rt>しょうひょうけん</rt></ruby>が<span class="hl"><ruby>侵害<rt>しんがい</rt></ruby></span>されていると<span class="hl"><ruby>主張<rt>しゅちょう</rt></ruby></span>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>日本 ZOOM 公司於 2006 年將其以英文字母表示的社名「ZOOM」進行視覺設計，並將該橫向並列的標誌註冊為商標。在訴訟中，原告指出日本 ZOOM 與視訊會議服務「Zoom」的標誌皆是由相同的四個英文字母橫向配置而成，外觀上非常相似。因此主張日本 ZOOM 公司的商標權受到了侵害。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>表記<rt>ひょうき</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">書寫方式、標記方式。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>配置<rt>はいち</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">配置、佈置、安排。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>指摘<rt>してき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">指出、指明。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>侵害<rt>しんがい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">侵害（權利等）。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>主張<rt>しゅちょう</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">主張、堅持自己的觀點。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>商標登録<rt>しょうひょうとうろく</rt></ruby> ／ <ruby>商標権<rt>しょうひょうけん</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">商標註冊 / 商標權。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">被告の反論と現状</span>
+      <span class="section-title-zh">被告的反論與現狀</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>米<rt>べい</rt></ruby><ruby>運営<rt>うんえい</rt></ruby><ruby>会社<rt>がいしゃ</rt></ruby><ruby>側<rt>がわ</rt></ruby>はＺｏｏｍのロゴについて、ウェブ<ruby>会議<rt>かいぎ</rt></ruby>サービスを<span class="hl"><ruby>示<rt>しめ</rt></ruby>す</span>ものとして<span class="hl"><ruby>知名度<rt>ちめいど</rt></ruby></span>が<ruby>高<rt>たか</rt></ruby>いと<span class="hl"><ruby>反論<rt>はんろん</rt></ruby></span>。<ruby>同<rt>どう</rt></ruby>サービスでの<span class="hl"><ruby>実績<rt>じっせき</rt></ruby></span>がない<ruby>原告<rt>げんこく</rt></ruby><ruby>側<rt>がわ</rt></ruby>のものと<ruby>誤認<rt>ごにん</rt></ruby>する<span class="hl">おそれはない</span>とし、<span class="hl"><ruby>争<rt>あらそ</rt></ruby>う<ruby>姿勢<rt>しせい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>していた</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>美國營運公司方則針對 Zoom 標誌反駁道，該商標作為視訊會議服務的代表，具有極高的知名度。並主張因為消費者並不會誤認為這是在該服務領域並無實績的原告方之產品，故展現出抗爭到底的姿態。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>示<rt>しめ</rt></ruby>す</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">顯示、表示、展現。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>反論<rt>はんろん</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">反駁、辯駁。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>知名度<rt>ちめいど</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">知名度。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>実績<rt>じっせき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">實績、實際成果（如銷售紀錄、經營成果等）。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">おそれがある</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">恐怕會……、有……的危險／疑慮。在此指產生誤認的疑慮。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>争<rt>あらそ</rt></ruby>う</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">爭論、抗爭。在法律情境下特指對訴訟內容有所爭執、不服。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term">～<ruby>姿勢<rt>しせい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す</span><span class="vocab-level">重點詞塊</span>
+          <span class="vocab-meaning">展現出……的態度。例：<ruby>争<rt>あらそ</rt></ruby>う<ruby>姿勢<rt>しせい</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>す＝展現出抗爭・訴訟到底的立場。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>原告<rt>げんこく</rt></ruby><ruby>側<rt>がわ</rt></ruby> ／ <ruby>誤認<rt>ごにん</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">原告方 / 誤認。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  法律ニュース 學習教材　｜　ズーム商標訴訟・東京地裁判決
+</footer>
+
+</body>
+</html>
