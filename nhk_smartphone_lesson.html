@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHK受信料とスマホ｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">生活ニュース｜學習教材</div>
+    <div class="header-title">テレビを処分したのにNHKの請求が…「スマホを持っているから」という理由なのですが</div>
+    <div class="header-subtitle">把電視丟了卻還是收到 NHK 的請款・日語精讀教材</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:var(--highlight-bg); border:1px solid var(--navy)"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">前言と背景</span>
+      <span class="section-title-zh">前言與背景</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>テレビを<span class="hl"><ruby>処分<rt>しょぶん</rt></ruby></span>した<span class="hl">にもかかわらず</span>、NHKから<ruby>受信料<rt>じゅしんりょう</rt></ruby>の<ruby>請求<rt>せいきゅう</rt></ruby>が<ruby>届<rt>とど</rt></ruby>き、「スマホを<ruby>持<rt>も</rt></ruby>っているから<ruby>契約<rt>けいやく</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>」と<ruby>言<rt>い</rt></ruby>われて「<span class="hl"><ruby>戸惑<rt>とまど</rt></ruby>う</span>」<ruby>方<rt>かた</rt></ruby>は<ruby>少<rt>すく</rt></ruby>なくありません。<ruby>実際<rt>じっさい</rt></ruby>にスマホでNHKを<ruby>見<rt>み</rt></ruby>たことがない<ruby>場合<rt>ばあい</rt></ruby>でも、<ruby>支払<rt>しはら</rt></ruby>い「<span class="hl"><ruby>義務<rt>ぎむ</rt></ruby></span>」はあるのでしょうか。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>儘管已經將電視處理掉了，卻還是收到 NHK 寄來的收視費請款，被告知「因為擁有智慧型手機，所以需要簽約」而感到困惑的人並不少。即使實際上從未用手機看過 NHK，也有支付的義務嗎？</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>処分<rt>しょぶん</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">處分、處理、丟棄。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～にもかかわらず</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">儘管～、雖然～卻～。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>戸惑<rt>とまど</rt></ruby>う</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">困惑、不知所措。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>義務<rt>ぎむ</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">義務、必須做的事。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">NHK受信料の判断基準</span>
+      <span class="section-title-zh">NHK 收視費的判斷基準</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>NHK<ruby>受信料<rt>じゅしんりょう</rt></ruby>は「<ruby>受信<rt>じゅしん</rt></ruby>できる<ruby>設備<rt>せつび</rt></ruby>」があるかどうかで<ruby>判断<rt>はんだん</rt></ruby>される。ここで<ruby>重要<rt>じゅうよう</rt></ruby>なのは、「<ruby>実際<rt>じっさい</rt></ruby>に<ruby>見<rt>み</rt></ruby>ているかどうか」ではなく、「<ruby>受信<rt>じゅしん</rt></ruby>できる<ruby>状態<rt>じょうたい</rt></ruby>にあるかどうか」という<ruby>点<rt>てん</rt></ruby>です。たとえば、テレビを<ruby>自宅<rt>じたく</rt></ruby>に「<span class="hl"><ruby>設置<rt>せっち</rt></ruby></span>」していれば、NHKを<ruby>見<rt>み</rt></ruby>たことがなくても<ruby>契約<rt>けいやく</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>します。これが「<ruby>見<rt>み</rt></ruby>ていないから<ruby>払<rt>はら</rt></ruby>わない」という「<span class="hl"><ruby>主張<rt>しゅちょう</rt></ruby></span>」が<span class="hl"><ruby>通<rt>とお</rt></ruby>らない</span><ruby>理由<rt>りゆう</rt></ruby>です。</p>
+        <p><ruby>逆<rt>ぎゃく</rt></ruby>に<ruby>言<rt>い</rt></ruby>えば、<ruby>受信<rt>じゅしん</rt></ruby>できる<ruby>設備<rt>せつび</rt></ruby>がなければ<ruby>契約<rt>けいやく</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>は<ruby>発生<rt>はっせい</rt></ruby>しません。そのため、テレビを<ruby>完全<rt>かんぜん</rt></ruby>に<ruby>処分<rt>しょぶん</rt></ruby>し、チューナー<ruby>付<rt>つ</rt></ruby>きの<ruby>機器<rt>きき</rt></ruby>も<ruby>一切<rt>いっさい</rt></ruby><ruby>持<rt>も</rt></ruby>っていない<ruby>場合<rt>ばあい</rt></ruby>は、「<span class="hl"><ruby>原則<rt>げんそく</rt></ruby>として</span>」<ruby>契約<rt>けいやく</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>は<ruby>発生<rt>はっせい</rt></ruby>しません。ただし、<ruby>処分<rt>しょぶん</rt></ruby>した<ruby>事実<rt>じじつ</rt></ruby>をNHKに<ruby>伝<rt>つた</rt></ruby>えていない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>請求<rt>せいきゅう</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>くケースもあるため<ruby>注意<rt>ちゅうい</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>NHK 收視費是依據是否有「可接收訊號的設備」來判斷。這裡重要的是，不在於「實際上是否有看」，而是「是否處於可以接收的狀態」。例如，只要在家中設置了電視，即使從未看過 NHK，也會產生簽約義務。這就是為什麼「因為沒看所以不付錢」這種主張行不通的理由。</p>
+        <p>反過來說，如果沒有可接收訊號的設備，就不會產生簽約義務。因此，若已完全處理掉電視，且完全沒有持有任何附帶調諧器的設備，原則上是不會產生簽約義務的。但是，如果沒有將已丟棄電視的事實告知 NHK，也可能持續被請款，因此必須注意。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>設置<rt>せっち</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">設置、安裝。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>主張<rt>しゅちょう</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">主張、堅持。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>通<rt>とお</rt></ruby>る</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">通過、行得通。此處指理由或主張被接受。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term"><ruby>原則<rt>げんそく</rt></ruby>として</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">原則上～。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">チューナー</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">Tuner / 調諧器、訊號接收器。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">スマホだけで契約義務は発生するか</span>
+      <span class="section-title-zh">只有手機會產生合約義務嗎？</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>近年<rt>きんねん</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>になっているのが「スマホを<ruby>持<rt>も</rt></ruby>っているだけで<ruby>契約<rt>けいやく</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>なのか」という<ruby>点<rt>てん</rt></ruby>です。<ruby>結論<rt>けつろん</rt></ruby>から<ruby>言<rt>い</rt></ruby>うと、<ruby>通常<rt>つうじょう</rt></ruby>のスマホを<ruby>持<rt>も</rt></ruby>っているだけでは、<ruby>契約<rt>けいやく</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>は<ruby>発生<rt>はっせい</rt></ruby>しません。ポイントは、「NHKの<ruby>放送<rt>ほうそう</rt></ruby>を<ruby>受信<rt>じゅしん</rt></ruby>できる<ruby>機能<rt>きのう</rt></ruby>を<ruby>持<rt>も</rt></ruby>っているかどうか」です。つまり、ワンセグに<span class="hl"><ruby>対応<rt>たいおう</rt></ruby>していない</span>スマホであれば、<ruby>契約<rt>けいやく</rt></ruby><ruby>義務<rt>ぎむ</rt></ruby>は<ruby>発生<rt>はっせい</rt></ruby>しない<span class="hl">「とされています」</span>。したがって、「スマホを<ruby>持<rt>も</rt></ruby>っている＝<ruby>必<rt>かなら</rt></ruby>ず<ruby>契約<rt>けいやく</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>」という<span class="hl">「わけではありません」</span>。<ruby>機種<rt>きしゅ</rt></ruby>や<ruby>機能<rt>きのう</rt></ruby>によって<ruby>判断<rt>はんだん</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かれる<ruby>点<rt>てん</rt></ruby>が<ruby>重要<rt>じゅうよう</rt></ruby>です。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>近年來成為問題的是「只要擁有智慧型手機就需要簽約嗎？」這一點。先說結論，如果只是擁有普通的手機，是不會產生簽約義務的。重點在於「是否具備能接收 NHK 廣播電視的機能」。也就是說，如果是不支援 1seg（行動電視接收功能）的手機，一般認為就不會產生簽約義務。於是，「擁有手機＝必定需要簽約」這樣的說法並不成立。判斷基準會根據機種與功能而有所不同，這點很重要。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～とされている</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">一般被認為～、被視作～。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～というわけではない</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">並不是說～、未必～。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>対応<rt>たいおう</rt></ruby>する</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">對應、支援（如支援某項系統或軟體）。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ワンセグ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">One Seg / 1seg，日本針對行動裝置的地面數位電視廣播服務。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">請求された場合の対処法と注意点</span>
+      <span class="section-title-zh">被請款時的應對方法與注意事項</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>もしテレビを<ruby>処分<rt>しょぶん</rt></ruby>しているにもかかわらず<ruby>請求<rt>せいきゅう</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>いている<ruby>場合<rt>ばあい</rt></ruby>は、まずNHKに<ruby>連絡<rt>れんらく</rt></ruby>し、<ruby>解約<rt>かいやく</rt></ruby>の<ruby>手続<rt>てつづ</rt></ruby>きを<ruby>行<rt>おこな</rt></ruby>い、テレビを<ruby>処分<rt>しょぶん</rt></ruby>したことを<ruby>申告<rt>しんこく</rt></ruby>します。スムーズに<ruby>進<rt>すす</rt></ruby>めるためにはテレビ<ruby>処分<rt>しょぶん</rt></ruby>時の<ruby>書類<rt>しょるい</rt></ruby>は<ruby>保管<rt>ほかん</rt></ruby>しておくと<ruby>安心<rt>あんしん</rt></ruby>です。また、スマホについても「ワンセグ<ruby>機能<rt>きのう</rt></ruby>がない」ことを<ruby>明確<rt>めいかく</rt></ruby>に<ruby>説明<rt>せつめい</rt></ruby>することが<ruby>重要<rt>じゅうよう</rt></ruby>です。</p>
+        <p><ruby>機種名<rt>きしゅめい</rt></ruby>を<ruby>伝<rt>つた</rt></ruby>えれば、NHK<ruby>側<rt>がわ</rt></ruby>で<ruby>確認<rt>かくにん</rt></ruby>されることが<ruby>多<rt>おお</rt></ruby>いため、<ruby>事前<rt>じぜん</rt></ruby>に<ruby>自分<rt>じぶん</rt></ruby>のスマホの「<span class="hl"><ruby>仕様<rt>しよう</rt></ruby></span>」を<ruby>調<rt>しら</rt></ruby>べておくとやり<ruby>取<rt>と</rt></ruby>りがスムーズになります。なお、<ruby>連絡<rt>れんらく</rt></ruby>をせずに「<span class="hl"><ruby>放置<rt>ほうち</rt></ruby></span>」すると、<ruby>未契約<rt>みけいやく</rt></ruby>として<ruby>訪問<rt>ほうもん</rt></ruby>や<ruby>通知<rt>つうち</rt></ruby>が<ruby>続<rt>つづ</rt></ruby>く<ruby>可能性<rt>かのうせい</rt></ruby>があります。「<span class="hl"><ruby>余計<rt>よけい</rt></ruby></span>」なトラブルを<ruby>避<rt>さ</rt></ruby>けるためにも、<ruby>早<rt>はや</rt></ruby>めに<ruby>対応<rt>たいおう</rt></ruby>することが<ruby>大切<rt>たいせつ</rt></ruby>です。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>如果已經處理掉電視卻還是持續被請款，首先請聯絡 NHK 辦理解約手續，並申報已處分電視一事。為了能順利進行，最好保管好處理電視時的相關文件會比較安心。此外，關於手機也明確說明「沒有 1seg 功能」是很重要的。</p>
+        <p>只要告知手機型號，NHK 那邊多半就能進行確認，所以事先查好自己手機的規格，溝通起來會比較順暢。附帶一提，如果不聯絡而置之不理的話，有可能會因為未簽約而持續收到拜訪或通知。為了避免多餘的麻煩，儘早處理是很重要的。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>仕様<rt>しよう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">規格、方法。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>放置<rt>ほうち</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">放置不管、置之不理。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>余計<rt>よけい</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">多餘的、不需要的。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 5 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 05</span>
+      <span class="section-title-jp">まとめ</span>
+      <span class="section-title-zh">總結</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>テレビを<ruby>処分<rt>しょぶん</rt></ruby>し、ワンセグ<ruby>機能<rt>きのう</rt></ruby><ruby>付<rt>つ</rt></ruby>きの<ruby>機器<rt>きき</rt></ruby>も<ruby>持<rt>も</rt></ruby>っていない<ruby>場合<rt>ばあい</rt></ruby>、<ruby>原則<rt>げんそく</rt></ruby>としてNHK<ruby>受信料<rt>じゅしんりょう</rt></ruby>の<ruby>支払<rt>しはら</rt></ruby>い<ruby>義務<rt>ぎむ</rt></ruby>はありません。テレビがないなら「<span class="hl"><ruby>冷静<rt>れいせい</rt></ruby></span>」に<ruby>対応<rt>たいおう</rt></ruby>すれば<ruby>支払<rt>しはら</rt></ruby>いは<ruby>不要<rt>ふよう</rt></ruby>な<ruby>場合<rt>ばあい</rt></ruby>もあります。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>如果已經丟棄了電視，且沒有持有附帶 1seg 功能的設備，原則上是沒有支付 NHK 收視費的義務的。如果沒有電視，冷靜處理的話也有不需支付的情況。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 05</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>冷静<rt>れいせい</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">冷靜、鎮定。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  生活ニュース 學習教材　｜　NHK受信料・スマホと契約義務
+</footer>
+
+</body>
+</html>
