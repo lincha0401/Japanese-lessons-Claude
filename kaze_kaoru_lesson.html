@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>風、薫る｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">ドラマニュース｜學習教材</div>
+    <div class="header-title">風、薫る：校長役で初登場した俳優に朝ドラファン歓喜　フレディ・マーキュリーだ！</div>
+    <div class="header-subtitle">NHK 朝ドラ《風、薫る》第 21 集觀劇筆記・日語精讀教材</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:var(--highlight-bg); border:1px solid var(--navy)"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">劇の背景と養成所入学</span>
+      <span class="section-title-zh">劇情背景與養成所入學</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>見上<rt>みかみ</rt></ruby><ruby>愛<rt>あい</rt></ruby>さんと<ruby>上坂<rt>こうさか</rt></ruby><ruby>樹里<rt>じゅり</rt></ruby>さんがダブル<ruby>主演<rt>しゅえん</rt></ruby>を<span class="hl"><ruby>務<rt>つと</rt></ruby>める</span>NHK<ruby>連続<rt>れんぞく</rt></ruby>テレビ<ruby>小説<rt>しょうせつ</rt></ruby>、<ruby>朝<rt>あさ</rt></ruby>ドラ「<ruby>風<rt>かぜ</rt></ruby>、<ruby>薫<rt>かお</rt></ruby>る」の<ruby>第<rt>だい</rt></ruby>21<ruby>回<rt>かい</rt></ruby>が4<ruby>月<rt>がつ</rt></ruby>27<ruby>日<rt>にち</rt></ruby>に<ruby>放送<rt>ほうそう</rt></ruby>された。りんと<ruby>直美<rt>なおみ</rt></ruby>が<ruby>入学<rt>にゅうがく</rt></ruby>した<ruby>梅岡<rt>うめおか</rt></ruby><ruby>女学校<rt>じょがっこう</rt></ruby><ruby>付属<rt>ふぞく</rt></ruby><ruby>看護婦<rt>かんごふ</rt></ruby><ruby>養成所<rt>ようせいじょ</rt></ruby>の<ruby>校長<rt>こうちょう</rt></ruby><ruby>役<rt>やく</rt></ruby>に、<ruby>視聴者<rt>ししゅうしゃ</rt></ruby>の<span class="hl"><ruby>注目<rt>ちゅうもく</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まった</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>由見上愛與上坂樹里雙主演的 NHK 連續電視小說（晨間劇）《風、薫る》第 21 集於 4 月 27 日播出。觀眾的目光集中在小凜與直美入學的梅岡女校附屬護理師養成所校長一角。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>務<rt>つと</rt></ruby>める</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">擔任、扮演（特定角色）。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>注目<rt>ちゅうもく</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まる</span><span class="vocab-level">重點詞塊</span>
+          <span class="vocab-meaning">吸引注意、受到關注。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>朝<rt>あさ</rt></ruby>ドラ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">晨間劇，日本 NHK 具代表性的帶狀電視劇。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">個性豊かな同期生たち</span>
+      <span class="section-title-zh">個性鮮明的同班同學</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>1<ruby>期生<rt>きせい</rt></ruby>は7<ruby>人<rt>にん</rt></ruby>で、<ruby>優等生<rt>ゆうとうせい</rt></ruby><span class="hl"><ruby>気質<rt>きしつ</rt></ruby></span>の<ruby>多江<rt>たえ</rt></ruby>、32<ruby>歳<rt>さい</rt></ruby>で<ruby>最年長<rt>さいねんちょう</rt></ruby>の<ruby>喜代<rt>きよ</rt></ruby>、ナイチンゲールに<span class="hl"><ruby>憧<rt>あこが</rt></ruby>れる</span>ゆき、ナース<ruby>服<rt>ふく</rt></ruby>に<ruby>憧<rt>あこが</rt></ruby>れるしのぶ、<ruby>青森県<rt>あおもりけん</rt></ruby><ruby>出身<rt>しゅっしん</rt></ruby>のトメという<ruby>年齢<rt>ねんれい</rt></ruby>も<ruby>個性<rt>こせい</rt></ruby>も<span class="hl"><ruby>異<rt>こと</rt></ruby>なる</span><span class="hl"><ruby>顔<rt>かお</rt></ruby>ぶれ</span>が<ruby>集<rt>あつ</rt></ruby>まった。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>第一屆學生共有 7 人，包含了具備優等生氣質的多江、32 歲最年長的喜代、嚮往南丁格爾的小幸、嚮往護理師服裝的阿忍，以及來自青森縣的阿留，集結了年齡與個性截然不同的成員。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>気質<rt>きしつ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">氣質、性格特質。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>憧<rt>あこが</rt></ruby>れる</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">嚮往、崇拜。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>異<rt>こと</rt></ruby>なる</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">不同、差異。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>顔<rt>かお</rt></ruby>ぶれ</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">成員、陣容。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">校長と直美の初めての交流</span>
+      <span class="section-title-zh">校長與直美的初次互動</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>教室<rt>きょうしつ</rt></ruby>に<ruby>校長<rt>こうちょう</rt></ruby>と<ruby>養成所長<rt>ようせいじょちょう</rt></ruby>を<span class="hl"><ruby>兼任<rt>けんにん</rt></ruby></span>する<ruby>梶原<rt>かじわら</rt></ruby>が<ruby>入<rt>はい</rt></ruby>ってくる。<ruby>教壇<rt>きょうだん</rt></ruby>に<ruby>立<rt>た</rt></ruby>った<ruby>梶原<rt>かじわら</rt></ruby>はあいさつを<ruby>始<rt>はじ</rt></ruby>めるが、<ruby>当時<rt>とうじ</rt></ruby>は<ruby>珍<rt>めずら</rt></ruby>しかった<ruby>直美<rt>なおみ</rt></ruby>の<ruby>髪形<rt>かみがた</rt></ruby>が<span class="hl"><ruby>気<rt>き</rt></ruby>になり</span>、<ruby>話<rt>はなし</rt></ruby>に<span class="hl"><ruby>集中<rt>しゅうちゅう</rt></ruby>できない</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>兼任校長與養成所所長的梶原走進教室。站在講台上的梶原開始致詞，但因為在意起在當時相當罕見的直美髮型，而無法集中精神說話。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>兼任<rt>けんにん</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">兼任。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>気<rt>き</rt></ruby>になる</span><span class="vocab-level">N3 詞塊</span>
+          <span class="vocab-meaning">在意、掛念。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>集中<rt>しゅうちゅう</rt></ruby>できない</span><span class="vocab-level">重點詞塊</span>
+          <span class="vocab-meaning">無法集中精神。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">直美の覚悟と断髪の理由</span>
+      <span class="section-title-zh">直美的覺悟與剪髮理由</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>直美<rt>なおみ</rt></ruby>は<ruby>髪<rt>かみ</rt></ruby>を<ruby>切<rt>き</rt></ruby>った<ruby>理由<rt>りゆう</rt></ruby>として、<span class="hl"><ruby>己<rt>おのれ</rt></ruby></span>の<ruby>出身<rt>しゅっしん</rt></ruby>や<ruby>自分<rt>じぶん</rt></ruby>の<ruby>未来<rt>みらい</rt></ruby>を<ruby>考<rt>かんが</rt></ruby>え<ruby>悩<rt>なや</rt></ruby>むのも<ruby>髪<rt>かみ</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<span class="hl"><ruby>断<rt>た</rt></ruby>ち<ruby>切<rt>き</rt></ruby>りました</span>と<ruby>説明<rt>せつめい</rt></ruby>。<ruby>私<rt>わたし</rt></ruby>のような<ruby>何<rt>なに</rt></ruby>ももたない<ruby>女<rt>おんな</rt></ruby>が<ruby>生<rt>い</rt></ruby>きていくためにはトレインドナースになる<span class="hl">しかない</span>と<ruby>思<rt>おも</rt></ruby>い、この<ruby>養成所<rt>ようせいじょ</rt></ruby>に<ruby>入<rt>はい</rt></ruby>りましたと<ruby>語<rt>かた</rt></ruby>った。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>直美說明剪髮的理由是：為了將煩惱自己的出身與未來的思緒，隨同頭髮一起斬斷。她表示：像我這樣一無所有的女性，為了生存下去，除了成為專業訓練護理師（Trained Nurse）之外別無他法，因此才進入了這所養成所。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>己<rt>おのれ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">自己。（比「自分」更文語、更強調自省意味的說法）</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>断<rt>た</rt></ruby>ち<ruby>切<rt>き</rt></ruby>る</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">斬斷、斷絕（煩惱、關係等）。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～しかない</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">只能、別無他法。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">トレインドナース</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">受過訓練的護理師（Trained Nurse）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 5 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 05</span>
+      <span class="section-title-jp">校長の率直な応答</span>
+      <span class="section-title-zh">校長的直率回應</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>梶原<rt>かじわら</rt></ruby>は<ruby>直美<rt>なおみ</rt></ruby>の<ruby>覚悟<rt>かくご</rt></ruby>を<span class="hl"><ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れ</span>、「<ruby>実<rt>じつ</rt></ruby>は、<ruby>私<rt>わたし</rt></ruby>は<ruby>看護<rt>かんご</rt></ruby>のことはよくわかりません」と<span class="hl"><ruby>告白<rt>こくはく</rt></ruby></span>。「ですから、この<ruby>養成所<rt>ようせいじょ</rt></ruby>にきてよかった。<ruby>正<rt>ただ</rt></ruby>しかったと<ruby>思<rt>おも</rt></ruby>えるものに、みなさんが<span class="hl"><ruby>おのおの</ruby></span>でなりましょう」と<span class="hl"><ruby>呼<rt>よ</rt></ruby>びかける</span>と、<ruby>教室<rt>きょうしつ</rt></ruby>を<ruby>去<rt>さ</rt></ruby>った。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>梶原接受了直美的覺悟，並坦白說：「其實，我對於護理的事情並不了解。」「因此，請各位各自努力，成為一個能讓自己覺得來到這所養成所是正確決定的人。」說完這番呼籲後，便離開了教室。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 05</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れる</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">接受、採納。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>告白<rt>こくはく</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">坦白、坦承（真心話）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term">おのおの</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">各自。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>呼<rt>よ</rt></ruby>びかける</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">呼籲、號召。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 6 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 06</span>
+      <span class="section-title-jp">俳優の背景と視聴者の反響</span>
+      <span class="section-title-zh">演員背景與觀眾反響</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>梶原<rt>かじわら</rt></ruby>を<ruby>演<rt>えん</rt></ruby>じる<ruby>伊勢<rt>いせ</rt></ruby><ruby>志摩<rt>しま</rt></ruby>さんは、2013<ruby>年度<rt>ねんど</rt></ruby>の「あまちゃん」でフレディ・マーキュリーの<span class="hl"><ruby>仮装<rt>かそう</rt></ruby></span>を<span class="hl"><ruby>披露<rt>ひろう</rt></ruby></span>するなど、<span class="hl"><ruby>独特<rt>どくとく</rt></ruby></span>な<span class="hl"><ruby>存在感<rt>そんざいかん</rt></ruby></span>で<ruby>朝<rt>あさ</rt></ruby>ドラファンを<ruby>楽<rt>たの</rt></ruby>しませてきた。<ruby>伊勢<rt>いせ</rt></ruby>さんの<ruby>登場<rt>とうじょう</rt></ruby>に、SNSでは「テンションが<ruby>上<rt>あ</rt></ruby>がった」「<ruby>校長<rt>こうちょう</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>がフレディだ」といった<span class="hl"><ruby>歓喜<rt>かんき</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がっていた</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>飾演梶原的伊勢志摩，曾在 2013 年的《小海女》中模仿過佛萊迪·墨庫瑞，以獨特的存在感帶給晨間劇粉絲許多樂趣。對於伊勢小姐的登場，社群媒體上出現了「情緒激昂起來了」、「校長竟然是佛萊迪」等驚喜歡呼聲。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 06</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>披露<rt>ひろう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">展示、表演。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>独特<rt>どくとく</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">獨特的。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>存在感<rt>そんざいかん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">存在感。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>歓喜<rt>かんき</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がる</span><span class="vocab-level">重點詞塊</span>
+          <span class="vocab-meaning">響起歡呼聲。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">フレディ・マーキュリー ／ テンション ／ SNS ／ <ruby>仮装<rt>かそう</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">Freddie Mercury / 情緒興奮度 / 社群媒體 / 扮裝、變裝。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  ドラマニュース 學習教材　｜　NHK 朝ドラ《風、薫る》第 21 集
+</footer>
+
+</body>
+</html>
