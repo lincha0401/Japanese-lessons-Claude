@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小沼将大 芸能界引退｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  /* ── TEACHER NOTE ── */
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .legend-bar, .legend-bar * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">芸能ニュース｜學習教材</div>
+    <div class="header-title">36歳の俳優が芸能界引退を報告、今後は未定</div>
+    <div class="header-subtitle">36 歲演員報告退出演藝圈，今後動向尚未確定</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">引退の報告と事務所退所</span>
+      <span class="section-title-zh">引退報告與離開經紀公司</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>俳優<rt>はいゆう</rt></ruby>の<ruby>小沼<rt>おぬま</rt></ruby><ruby>将大<rt>しょうた</rt></ruby>が28<ruby>日<rt>にち</rt></ruby>までにXを<ruby>更新<rt>こうしん</rt></ruby>し、<ruby>俳優業<rt>はいゆうぎょう</rt></ruby>を<ruby>引退<rt>いんたい</rt></ruby>することを<span class="hl"><ruby>明<rt>あき</rt></ruby>らかにした</span>。</p>
+        <p><ruby>小沼<rt>おぬま</rt></ruby>は、「4<ruby>月<rt>がつ</rt></ruby>27<ruby>日<rt>にち</rt></ruby><span class="hl">をもちまして</span>、<ruby>株式会社<rt>かぶしきがいしゃ</rt></ruby>オムニアを<ruby>退所<rt>たいしょ</rt></ruby>し、これまでの<ruby>活動<rt>かつどう</rt></ruby>に<span class="hl"><ruby>幕<rt>まく</rt></ruby>を<ruby>下<rt>お</rt></ruby>ろす</span><span class="hl">ことといたしました</span>」と<ruby>報告<rt>ほうこく</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>演員小沼將大於 28 日前更新了 X（原推特），表明將從演員生涯引退。</p>
+        <p>小沼報告表示，已於 4 月 27 日離開經紀公司 OMNIA，並決定為至今為止的演藝活動劃下句點。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>明<rt>あき</rt></ruby>らかにする</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">表明、公開、弄清楚。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～をもちまして</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">以……之時、到……為止。是「～で」的正式禮貌說法，常用於公告聲明。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>幕<rt>まく</rt></ruby>を<ruby>下<rt>お</rt></ruby>ろす</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">落下帷幕、劃下句點。原指舞台劇結束，引申為一段生涯或活動的結束。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～ことといたしました</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">決定……。比「～ことにしました」更正式、謙遜，常用於官方聲明。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>退所<rt>たいしょ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">離開經紀公司、事務所。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">引退の理由と今後</span>
+      <span class="section-title-zh">引退理由與未來規劃</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>「<ruby>何度<rt>なんど</rt></ruby>も<ruby>考<rt>かんが</rt></ruby>え、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>人生<rt>じんせい</rt></ruby>を<ruby>今<rt>いま</rt></ruby><ruby>一度<rt>いちど</rt></ruby><ruby>見<rt>み</rt></ruby>つめ<ruby>直<rt>なお</rt></ruby>し<span class="hl">たく</span>、このような<span class="hl"><ruby>結論<rt>けつろん</rt></ruby>に<ruby>至<rt>いた</rt></ruby>りました</span>」と<ruby>理由<rt>りゆう</rt></ruby>を<ruby>説明<rt>せつめい</rt></ruby>した。</p>
+        <p>「これからはっきり<ruby>何<rt>なに</rt></ruby>をしていくか<ruby>決<rt>き</rt></ruby>まっている<span class="hl">わけではありません</span>が、<ruby>今後<rt>こんご</rt></ruby>とも<ruby>温<rt>あたた</rt></ruby>かく<span class="hl"><ruby>見守<rt>みまも</rt></ruby>って</span>いただけたら<span class="hl"><ruby>幸<rt>さいわ</rt></ruby>いです</span>」と、<ruby>今後<rt>こんご</rt></ruby>は<ruby>未定<rt>みてい</rt></ruby>であることを<ruby>示<rt>しめ</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>他說明理由表示：「經過多次思考，想要再次審視自己的人生，因此得出了這樣的結論。」</p>
+        <p>「雖然還沒明確決定今後要做什麼，但若大家今後也能溫暖地守護我，將是不勝榮幸。」他表示目前未來動向尚未確定。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～たく（～たい の<ruby>連用形<rt>れんようけい</rt></ruby>）</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">想要……。正式文章中將「～たい」改為「～たく」連結後方句子，屬書面語法。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>結論<rt>けつろん</rt></ruby>に<ruby>至<rt>いた</rt></ruby>る</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">得出結論、達成結論。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～わけではない</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">並非……、不代表……。用來表示部分否定。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>見守<rt>みまも</rt></ruby>る</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">守護、注視、照看。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～たら<ruby>幸<rt>さいわ</rt></ruby>いです</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">若能……將是不勝榮幸。非常正式且有禮貌的請求表達。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">感謝の言葉と俳優への思い</span>
+      <span class="section-title-zh">感謝之詞與對演員工作的思念</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>「<span class="hl"><ruby>決<rt>けっ</rt></ruby>して</span>、<ruby>俳優業<rt>はいゆうぎょう</rt></ruby>や<ruby>活動<rt>かつどう</rt></ruby>が<ruby>嫌<rt>きら</rt></ruby>いになった<span class="hl">わけではありません</span>し、<ruby>自分<rt>じぶん</rt></ruby>にとって<span class="hl">かけがえのない</span><ruby>生<rt>い</rt></ruby>き<ruby>方<rt>かた</rt></ruby><span class="hl">でしかありません</span>」と<ruby>強調<rt>きょうちょう</rt></ruby>。<ruby>最後<rt>さいご</rt></ruby>に、「<ruby>長年<rt>ながねん</rt></ruby>、<ruby>小沼<rt>おぬま</rt></ruby><ruby>将大<rt>しょうた</rt></ruby>に<span class="hl"><ruby>関<rt>かか</rt></ruby>わって</span>いただいた<ruby>皆様<rt>みなさま</rt></ruby>、<ruby>本当<rt>ほんとう</rt></ruby>にありがとうございました」と<ruby>感謝<rt>かんしゃ</rt></ruby>を<ruby>伝<rt>つた</rt></ruby>えた。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>他強調：「絕對不是變得討厭演員這份工作或活動，對我來說這就是無可取代的生活方式。」最後，他傳達了感謝之情：「非常感謝長年以來與小沼將大有關聯的各位。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term"><ruby>決<rt>けっ</rt></ruby>して～ない</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">絕不……。強烈否定的表達方式。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term">かけがえのない</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">無可取代的、珍貴的。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～でしかない</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">只不過是……、僅僅是……。強調「除此之外別無他物」。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>関<rt>かか</rt></ruby>わる</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">關聯、參與、扯上關係。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">小沼将大の主な経歴</span>
+      <span class="section-title-zh">小沼將大的主要經歷</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>小沼<rt>おぬま</rt></ruby>は2014<ruby>年<rt>ねん</rt></ruby>に<ruby>舞台<rt>ぶたい</rt></ruby>「テニスの<ruby>王子様<rt>おうじさま</rt></ruby>」で<ruby>跡部<rt>あとべ</rt></ruby><ruby>景吾<rt>けいご</rt></ruby><ruby>役<rt>やく</rt></ruby>を、15<ruby>年<rt>ねん</rt></ruby>に<ruby>舞台<rt>ぶたい</rt></ruby>「<ruby>新<rt>しん</rt></ruby>・<ruby>幕末<rt>ばくまつ</rt></ruby><ruby>純情<rt>じゅんじょう</rt></ruby><ruby>伝<rt>でん</rt></ruby>」で<ruby>近藤<rt>こんどう</rt></ruby><ruby>勇<rt>いさみ</rt></ruby><ruby>役<rt>やく</rt></ruby>を<span class="hl"><ruby>演<rt>えん</rt></ruby>じ</span>、17<ruby>年<rt>ねん</rt></ruby>に<ruby>男<rt>おとこ</rt></ruby><ruby>劇団<rt>げきだん</rt></ruby><ruby>青山<rt>あおやま</rt></ruby><ruby>表参道<rt>おもてさんどう</rt></ruby>Xのメンバーとなった。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>小沼於 2014 年在舞台劇《網球王子》飾演跡部景吾，2015 年在舞台劇《新·幕末純情傳》飾演近藤勇，並於 2017 年成為「男劇團 青山表參道X」的成員。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>主<rt>おも</rt></ruby>な</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">主要的。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>演<rt>えん</rt></ruby>じる</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">演出、扮演。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">メンバー</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">成員（Member）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：「～でしかない」與「～わけではない」的用法對比</div>
+  <div class="note-body">
+    <p>這兩組文法在引退聲明或正式辯解中非常常見，意思相近卻各有側重：</p>
+    <p><span class="note-term">～わけではない</span>　是用來<strong>預防誤解</strong>的。例如文中說「不是討厭工作（只是想換個方式生活）」，語氣上是退一步澄清、消除他人可能有的錯誤想像。</p>
+    <p><span class="note-term">～でしかない</span>　是用來<strong>展現絕對性</strong>的。例如文中說「（演員工作）對我來說就只是（無可取代的）生活方式」，語氣上是正面強調、毫無保留地肯定某一事物的唯一性。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  芸能ニュース 學習教材　｜　小沼将大 芸能界引退・正式書面語法精讀
+</footer>
+
+</body>
+</html>
