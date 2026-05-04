@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>錦織圭 現役引退発表｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">スポーツニュース｜學習教材</div>
+    <div class="header-title">錦織圭が今季限りでの現役引退を発表「やり切ったと胸を張って言える」</div>
+    <div class="header-subtitle">錦織圭宣布本球季結束後引退：「能昂首挺胸地說我已拼盡全力」</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">引退の決断とトップへの足跡</span>
+      <span class="section-title-zh">引退的決斷與通往頂峰的足跡</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>元<rt>もと</rt></ruby><ruby>世界<rt>せかい</rt></ruby>ランク4<ruby>位<rt>い</rt></ruby>で、2014<ruby>年<rt>ねん</rt></ruby>の<ruby>全米<rt>ぜんべい</rt></ruby>オープン<ruby>準優勝<rt>じゅんゆうしょう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>である<ruby>錦織<rt>にしこり</rt></ruby><ruby>圭<rt>けい</rt></ruby>が5<ruby>月<rt>がつ</rt></ruby>1<ruby>日<rt>にち</rt></ruby>、<ruby>自身<rt>じしん</rt></ruby>のSNSで<ruby>今季<rt>こんき</rt></ruby><ruby>限<rt>かぎ</rt></ruby>りでの<ruby>引退<rt>いんたい</rt></ruby>を<ruby>発表<rt>はっぴょう</rt></ruby>した。</p>
+        <p>「このたび、<ruby>今<rt>こん</rt></ruby>シーズン<span class="hl">をもって</span><ruby>現役<rt>げんえき</rt></ruby>を<ruby>引退<rt>いんたい</rt></ruby>する<ruby>決断<rt>けつだん</rt></ruby>をいたしました。<ruby>小<rt>ちい</rt></ruby>さい<ruby>頃<rt>ころ</rt></ruby>からテニスに<span class="hl"><ruby>夢中<rt>むちゅう</rt></ruby>になり</span>、トップ10という<ruby>場所<rt>ばしょ</rt></ruby>まで<span class="hl"><ruby>辿<rt>たど</rt></ruby>り<ruby>着<rt>つ</rt></ruby>けた</span>ことは、<ruby>自分<rt>じぶん</rt></ruby>にとって<ruby>大<rt>おお</rt></ruby>きな<span class="hl"><ruby>誇<rt>ほこ</rt></ruby>り</span>です」とファンに<ruby>報告<rt>ほうこく</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>曾位居世界排名第 4、2014 年美網亞軍的錦織圭於 5 月 1 日在自己的社群媒體上宣布將在本球季結束後引退。</p>
+        <p>他向粉絲報告：「這次我決定在今年賽季結束後退役。從很小的時候起就對網球著迷，能走到世界前 10 名這個位置，對我而言是巨大的驕傲。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>夢中<rt>むちゅう</rt></ruby>になる</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">著迷、熱中。形容對某事物極度投入，到了忘我的程度。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>辿<rt>たど</rt></ruby>り<ruby>着<rt>つ</rt></ruby>く</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">艱難地抵達、終於走到。強調經過一番努力或曲折後才到達目標或終點。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～をもって</span><span class="vocab-level">N1 文法</span>
+          <span class="vocab-meaning">以……（時間）為止。用於正式公告或聲明中，標示某個狀態的結束點。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>誇<rt>ほこ</rt></ruby>り</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">驕傲、自豪感。指對自己的成就、身分或努力感到光榮的心情。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>準優勝<rt>じゅんゆうしょう</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">亞軍。體育競賽用語，指排名第二的成績。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">怪我との闘いと思い</span>
+      <span class="section-title-zh">與傷病的鬥爭及信念</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><span class="hl"><ruby>度重<rt>たびかさ</rt></ruby>なる</span><ruby>怪我<rt>けが</rt></ruby>との<ruby>戦<rt>たたか</rt></ruby>いの<ruby>中<rt>なか</rt></ruby>で、<ruby>思<rt>おも</rt></ruby>うようにプレーできない<span class="hl">もどかしさ</span>や、<ruby>不安<rt>ふあん</rt></ruby>に<span class="hl"><ruby>押<rt>お</rt></ruby>しつぶされそう</span>になったこともありました。</p>
+        <p>それでも「テニスが<ruby>好<rt>す</rt></ruby>きだ」「もっと<ruby>強<rt>つよ</rt></ruby>くなれる」という<ruby>思<rt>おも</rt></ruby>いが、<ruby>何度<rt>なんど</rt></ruby>でも<ruby>自分<rt>じぶん</rt></ruby>をコートに<ruby>戻<rt>もど</rt></ruby>してくれました。そのすべての<ruby>過程<rt>かてい</rt></ruby>が<ruby>自分<rt>じぶん</rt></ruby>の<ruby>人生<rt>じんせい</rt></ruby>を<span class="hl"><ruby>豊<rt>ゆた</rt></ruby>かに</span>し、<ruby>今<rt>いま</rt></ruby>の<ruby>自分<rt>じぶん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ってくれたと<ruby>感<rt>かん</rt></ruby>じています。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在與反覆傷病的鬥爭中，曾因無法如願發揮而不甘，也曾有過快被不安擊垮的時候。</p>
+        <p>儘管如此，「喜歡網球」、「我還能變得更強」的信念，無數次帶領我回到球場。我深感這所有的過程都豐富了我的人生，並造就了現在的我。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term">もどかしい</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">焦急、令人不耐。形容因事與願違、無法順暢進行而產生的急躁或遺憾感。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>押<rt>お</rt></ruby>しつぶされる</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">被壓潰、擊垮。常用於形容在精神上受到巨大壓力或不安的打擊。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>度重<rt>たびかさ</rt></ruby>なる</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">反覆、接二連三地發生。常用於描述不愉快或困難的事情多次出現。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>豊<rt>ゆた</rt></ruby>か</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">豐富、富饒。不僅指物質，也常用於形容心靈或人生閱歷的充實。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">日本テニス界の象徴と偉業</span>
+      <span class="section-title-zh">日本網球界的象徵與偉業</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>男子<rt>だんし</rt></ruby>テニス<ruby>界<rt>かい</rt></ruby>では<ruby>小柄<rt>こがら</rt></ruby>な<ruby>体格<rt>たいかく</rt></ruby><span class="hl">ながら</span>、ツアー<ruby>優勝<rt>ゆうしょう</rt></ruby><ruby>回数<rt>かいすう</rt></ruby>は12<ruby>度<rt>ど</rt></ruby>を<ruby>数<rt>かぞ</rt></ruby>える。2014<ruby>年<rt>ねん</rt></ruby>の<ruby>全米<rt>ぜんべい</rt></ruby>オープンでは、アジア<ruby>人<rt>じん</rt></ruby><ruby>男子<rt>だんし</rt></ruby><ruby>初<rt>はつ</rt></ruby>のグランドスラム<ruby>決勝<rt>けっしょう</rt></ruby><ruby>進出<rt>しんしゅつ</rt></ruby>を<span class="hl"><ruby>果<rt>は</rt></ruby>たし</span><ruby>準優勝<rt>じゅんゆうしょう</rt></ruby>。</p>
+        <p>2016<ruby>年<rt>ねん</rt></ruby>リオデジャネイロ<ruby>五輪<rt>ごりん</rt></ruby>では、<ruby>日本<rt>にっぽん</rt></ruby><ruby>勢<rt>ぜい</rt></ruby>96<ruby>年<rt>ねん</rt></ruby>ぶりとなる<ruby>銅<rt>どう</rt></ruby>メダルを<ruby>獲得<rt>かくとく</rt></ruby>した。<ruby>日本<rt>にっぽん</rt></ruby>テニス<ruby>界<rt>かい</rt></ruby>を<span class="hl"><ruby>文字通<rt>もじどお</rt></ruby>り</span><span class="hl"><ruby>牽引<rt>けんいん</rt></ruby>し</span>、<ruby>世界<rt>せかい</rt></ruby>の<ruby>頂点<rt>ちょうてん</rt></ruby>に<ruby>最<rt>もっと</rt></ruby>も<ruby>近<rt>ちか</rt></ruby>づいた<ruby>男<rt>おとこ</rt></ruby>だ。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>雖然在男子網球界中體格較嬌小，但他仍創下了 12 次巡迴賽冠軍的紀錄。2014 年美網，他成為首位打進大滿貫男單決賽的亞洲人並獲得亞軍。</p>
+        <p>2016 年里約奧運中，他奪得了日本隊暌違 96 年的銅牌。他確實帶領著日本網球界，是與世界頂峰最接近的男人。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～ながら</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">雖然……但是……。用於表示轉折，此處指雖然身材小但成就大。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term">～を<ruby>果<rt>は</rt></ruby>たす</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">完成、達成（使命、目的或目標）。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>牽引<rt>けんいん</rt></ruby>する</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">引領、帶動。指在團隊或領域中扮演領頭羊，推動發展。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>文字通<rt>もじどお</rt></ruby>り</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">確實地、如字面上所言。用來強調某種形容或描述完全符合事實。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">グランドスラム</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">大滿貫。網球四大公開賽（澳網、法網、溫布頓、美網）的總稱。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">感謝と最後の戦い</span>
+      <span class="section-title-zh">感謝與最後的奮戰</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>正直<rt>しょうじき</rt></ruby>に<ruby>言<rt>い</rt></ruby>えば、<ruby>今<rt>いま</rt></ruby>でもコートに<ruby>立<rt>た</rt></ruby>ち<ruby>続<rt>つづ</rt></ruby>けたい<ruby>気持<rt>きも</rt></ruby>ちはあります。それでも、これまでのすべてを<ruby>振<rt>ふ</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>ったとき、<span class="hl">やり<ruby>切<rt>き</rt></ruby>った</span>と<span class="hl"><ruby>胸<rt>むね</rt></ruby>を<ruby>張<rt>は</rt></ruby>って</span><ruby>言<rt>い</rt></ruby>える<ruby>自分<rt>じぶん</rt></ruby>がいます。</p>
+        <p><ruby>残<rt>のこ</rt></ruby>りの<ruby>試合<rt>しあい</rt></ruby>も、<ruby>一瞬<rt>いっしゅん</rt></ruby><ruby>一瞬<rt>いっしゅん</rt></ruby>を<ruby>大切<rt>たいせつ</rt></ruby>に、<ruby>最後<rt>さいご</rt></ruby>まで<ruby>戦<rt>たたか</rt></ruby>い<span class="hl"><ruby>抜<rt>ぬ</rt></ruby>きます</span>と<ruby>力強<rt>ちからづよ</rt></ruby>い<ruby>言葉<rt>ことば</rt></ruby>で<span class="hl"><ruby>締<rt>し</rt></ruby>めくくった</span>。<ruby>我々<rt>われわれ</rt></ruby>が<ruby>目<rt>め</rt></ruby>に<span class="hl"><ruby>焼<rt>や</rt></ruby>き<ruby>付<rt>つ</rt></ruby>ける</span>べき<ruby>一打<rt>いちだ</rt></ruby>はまだ<ruby>残<rt>のこ</rt></ruby>されている。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>誠實地說，至今仍有想繼續站在球場上的心情。然而，當回首這一切時，我可以昂首挺胸地說我已拼盡全力。</p>
+        <p>他以堅定的話語結尾：「剩下的比賽我也會珍惜每一瞬間，奮戰到底。」值得我們深深刻在腦海中的那一擊，依然還在。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>胸<rt>むね</rt></ruby>を<ruby>張<rt>は</rt></ruby>る</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">挺起胸膛、昂首挺胸。形容充滿自信或感到自豪的樣子。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～<ruby>抜<rt>ぬ</rt></ruby>く</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">……到底、徹底……。表示將某個動作或狀態持續到最後一刻。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>締<rt>し</rt></ruby>めくくる</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">結尾、收尾。常用於描述一場演講、一段生涯或一個計畫的結束方式。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>目<rt>め</rt></ruby>に<ruby>焼<rt>や</rt></ruby>き<ruby>付<rt>つ</rt></ruby>ける</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">深深刻在腦海中、銘記在心。形容畫面極其深刻，無法忘懷。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：理解「やり切る」與「やり抜く」的細微差異</div>
+  <div class="note-body">
+    <p>這篇新聞中出現了兩個表達「做到最後」的詞彙，對學習者來說很有對比價值：</p>
+    <p><span class="note-term">やり切る（やりきる）</span>　強調的是「達成感」與「消耗完畢」。錦織圭說「やり切った」，意指他已經將所有精力與可能性都發揮出來了，沒有留下任何遺憾，這是一種內在心理狀態的圓滿。</p>
+    <p><span class="note-term">やり抜く（やりぬく）</span>　強調的是「意志力」與「克服萬難」。文中提到「最後まで戦い抜きます」，代表即便環境艱難或身體疼痛，他仍會用強大的精神力支撐到最後一刻，側重於對過程的堅持。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  スポーツニュース 學習教材　｜　錦織圭現役引退・慣用表現・複合動詞精讀
+</footer>
+
+</body>
+</html>
