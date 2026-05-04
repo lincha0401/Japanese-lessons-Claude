@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総理の一日 中東情勢閣僚会議｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">官邸発表・政策文書｜學習教材</div>
+    <div class="header-title">総理の一日　中東情勢に関する関係閣僚会議</div>
+    <div class="header-subtitle">總理的一日　關於中東情勢之相關閣僚會議</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">原油の代替調達と安定供給</span>
+      <span class="section-title-zh">原油的替代採購與穩定供應</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>令和<rt>れいわ</rt></ruby>８<ruby>年<rt>ねん</rt></ruby>４<ruby>月<rt>がつ</rt></ruby>30<ruby>日<rt>にち</rt></ruby>、<ruby>高市<rt>たかいち</rt></ruby><ruby>総理<rt>そうり</rt></ruby>は、<ruby>総理<rt>そうり</rt></ruby><ruby>大臣<rt>だいじん</rt></ruby><ruby>官邸<rt>かんてい</rt></ruby>で<ruby>第<rt>だい</rt></ruby>６<ruby>回<rt>かい</rt></ruby><ruby>中東<rt>ちゅうとう</rt></ruby><ruby>情勢<rt>じょうせい</rt></ruby>に<ruby>関<rt>かん</rt></ruby>する<ruby>関係<rt>かんけい</rt></ruby><ruby>閣僚<rt>かくりょう</rt></ruby><ruby>会議<rt>かいぎ</rt></ruby>に<ruby>出席<rt>しゅっせき</rt></ruby>しました。</p>
+        <p><ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>しになりますが、<ruby>原油<rt>げんゆ</rt></ruby>については、<ruby>日本<rt>にっぽん</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>として<ruby>必要<rt>ひつよう</rt></ruby>となる<ruby>量<rt>りょう</rt></ruby>は<ruby>確保<rt>かくほ</rt></ruby>できており、<ruby>年<rt>とし</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えて<ruby>石油<rt>せきゆ</rt></ruby>の<ruby>安定<rt>あんてい</rt></ruby><ruby>供給<rt>きょうきゅう</rt></ruby>の<span class="hl">めどがついています</span>。</p>
+        <p>ホルムズ<ruby>海峡<rt>かいきょう</rt></ruby>を<ruby>経由<rt>けいゆ</rt></ruby>しない<ruby>原油<rt>げんゆ</rt></ruby>の<span class="hl"><ruby>代替<rt>だいたい</rt></ruby></span><ruby>調達<rt>ちょうたつ</rt></ruby>は、５<ruby>月<rt>がつ</rt></ruby>で、<ruby>約<rt>やく</rt></ruby>６<ruby>割<rt>わり</rt></ruby>の<ruby>確保<rt>かくほ</rt></ruby>にめどがついています。<ruby>仮<rt>かり</rt></ruby>に６<ruby>月<rt>がつ</rt></ruby><ruby>以降<rt>いこう</rt></ruby>は５<ruby>割<rt>わり</rt></ruby>しか<ruby>代替<rt>だいたい</rt></ruby><ruby>調達<rt>ちょうたつ</rt></ruby>が<ruby>実現<rt>じつげん</rt></ruby>しないという<span class="hl"><ruby>保守的<rt>ほしゅてき</rt></ruby>な<ruby>仮定<rt>かてい</rt></ruby></span>を<ruby>置<rt>お</rt></ruby>いたとしても、<ruby>年<rt>とし</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えて<ruby>必要<rt>ひつよう</rt></ruby>となる<ruby>量<rt>りょう</rt></ruby>が<ruby>確保<rt>かくほ</rt></ruby>できるという<ruby>見通し<rt>みとおし</rt></ruby>を<ruby>示<rt>しめ</rt></ruby>しています。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>令和 8 年 4 月 30 日，高市總理於總理大臣官邸出席了第 6 次關於中東情勢之相關閣僚會議。</p>
+        <p>雖然是老調重彈，但關於原油部分，日本全國所需的需求量已獲得確保，石油的穩定供應已確定能維持至跨年之後。</p>
+        <p>不經由荷莫茲海峽的原油替代採購，預計在 5 月份能確保約六成的供應量。即便設定一個較保守的假設，即 6 月以後僅能實現五成的替代採購，政府仍預期能確保日本全國跨年後所需的必要總量。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term">めどがつく</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">有了眉目、看到目標。常用於描述工程、資金或供應計畫有了明確的實現前景。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>代替<rt>だいたい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">替代。在能源領域特指當原本的採購管道受阻時，尋找其他來源的行為。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～をふまえ</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">根據……、基於……。表示在考量前述事實或討論結果後，進行後續行動。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>保守的<rt>ほしゅてき</rt></ruby>な<ruby>仮定<rt>かてい</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">保守假設。政策評估術語，指設定最嚴苛或最不樂觀的條件來進行安全估算。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">国内価格抑制策と国民生活の維持</span>
+      <span class="section-title-zh">國內價格平抑措施與維持國民生活</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>国内<rt>こくない</rt></ruby><ruby>対策<rt>たいさく</rt></ruby>として、ガソリン、<ruby>軽油<rt>けいゆ</rt></ruby>、<ruby>重油<rt>じゅうゆ</rt></ruby>、<ruby>灯油<rt>とうゆ</rt></ruby>などの<span class="hl"><ruby>補助<rt>ほじょ</rt></ruby></span>を<ruby>継続<rt>けいぞく</rt></ruby>しております。<ruby>今週<rt>こんしゅう</rt></ruby>のガソリン<ruby>価格<rt>かかく</rt></ruby>も、<ruby>全国<rt>ぜんこく</rt></ruby><ruby>平均<rt>へいきん</rt></ruby>で170<ruby>円<rt>えん</rt></ruby>に<span class="hl"><ruby>抑制<rt>よくせい</rt></ruby></span>できています。</p>
+        <p><ruby>高市<rt>たかいち</rt></ruby><ruby>内閣<rt>ないかく</rt></ruby>としては、<ruby>国民<rt>こくみん</rt></ruby>の<ruby>皆様<rt>みなさま</rt></ruby>の<ruby>命<rt>いのち</rt></ruby>と<ruby>暮<rt>く</rt></ruby>らし、<ruby>経済<rt>けいざい</rt></ruby><ruby>活動<rt>かつどう</rt></ruby>に<span class="hl"><ruby>支障<rt>ししょう</rt></ruby></span>が<ruby>生<rt>しょう</rt></ruby>じないように<span class="hl"><ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>んで</span>まいります。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>作為國內對策，我們正持續提供汽油、柴油、燃料油及燈油等燃料補助。本週的汽油價格在全國平均也成功平抑在 170 日圓。</p>
+        <p>高市內閣將致力於確保國民的生命、生活以及經濟活動不會受到任何妨礙。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>抑制<rt>よくせい</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">壓制、平抑。在經濟新聞中常指透過政策手段阻止物價過度上漲。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>支障<rt>ししょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">妨礙、障礙。通常指對計畫、生活或功能運作產生的負面阻礙。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term">～に<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">致力於、努力處理。表示全神貫注地解決某個課題或實施某項計畫。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>補助<rt>ほじょ</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">補助、補貼。指政府發放資金以減輕民眾或企業的經濟負擔。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">化学製品の供給継続見通し</span>
+      <span class="section-title-zh">化學產品供應持續之展望</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>ナフサにつきましては、<ruby>米国<rt>べいこく</rt></ruby>、アルジェリア、ペルーなど<ruby>中東<rt>ちゅうとう</rt></ruby><ruby>以外<rt>いがい</rt></ruby>からの<ruby>輸入<rt>ゆにゅう</rt></ruby>が、５<ruby>月<rt>がつ</rt></ruby>には３<ruby>倍<rt>ばい</rt></ruby>となります。ポリエチレンなど<ruby>中間<rt>ちゅうかん</rt></ruby><ruby>段階<rt>だんかい</rt></ruby>の<ruby>化学<rt>かがく</rt></ruby><ruby>製品<rt>せいひん</rt></ruby>の<span class="hl"><ruby>在庫<rt>ざいこ</rt></ruby></span>は、まだ1.8か<ruby>月<rt>げつ</rt></ruby><ruby>分<rt>ぶん</rt></ruby>あります。</p>
+        <p>これらをあわせますと、<span class="hl">ナフサ<ruby>由来<rt>ゆらい</rt></ruby></span>の<ruby>化学<rt>かがく</rt></ruby><ruby>製品<rt>せいひん</rt></ruby>の<ruby>供給<rt>きょうきゅう</rt></ruby>は、<ruby>年<rt>とし</rt></ruby>を<ruby>越<rt>こ</rt></ruby>えて<ruby>継続<rt>けいぞく</rt></ruby>できる<span class="hl"><ruby>見込<rt>みこ</rt></ruby>み</span>となりました。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>關於石腦油（Naphtha）的部分，來自美國、阿爾及利亞及秘魯等中東以外地區的進口量，在 5 月份將達到以往的 3 倍。聚乙烯等中間階段的化學產品庫存，目前仍保有 1.8 個月的分量。</p>
+        <p>綜合以上因素，石腦油衍生的化學產品供應展望，進一步提升至可持續供應至跨年後。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>由来<rt>ゆらい</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">源自、衍生。在工業脈絡下指某種成品是由特定原料製造而成的。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>見込<rt>みこ</rt></ruby>み</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">預計、預期。表示根據目前的數據或狀況所做出的未來發展預估。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～に<ruby>比<rt>くら</rt></ruby>べると</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">與……相比。用於進行基準對照，此處指與中東局勢緊張前的水準相比。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ナフサ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">石腦油。化學工業的重要原料，用於製造塑膠、合成纖維等產品。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">流通の目詰まり解消と業界連携</span>
+      <span class="section-title-zh">消除流通阻塞與業界合作</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>他方<rt>たほう</rt></ruby>、<ruby>足下<rt>あしもと</rt></ruby>では、<ruby>供給<rt>きょうきゅう</rt></ruby>の<ruby>偏<rt>かたよ</rt></ruby>りや<ruby>流通<rt>りゅうつう</rt></ruby>の<span class="hl"><ruby>目詰<rt>めづ</rt></ruby>まり</span>が<ruby>続<rt>つづ</rt></ruby>いています。<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>事業者<rt>じぎょうしゃ</rt></ruby>が<ruby>将来<rt>しょうらい</rt></ruby>の<ruby>供給<rt>きょうきゅう</rt></ruby>について<ruby>不安<rt>ふあん</rt></ruby>を<ruby>感<rt>かん</rt></ruby>じ、<ruby>普段<rt>ふだん</rt></ruby>よりも<ruby>多<rt>おお</rt></ruby>く<ruby>発注<rt>はっちゅう</rt></ruby>してしまった<ruby>結果<rt>けっか</rt></ruby>、<ruby>混乱<rt>こんらん</rt></ruby>を<span class="hl"><ruby>招<rt>まね</rt></ruby>いた</span><ruby>事例<rt>じれい</rt></ruby>もあったようでございます。</p>
+        <p><ruby>関係<rt>かんけい</rt></ruby><ruby>大臣<rt>だいじん</rt></ruby><span class="hl">におかれましては</span>、<ruby>流通<rt>りゅうつう</rt></ruby>の<ruby>目詰<rt>めづ</rt></ruby>まりが<ruby>発生<rt>はっせい</rt></ruby>した<ruby>場合<rt>ばあい</rt></ruby>には、<ruby>一<rt>ひと</rt></ruby>つ<ruby>一<rt>ひと</rt></ruby>つ、<ruby>丁寧<rt>ていねい</rt></ruby>かつ<span class="hl"><ruby>迅速<rt>じんそく</rt></ruby></span>に<ruby>対応<rt>たいおう</rt></ruby>してください。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>另一方面，目前局部地區仍存在供應不均及流通阻塞的問題。似乎出現了部分業者因對未來供應感到不安，而下訂超過平時份量的訂單，導致生產廠商與批發通路發生混亂的情況。</p>
+        <p>請各位相關大臣在發生流通阻塞時，務必針對每個案例，進行周全且迅速的應對。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>目詰<rt>めづ</rt></ruby>まり</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">阻塞。原指濾網孔徑塞住，此處比喻供應鏈中某個環節停滯導致整體流通不暢。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term">～を<ruby>招<rt>まね</rt></ruby>く</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">招致、導致。通常接續負面的結果，如混亂、誤解或失敗。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～におかれましては</span><span class="vocab-level">N1 文法</span>
+          <span class="vocab-meaning">關於……（尊崇對象）。用於正式公文或致詞中，對尊長或上級表達「關於您的部分」的高級敬語表現。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>迅速<rt>じんそく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">迅速、快捷。強調行動或處理速度極快，常用於應急或公務場合。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：「目詰まり（めづまり）」的多層語義</div>
+  <div class="note-body">
+    <p>在日文學習中，「目詰まり」是一個非常有趣的單字，它的意義會隨語境產生明顯轉變：</p>
+    <p><span class="note-term">物理層面</span>　原意指咖啡濾紙、空氣濾網或印表機噴頭被髒污「堵塞」住，是日常生活中常見的具體用法。</p>
+    <p><span class="note-term">抽象／經濟層面</span>　在新聞稿或政府文件中，常用來形容「供應鏈阻塞」。例如文中提到原料庫存充足，但有些店家卻買不到貨——這就是貨物卡在批發或運輸環節，日文便以「流通の目詰まり」形容。</p>
+    <p>這與一般的「<ruby>停止<rt>ていし</rt></ruby>」或「<ruby>不足<rt>ふそく</rt></ruby>」不同，它強調的是「管路通暢度」的問題，也就是資源分配不均，而非真的短缺。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  官邸発表・政策文書 學習教材　｜　中東情勢閣僚会議・エネルギー安定供給・敬語表現精讀
+</footer>
+
+</body>
+</html>
