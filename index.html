@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日語學習 — yng1026_tz</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 36px 40px 30px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 10px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.65;
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+  }
+  .header-meta {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.28);
+    color: rgba(255,255,255,0.8);
+    font-family: 'Source Serif 4', serif;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+  }
+
+  /* ── SEARCH BAR ── */
+  .search-wrapper {
+    margin-bottom: 24px;
+    position: relative;
+  }
+  .search-input {
+    width: 100%;
+    padding: 11px 44px 11px 16px;
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+  .search-input::placeholder {
+    color: var(--ink-light);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+  }
+  .search-input:focus {
+    border-color: var(--navy-light);
+    box-shadow: 0 0 0 3px rgba(61,84,145,0.12);
+  }
+  .search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-light);
+    font-size: 15px;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .search-count {
+    margin-top: 8px;
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--ink-light);
+    min-height: 16px;
+  }
+
+  /* ── SECTION LABEL ── */
+  .list-label {
+    font-family: 'Source Serif 4', serif;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.55;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ── ARTICLE LIST ── */
+  .article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .article-item {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+  .article-item:last-child {
+    border-bottom: none;
+  }
+  .article-item:hover {
+    background: var(--navy-ultra);
+  }
+  .article-item:hover .article-arrow {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+  /* Hide items that don't match search */
+  .article-item.hidden {
+    display: none;
+  }
+
+  .article-num {
+    background: var(--navy);
+    color: rgba(255,255,255,0.55);
+    font-family: 'Source Serif 4', serif;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    writing-mode: vertical-rl;
+    padding: 18px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    flex-shrink: 0;
+  }
+
+  .article-body {
+    padding: 18px 22px 18px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .article-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+
+  .article-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    color: var(--ink-mid);
+    letter-spacing: 0.04em;
+  }
+
+  .article-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .tag {
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    border: 1px solid var(--rule);
+    color: var(--ink-light);
+    font-family: 'Source Serif 4', serif;
+  }
+  .tag.source {
+    border-color: #b8c4d8;
+    color: var(--navy);
+    background: var(--navy-pale);
+  }
+
+  .article-right {
+    display: flex;
+    align-items: center;
+    padding-right: 22px;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+  .article-date {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    color: var(--ink-light);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .article-arrow {
+    font-size: 16px;
+    color: var(--navy);
+    opacity: 0.35;
+    transition: opacity 0.15s, transform 0.15s;
+  }
+
+  /* ── NO RESULTS ── */
+  .no-results {
+    display: none;
+    padding: 36px 24px;
+    text-align: center;
+    color: var(--ink-light);
+    font-family: 'Source Serif 4', serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .no-results.visible {
+    display: block;
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.45);
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-align: center;
+    padding: 18px 40px;
+  }
+
+  @media (max-width: 600px) {
+    .site-header { padding: 24px 20px 20px; }
+    .main { padding: 28px 16px 60px; }
+    .article-body { padding: 14px 16px; }
+    .article-right { padding-right: 14px; }
+    .article-date { display: none; }
+    .header-title { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">Japanese Language Learning Materials</div>
+    <div class="header-title">日語學習教材</div>
+    <div class="header-subtitle">yng1026_tz　｜　以日語新聞報導為素材的學習筆記</div>
+    <div class="header-meta">
+      <span class="badge">中日對照</span>
+      <span class="badge">振假名標注</span>
+      <span class="badge">詞彙解析</span>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <div class="list-label">文章一覽 — Article Index</div>
+
+  <!-- ── 搜尋框 ── -->
+  <div class="search-wrapper">
+    <input
+      class="search-input"
+      id="searchInput"
+      type="text"
+      placeholder="搜尋文章⋯ 例：科学、NHK、スポーツ"
+      autocomplete="off"
+    />
+    <span class="search-icon">🔍</span>
+    <div class="search-count" id="searchCount"></div>
+  </div>
+
+  <div class="article-list" id="articleList">
+
+    <a class="article-item" href="jra_keiba_lesson.html">
+      <div class="article-num">NO.001</div>
+      <div class="article-body">
+        <div class="article-title-jp">競馬学校入学式スピーチ</div>
+        <div class="article-title-zh">JRA 競馬學校入學典禮演講</div>
+        <div class="article-tags">
+          <span class="tag source">JRA 公式</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">スポーツ</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.21(火)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="muon_fusion_lesson">
+      <div class="article-num">NO.002</div>
+      <div class="article-body">
+        <div class="article-title-jp">ミュオンを使う核融合の共鳴状態を直接観測</div>
+        <div class="article-title-zh">渺子核融合共鳴狀態直接觀測</div>
+        <div class="article-tags">
+          <span class="tag source">中部大学・東北大学 国際共同研究</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">科学ニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.22(水)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="nhk_smartphone_lesson">
+      <div class="article-num">NO.003</div>
+      <div class="article-body">
+        <div class="article-title-jp">テレビを処分したのにNHKの請求が…「スマホを持っているから」という理由なのですが</div>
+        <div class="article-title-zh">把電視丟了卻還是收到 NHK 的請款</div>
+        <div class="article-tags">
+          <span class="tag source">FINANCIAL FIELD</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">生活ニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.23(木)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="zoom_trademark_lesson">
+      <div class="article-num">NO.004</div>
+      <div class="article-body">
+        <div class="article-title-jp">「ロゴが似ている」と日本の上場会社が「Ｚｏｏｍ」米運営会社など訴え、東京地裁が１・８億円支払い命じる</div>
+        <div class="article-title-zh">日本上市公司以「商標相似」起訴美國 Zoom・東京地方法院判決賠償 1.8 億日圓</div>
+        <div class="article-tags">
+          <span class="tag source">dmenu</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">法律ニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.24(金)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="kaze_kaoru_lesson">
+      <div class="article-num">NO.005</div>
+      <div class="article-body">
+        <div class="article-title-jp">風、薫る：校長役で初登場した俳優に朝ドラファン歓喜　フレディ・マーキュリーだ！</div>
+        <div class="article-title-zh">NHK 朝ドラ《風、薫る》第 21 集觀劇筆記</div>
+        <div class="article-tags">
+          <span class="tag source">NHK</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">ドラマニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.27(月)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="onuma_retirement_lesson">
+      <div class="article-num">NO.006</div>
+      <div class="article-body">
+        <div class="article-title-jp">36歳の俳優が芸能界引退を報告、今後は未定</div>
+        <div class="article-title-zh">36 歲演員報告退出演藝圈，今後動向尚未確定</div>
+        <div class="article-tags">
+          <span class="tag source">テレ朝NEWS</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">芸能ニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.28(火)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="katsuya_lesson">
+      <div class="article-num">NO.007</div>
+      <div class="article-body">
+        <div class="article-title-jp">店内ガラガラ「かつや」の客離れが止まらない…"安さ"という取り柄を失ったカツ丼王者の末路</div>
+        <div class="article-title-zh">店內空蕩蕩「吉豚屋」客源流失不止…失去「便宜」優點的豬排丼王者之末路</div>
+        <div class="article-tags">
+          <span class="tag source">マネー現代</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">飲食業界ニュース</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.29(水)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="chuto_cabinet_lesson">
+      <div class="article-num">NO.008</div>
+      <div class="article-body">
+        <div class="article-title-jp">総理の一日 中東情勢に関する関係閣僚会議</div>
+        <div class="article-title-zh">總理的一日 關於中東情勢之相關閣僚會議</div>
+        <div class="article-tags">
+          <span class="tag source">首相官邸</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">政治・エネルギー</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.04.30(木)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <a class="article-item" href="nishikori_lesson">
+      <div class="article-num">NO.009</div>
+      <div class="article-body">
+        <div class="article-title-jp">錦織圭が今季限りでの現役引退を発表「やり切ったと胸を張って言える」</div>
+        <div class="article-title-zh">錦織圭宣布本球季結束後引退：能昂首挺胸地說我已拼盡全力</div>
+        <div class="article-tags">
+          <span class="tag source">テニスニュース</span>
+          <span class="tag">N1〜N3</span>
+          <span class="tag">スポーツ</span>
+        </div>
+      </div>
+      <div class="article-right">
+        <span class="article-date">2026.05.01(金)</span>
+        <span class="article-arrow">→</span>
+      </div>
+    </a>
+
+    <div class="no-results" id="noResults">查無符合結果 — No results found</div>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  日語學習教材　｜　yng1026_tz　｜　學習素材來自網路日語新聞報導
+</footer>
+
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const searchCount = document.getElementById('searchCount');
+  const noResults   = document.getElementById('noResults');
+  const items       = document.querySelectorAll('.article-item');
+  const total       = items.length;
+
+  searchInput.addEventListener('input', function () {
+    const keyword = this.value.trim().toLowerCase();
+    let visible = 0;
+
+    items.forEach(function (item) {
+      // 取出此條目所有文字內容（日文標題、中文標題、標籤全部都搜）
+      const text = item.textContent.toLowerCase();
+      if (!keyword || text.includes(keyword)) {
+        item.classList.remove('hidden');
+        visible++;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    // 更新計數提示
+    if (keyword) {
+      searchCount.textContent = '共找到 ' + visible + ' / ' + total + ' 篇文章';
+    } else {
+      searchCount.textContent = '';
+    }
+
+    // 顯示或隱藏「查無結果」訊息
+    if (visible === 0) {
+      noResults.classList.add('visible');
+    } else {
+      noResults.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>
