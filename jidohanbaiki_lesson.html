@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高速PAの自販機が話題｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">SNS話題・ライフスタイル｜學習教材</div>
+    <div class="header-title">高速道路のPAで休憩中→「なんやこの自販機」　"まさかのラインアップ"が190万表示「あかんちょっと興味ある」</div>
+    <div class="header-subtitle">高速公路休息站休憩中→「這是什麼自動販賣機啊」　"意想不到的陣容"突破190萬次瀏覽「糟糕，我有興趣了」</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">關西腔補充</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">SNSで話題の"まさかの自販機"</span>
+      <span class="section-title-zh">社群媒體熱議的"意想不到的販賣機"</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>高速<rt>こうそく</rt></ruby><ruby>道路<rt>どうろ</rt></ruby>のパーキングエリアで<ruby>見<rt>み</rt></ruby>つけた"<span class="hl">まさかの</span><ruby>自販機<rt>じはんき</rt></ruby>"を<ruby>紹介<rt>しょうかい</rt></ruby>する<ruby>投稿<rt>とうこう</rt></ruby>が、X（<ruby>旧<rt>きゅう</rt></ruby>Twitter）で<ruby>話題<rt>わだい</rt></ruby>です。<ruby>記事<rt>きじ</rt></ruby><ruby>執筆<rt>しっぴつ</rt></ruby><ruby>時点<rt>じてん</rt></ruby>で191<ruby>万回<rt>まんかい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby><ruby>表示<rt>ひょうじ</rt></ruby>され、およそ1<ruby>万件<rt>まんけん</rt></ruby>の「いいね」を<span class="hl"><ruby>獲得<rt>かくとく</rt></ruby></span>しています。</p>
+        <p><ruby>投稿<rt>とうこう</rt></ruby>したのは、<ruby>京都<rt>きょうと</rt></ruby>にて<ruby>鉄道<rt>てつどう</rt></ruby>カフェを<span class="hl"><ruby>営<rt>いとな</rt></ruby>んでいる</span><ruby>鉄道<rt>てつどう</rt></ruby>カフェたあたさんです。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在高速公路休息站發現的"意想不到的自動販賣機"之介紹貼文，正在 X（舊 Twitter）上引起話題。截至文章撰寫時，瀏覽次數已超過 191 萬次，並獲得了約 1 萬件按讚。</p>
+        <p>貼文者是在京都經營鐵道咖啡廳的鐵道咖啡たあた先生。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term">まさかの</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">意想不到的。用於強調某種狀況令人驚訝、超乎常理，帶有強烈驚嘆語氣。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>獲得<rt>かくとく</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">獲得。通常指透過競爭或努力得到某種身分、權利或像「按讚」這類的具體數據。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>営<rt>いとな</rt></ruby>む</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">經營。指從事商業活動、管理店鋪或企業，也可用於描述過著某種生活方式。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">PA（パーキングエリア）</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">高速公路休息站。Parking Area 的縮寫，規模小於服務區（SA）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">阪神高速の標識がミニチュアに</span>
+      <span class="section-title-zh">阪神高速公路路牌微縮化</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>自動販売機<rt>じどうはんばいき</rt></ruby>に<ruby>寄<rt>よ</rt></ruby>ってみると、<ruby>阪神<rt>はんしん</rt></ruby><ruby>高速道路<rt>こうそくどうろ</rt></ruby>の<span class="hl"><ruby>標識<rt>ひょうしき</rt></ruby></span>が、<ruby>大小<rt>だいしょう</rt></ruby>さまざまな<ruby>大<rt>おお</rt></ruby>きさのステッカーやキーホルダーになって<ruby>販売<rt>はんばい</rt></ruby>されています！</p>
+        <p>ラインアップには<ruby>大阪<rt>おおさか</rt></ruby>で<span class="hl">おなじみ</span>「<ruby>道頓堀<rt>どうとんぼり</rt></ruby><ruby>出口<rt>でぐち</rt></ruby>」や、<ruby>誰<rt>だれ</rt></ruby>もが<ruby>見<rt>み</rt></ruby>たことのある「ETC<ruby>専用<rt>せんよう</rt></ruby>」といった<ruby>標識<rt>ひょうしき</rt></ruby>が<ruby>含<rt>ふく</rt></ruby>まれていて、これは<span class="hl"><ruby>思<rt>おも</rt></ruby>わず</span><ruby>欲<rt>ほ</rt></ruby>しくなってしまいそう。「こんなん<ruby>見<rt>み</rt></ruby>つけたら<ruby>回<rt>まわ</rt></ruby>す<span class="hl">しかないやん</span>」と<ruby>店主<rt>てんしゅ</rt></ruby>さんはコメントしています。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>靠近自動販賣機一看……阪神高速公路的標誌，竟變成了大小不一的貼紙和鑰匙圈正在販售！</p>
+        <p>陣容包含大阪熟悉的「道頓堀出口」，以及每個人都看過的「ETC專用」等標誌，讓人不由得想買一個。店主評論道：「看到這種東西，只能扭一個了吧」。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>標識<rt>ひょうしき</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">標誌。特指道路、交通或公共場所中，用來表示規定、導引或警告的牌示。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term">おなじみ</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">熟悉、常見。指廣為人知、非常親近的事物或人物，常用於強調親切感。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>思<rt>おも</rt></ruby>わず</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">不由得、不由自主。描述在無意識或受外界刺激下，不自覺產生的動作或情感。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～しかない</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">只能……。表示沒有其他方法或選擇，在口語中常用來強調別無他路。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">泉大津PAに設置されたユニークな自販機</span>
+      <span class="section-title-zh">泉大津PA設置的獨特販賣機</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>この<ruby>自動販売機<rt>じどうはんばいき</rt></ruby>が<ruby>置<rt>お</rt></ruby>かれているのは、<ruby>阪神<rt>はんしん</rt></ruby><ruby>高速道路<rt>こうそくどうろ</rt></ruby>の<ruby>泉大津<rt>いずみおおつ</rt></ruby>パーキングエリアです。<ruby>販売元<rt>はんばいもと</rt></ruby><span class="hl">によると</span>、<ruby>今回<rt>こんかい</rt></ruby><ruby>話題<rt>わだい</rt></ruby>になっている<ruby>標識<rt>ひょうしき</rt></ruby>グッズのほか、<ruby>手<rt>て</rt></ruby>ぬぐい、ユニークな<ruby>靴下<rt>くつした</rt></ruby>を<span class="hl"><ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>う</span>ものなど、<ruby>全部<rt>ぜんぶ</rt></ruby>で10<ruby>台<rt>だい</rt></ruby><ruby>設置<rt>せっち</rt></ruby>されているのだそうです。</p>
+        <p><ruby>店主<rt>てんしゅ</rt></ruby>さんが<ruby>実際<rt>じっさい</rt></ruby>にガチャを<ruby>引<rt>ひ</rt></ruby>いてみたところ、<ruby>天保山<rt>てんぽうざん</rt></ruby>ジャンクションのキーホルダーなどが<span class="hl"><ruby>当<rt>あ</rt></ruby>たった</span>のだそうです。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>這台自動販賣機設置在阪神高速公路的泉大津休息站。根據販售廠商表示，除了這次引發話題的標誌週邊，還有販售手帕、獨特襪子等，總共設置了 10 台機器。</p>
+        <p>店主實際試扭後，抽中了天保山系統交流道的鑰匙圈等獎項。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～によると</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">根據……。用於標示資訊或傳聞的來源，後方常接「～そうだ」或「～らしい」。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>取<rt>と</rt></ruby>り<ruby>扱<rt>あつか</rt></ruby>う</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">販售、受理、對待。在此指商店或機器販賣、提供特定種類的商品。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>当<rt>あ</rt></ruby>たる</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">中獎、抽中。常用於抽獎、扭蛋或預測正確，表示獲得預期之外的好運。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ガチャ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">扭蛋。投入硬幣轉出隨機商品的機器，名稱源自機器轉動的聲音。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">収集欲を刺激するユーザーの反響</span>
+      <span class="section-title-zh">刺激蒐集慾望的用戶反響</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>ドライブ<ruby>好<rt>す</rt></ruby>きなら<span class="hl"><ruby>思<rt>おも</rt></ruby>わず</span><ruby>引<rt>ひ</rt></ruby>いてみたくなってしまいそうな<ruby>投稿<rt>とうこう</rt></ruby>に、Xでは「<ruby>全種類<rt>ぜんしゅるい</rt></ruby><ruby>集<rt>あつ</rt></ruby>めたくなるやつだ」「<span class="hl">あかん</span>ちょっと<ruby>興味<rt>きょうみ</rt></ruby>あるww」「これめちゃくちゃ<ruby>欲<rt>ほ</rt></ruby>しい！」など、<span class="hl"><ruby>物珍<rt>ものめずら</rt></ruby>しさ</span>から<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>の<ruby>反応<rt>はんのう</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く<span class="hl"><ruby>寄<rt>よ</rt></ruby>せられていました</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>對於這則讓愛開車的人不由得想扭一個的貼文，X 上湧現了許多對此感到新奇而感興趣的反應，例如「這會讓人想收集全種類」、「糟了，我有點感興趣了哈哈」、「這超想要的！」。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>物珍<rt>ものめずら</rt></ruby>しさ</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">新奇、獵奇。形容因為某事物平時不常見、非常稀奇而產生的新鮮感。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>寄<rt>よ</rt></ruby>せる</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">提供、匯集。在此指將意見、感想或反應投遞、集中至某處（如網路上）。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>反響<rt>はんきょう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">反響、迴響。指某個事件、作品或言論在社會或網路上引發的反饋或熱烈討論。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term">あかん</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">（關西腔）不行、糟了。相當於標準語「だめ」，常在感到麻煩、失敗或受不了時使用。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：新聞中的關西腔語感</div>
+  <div class="note-body">
+    <p>這篇新聞的標題和引述語使用了大量的關西腔（大阪話），這是因為背景發生在阪神高速（大阪周邊）。以下是三組標準語對照：</p>
+    <p><span class="note-term">なんやこの…</span>　標準語是「なんだこの…」，意思是「這是什麼啊……」。關西人常把「だ」換成「や」，語氣較為直接且帶有驚訝或吐槽感。</p>
+    <p><span class="note-term">あかん</span>　標準語是「だめ」。文中「あかんちょっと興味ある」代表「糟了（擋不住了），我有點感興趣了」，這是一種幽默的自嘲法。</p>
+    <p><span class="note-term">～やん</span>　標準語是「～じゃないか」。例如「回すしかないやん」意思是「不是只能扭了嗎！」，用來強調這件事理所當然。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  SNS話題・ライフスタイル 學習教材　｜　高速PA自販機・関西腔・口語表現精讀
+</footer>
+
+</body>
+</html>
