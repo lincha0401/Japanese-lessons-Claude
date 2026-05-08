@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本橋三越 催事炎上｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">社會ニュース・炎上事案｜學習教材</div>
+    <div class="header-title">「不衛生で嫌だ」催事出店のサンドイッチ店　調理中の店員の"ローストビーフ直食い"動画が波紋…日本橋三越は「今回の事案は明らかに不適切」と謝罪</div>
+    <div class="header-subtitle">「不衛生好討厭」特展出店的三明治店　店員烹飪中「徒手抓食烤牛肉」影片引發爭議…日本橋三越致歉表示「此案明顯不當」</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">催事の背景と炎上のきっかけ</span>
+      <span class="section-title-zh">活動背景與炎上契機</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>4<ruby>月<rt>がつ</rt></ruby>23<ruby>日<rt>にち</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>・<ruby>日本橋<rt>にほんばし</rt></ruby><ruby>三越<rt>みつこし</rt></ruby><ruby>本店<rt>ほんてん</rt></ruby>で<ruby>開催<rt>かいさい</rt></ruby>された「イタリア<ruby>展<rt>てん</rt></ruby> 2026」。SNSでは<ruby>同<rt>どう</rt></ruby>イベントに<ruby>出店<rt>しゅってん</rt></ruby>したサンドイッチ<ruby>店<rt>てん</rt></ruby>の<ruby>動画<rt>どうが</rt></ruby>が<ruby>炎上<rt>えんじょう</rt></ruby>している。</p>
+        <p><ruby>同<rt>どう</rt></ruby><ruby>店<rt>てん</rt></ruby>のSNSではイベント<ruby>当日<rt>とうじつ</rt></ruby>の<ruby>様子<rt>ようす</rt></ruby>を<ruby>収<rt>おさ</rt></ruby>めた<ruby>動画<rt>どうが</rt></ruby>を<ruby>公開<rt>こうかい</rt></ruby>していたが、<ruby>動画<rt>どうが</rt></ruby><ruby>内<rt>ない</rt></ruby>に<span class="hl"><ruby>映<rt>うつ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>んでいた</span><ruby>店員<rt>てんいん</rt></ruby>の<ruby>振<rt>ふ</rt></ruby>る<ruby>舞<rt>ま</rt></ruby>いが<span class="hl"><ruby>物議<rt>ぶつぎ</rt></ruby>を<ruby>醸<rt>かも</rt></ruby>している</span>のだ。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>從 4 月 23 日起在東京日本橋三越本店舉行的「2026 義大利展」。社群媒體上，在該活動出店的三明治店影片引發了輿論砲轟（炎上）。</p>
+        <p>該店雖然在自己的社群帳號公開了記錄活動當天過程的影片，但影片中拍到的店員行為卻引發了廣泛爭議。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>波紋<rt>はもん</rt></ruby>を<ruby>広<rt>ひろ</rt></ruby>げる</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">引起波紋。指一個事件在社會上引起廣泛討論、影響或不安。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>催事<rt>さいじ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">百貨公司或商業設施舉辦的特別展覽、推廣活動。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>物議<rt>ぶつぎ</rt></ruby>を<ruby>醸<rt>かも</rt></ruby>す</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">引發爭議。指某人的言行引起社會大眾的議論或批評。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>映<rt>うつ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>む</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">映入、拍進去。指在拍攝時，無意間將原本沒打算拍的人事物也拍進畫面。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">不適切な調理風景への指摘</span>
+      <span class="section-title-zh">對不當烹飪過程的指責</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>店員<rt>てんいん</rt></ruby>は<ruby>調理<rt>ちょうり</rt></ruby><ruby>用<rt>よう</rt></ruby><ruby>手袋<rt>てぶくろ</rt></ruby>をつけたままカットしたローストビーフをその<ruby>場<rt>ば</rt></ruby>で<ruby>直<rt>じか</rt></ruby>に<ruby>口<rt>くち</rt></ruby>に<ruby>入<rt>い</rt></ruby>れる<ruby>姿<rt>すがた</rt></ruby>もあった。またマスクもしておらず、これに<ruby>視聴者<rt>ししょうしゃ</rt></ruby>からは「<ruby>不衛生<rt>ふえいせい</rt></ruby>で<ruby>嫌<rt>いや</rt></ruby>だ」「マスクもせずに<ruby>調理<rt>ちょうり</rt></ruby><ruby>用<rt>よう</rt></ruby><ruby>手袋<rt>てぶくろ</rt></ruby>のまま<ruby>味見<rt>あじみ</rt></ruby>して」といった<span class="hl"><ruby>指摘<rt>してき</rt></ruby></span>が<span class="hl"><ruby>寄<rt>よ</rt></ruby>せられている</span>。</p>
+        <p>この<ruby>動画<rt>どうが</rt></ruby>はSNSで<ruby>不衛生<rt>ふえいせい</rt></ruby>と<ruby>批判<rt>ひはん</rt></ruby>を<ruby>集<rt>あつ</rt></ruby>め、5<ruby>月<rt>がつ</rt></ruby>4<ruby>日<rt>にち</rt></ruby><ruby>頃<rt>ごろ</rt></ruby>から<ruby>動画<rt>どうが</rt></ruby>が<span class="hl"><ruby>拡散<rt>かくさん</rt></ruby></span>されることになった。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>影片中出現店員戴著烹飪用手套，直接將切好的烤牛肉放入口中的樣子。此外也沒戴口罩，對此觀眾紛紛指責「不衛生好討厭」、「不戴口罩還戴著烹飪手套試吃」。</p>
+        <p>這段影片因衛生考量而在社群媒體上招致批評，並從 5 月 4 日左右開始被廣泛擴散。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>不適切<rt>ふてきせつ</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">不適當、不妥當。常用於形容企業或公務人員違反道德、規定或常理的行為。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>指摘<rt>してき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">指出、指責。指明出錯的地方或需要注意的問題點。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>拡散<rt>かくさん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">擴散。在網路語境下指資訊、影片被大量轉發、流傳。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>寄<rt>よ</rt></ruby>せられる</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">湧入、匯集。常用於描述大量的意見、投訴集中到某個單位。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">三越伊勢丹の謝罪と認識</span>
+      <span class="section-title-zh">三越伊勢丹的謝罪與認定</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>三越<rt>みつこし</rt></ruby><ruby>側<rt>がわ</rt></ruby>は<ruby>広報<rt>こうほう</rt></ruby><ruby>担当者<rt>たんとうしゃ</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じ、「<ruby>今回<rt>こんかい</rt></ruby>の<span class="hl"><ruby>事案<rt>じあん</rt></ruby></span>は<ruby>明<rt>あき</rt></ruby>らかに<ruby>不適切<rt>ふてきせつ</rt></ruby>なものであると<ruby>認識<rt>にんしき</rt></ruby>しております」と<ruby>回答<rt>かいとう</rt></ruby>。</p>
+        <p>「<ruby>当社<rt>とうしゃ</rt></ruby>の<ruby>管理<rt>かんり</rt></ruby><ruby>徹底<rt>てってい</rt></ruby>が<span class="hl"><ruby>行<rt>ゆ</rt></ruby>き<ruby>届<rt>とど</rt></ruby>かず</span><ruby>発生<rt>はっせい</rt></ruby>してしまいました」とし、<ruby>保健所<rt>ほけんじょ</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>・<ruby>相談<rt>そうだん</rt></ruby>のうえ、<ruby>衛生<rt>えいせい</rt></ruby><ruby>管理<rt>かんり</rt></ruby><ruby>体制<rt>たいせい</rt></ruby>の<span class="hl"><ruby>強化<rt>きょうか</rt></ruby></span>と<ruby>再発<rt>さいはつ</rt></ruby><ruby>防止<rt>ぼうし</rt></ruby>策を<span class="hl"><ruby>徹底<rt>てってい</rt></ruby></span>すると<ruby>謝罪<rt>しゃざい</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>三越方透過公關負責人回答：「我們認定此次案件顯然是不當的」。</p>
+        <p>並表示「是因為本公司的管理執行不到位才發生的」，在向保健所報告並諮詢後，致歉表示將徹底強化衛生管理體制並落實防止再犯對策。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>事案<rt>じあん</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">案件、事件。多用於正式文件或法律、行政場合。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>行<rt>ゆ</rt></ruby>き<ruby>届<rt>とど</rt></ruby>く</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">周全、到位。此處以否定型「行き届かず」表示管理疏漏、未能落實到每個環節。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>徹底<rt>てってい</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">徹底執行。指將某種方針或措施落實到每個角落，不留漏洞。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>把握<rt>はあく</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">掌握、了解。指充分理解情況或數據，確實掌握事件全貌。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">店側の反省と再発防止策</span>
+      <span class="section-title-zh">店家的反省與防止再犯策</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>サンドイッチ<ruby>店<rt>てん</rt></ruby>もインスタグラムに<ruby>謝罪<rt>しゃざい</rt></ruby><ruby>文<rt>ぶん</rt></ruby>を<ruby>掲載<rt>けいさい</rt></ruby>。「<span class="hl"><ruby>配慮<rt>はいりょ</rt></ruby></span>が<span class="hl"><ruby>欠<rt>か</rt></ruby>けておりました</span>ことを<ruby>深<rt>ふか</rt></ruby>く<ruby>反省<rt>はんせい</rt></ruby>しております」とつづり、<ruby>試食<rt>ししょく</rt></ruby>のルール<ruby>化<rt>か</rt></ruby>や<ruby>全<rt>ぜん</rt></ruby>スタッフへの<ruby>衛生<rt>えいせい</rt></ruby><ruby>教育<rt>きょういく</rt></ruby>の<ruby>再<rt>さい</rt></ruby><ruby>実施<rt>じっし</rt></ruby>、SNS<ruby>投稿<rt>とうこう</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>のチェック<ruby>体制<rt>たいせい</rt></ruby><ruby>強化<rt>きょうか</rt></ruby>などを<ruby>挙<rt>あ</rt></ruby>げた。</p>
+        <p><ruby>今後<rt>こんご</rt></ruby>は<span class="hl"><ruby>信頼<rt>しんらい</rt></ruby><ruby>回復<rt>かいふく</rt></ruby></span>に<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>むと<ruby>締<rt>し</rt></ruby>めくくっている。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>三明治店也在 Instagram 刊登了道歉文。寫道：「我們深刻反省欠缺考量一事」，並提出了將試吃規則化、對全體員工重新進行衛生教育，以及強化社群媒體貼文內容的審核機制等措施。</p>
+        <p>最後結尾表示今後將致力於恢復信譽。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>配慮<rt>はいりょ</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">顧慮、考慮。指為了不給他人添麻煩而進行週到的考量。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>欠<rt>か</rt></ruby>ける</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">欠缺、缺乏。指原本應該具備的特質或規定不完整。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>見直<rt>みなお</rt></ruby>し</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">重新審視。指對現行的制度或標準再次檢查並修正。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>信頼<rt>しんらい</rt></ruby><ruby>回復<rt>かいふく</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">恢復信譽。企業在發生爭議後，為贏回大眾信任所做的努力。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：引發爭議的常用表現對照</div>
+  <div class="note-body">
+    <p>這篇新聞中出現了兩個表達「引發討論／爭議」的 N1 級別詞彙，看似相近，實則各有側重：</p>
+    <p><span class="note-term">波紋（はもん）を広げる／呼ぶ</span>　側重於一個事件發生後，產生的「影響範圍」很大。就像石頭投入水中，漣漪向外擴散——強調的是波及範圍的廣度，語氣相對中性。</p>
+    <p><span class="note-term">物議（ぶつぎ）を醸す（かもす）</span>　側重於某個言行引起了社會大眾「多方批評」或「爭議」。語氣通常較為負面，暗示當事人的行為有失妥當，引起他人非議。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  社會ニュース・炎上事案 學習教材　｜　日本橋三越催事・衛生管理・企業謝罪表現精讀
+</footer>
+
+</body>
+</html>
