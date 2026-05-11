@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>脳のオン/オフ切り替えは鍛えられる｜慶應大 PNAS 研究｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  /* ── FIGURE BLOCK ── */
+  .fig-block {
+    border-top: 1px solid var(--rule);
+    background: #f4f5f8;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .fig-block img {
+    max-width: 100%;
+    max-height: 340px;
+    width: auto;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .fig-caption {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 11.5px;
+    color: var(--ink-light);
+    text-align: center;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+  .fig-caption strong {
+    color: var(--navy);
+    font-weight: 700;
+  }
+
+  /* ── MULTI-FIGURE ROW ── */
+  .fig-row {
+    border-top: 1px solid var(--rule);
+    background: #f4f5f8;
+    padding: 20px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fig-row .fig-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 220px;
+    max-width: 400px;
+  }
+  .fig-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .fig-row .fig-caption {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 11px;
+    color: var(--ink-light);
+    text-align: center;
+    line-height: 1.65;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .fig-block { background: #f0f0f0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .fig-row { background: #f0f0f0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">科学・医療ニュース｜學習教材</div>
+    <div class="header-title">脳のオン/オフ切り替えは鍛えられる──イメトレで実際の運動能力向上に成功、慶應大がPNASで発表</div>
+    <div class="header-subtitle">大腦的開關切換是可以鍛鍊的──慶應大學於 PNAS 發表研究：透過意象訓練成功提升實際運動能力</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">科学論文精讀</span>
+      <span class="badge">研究図版付き</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">BCIと脳状態可視化の成功</span>
+      <span class="section-title-zh">BCI 與大腦狀態可視化的成功</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>慶應義塾<rt>けいおうぎじゅく</rt></ruby><ruby>大学<rt>だいがく</rt></ruby>に<ruby>所属<rt>しょぞく</rt></ruby>する<ruby>研究<rt>けんきゅう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>らがPNASで<ruby>発表<rt>はっぴょう</rt></ruby>した<ruby>論文<rt>ろんぶん</rt></ruby>は、ブレイン・コンピュータ・インタフェース（BCI）を<ruby>活用<rt>かつよう</rt></ruby>し、イメージトレーニング（イメトレ）<ruby>中<rt>ちゅう</rt></ruby>の<ruby>脳<rt>のう</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>を<span class="hl"><ruby>可視化<rt>かしか</rt></ruby></span>することで、<ruby>実際<rt>じっさい</rt></ruby>の<ruby>運動<rt>うんどう</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>を<ruby>向上<rt>こうじょう</rt></ruby>させることに<ruby>成功<rt>せいこう</rt></ruby>した<ruby>研究<rt>けんきゅう</rt></ruby><ruby>報告<rt>ほうこく</rt></ruby>だ。</p>
+        <p><ruby>本<rt>ほん</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>では<ruby>頭皮<rt>とうひ</rt></ruby><ruby>脳波計<rt>のうはけい</rt></ruby>とAIを<ruby>用<rt>もち</rt></ruby>いることで、<ruby>脳内<rt>のうない</rt></ruby>に<ruby>電極<rt>でんきょく</rt></ruby>を<span class="hl"><ruby>埋<rt>う</rt></ruby>め<ruby>込<rt>こ</rt></ruby>む</span>ことなく、<ruby>脳内<rt>のうない</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>をリアルタイムで<ruby>可視化<rt>かしか</rt></ruby>することに<ruby>成功<rt>せいこう</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>慶應義塾大學的研究團隊在 PNAS 發表論文，報告了一項透過運用腦機介面（BCI）將意象訓練中的大腦狀態視覺化，進而成功提升實際運動能力的實驗。</p>
+        <p>該研究透過使用頭皮腦波儀與 AI，成功實現了無需在大腦內植入電極，即可即時將腦內狀態視覺化。</p>
+      </div>
+    </div>
+    <!-- 圖1：實驗セットアップ -->
+    <div class="fig-block">
+      <img src="fig1_setup.png" alt="実験のセットアップ">
+      <p class="fig-caption"><strong>圖1｜實驗裝置示意圖</strong>（プレスリリースより引用）<br>參與者佩戴高密度頭皮腦波計，右手安裝電動輔具，腦波經即時分析後同步更新螢幕上的紅色長條，並驅動輔具。</p>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>司<rt>つかさど</rt></ruby>る</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">掌管、治理、擔任。常用於描述身體器官（如大腦）負責特定的功能或行為。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>可視化<rt>かしか</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">視覺化。將原本肉眼看不見的資訊（如數據、腦波）轉換成圖像或圖表。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">リアルタイム</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">即時、同步。指數據處理與事件發生幾乎同步進行，無明顯延遲。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>埋<rt>う</rt></ruby>め<ruby>込<rt>こ</rt></ruby>む</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">埋入、嵌入。在醫學或工程脈絡下，指將設備（如電極）植入體內。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">感覚運動リズムと訓練の仕組み</span>
+      <span class="section-title-zh">感覺運動節奏與訓練機制</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>本<rt>ほん</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>が<ruby>脳<rt>のう</rt></ruby><ruby>状態<rt>じょうたい</rt></ruby>の<ruby>可視化<rt>かしか</rt></ruby>において<span class="hl"><ruby>着目<rt>ちゃくもく</rt></ruby></span>したのが、「<ruby>感覚<rt>かんかく</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>リズム」と<ruby>呼<rt>よ</rt></ruby>ばれる<ruby>脳波<rt>のうは</rt></ruby><ruby>成分<rt>せいぶん</rt></ruby>だ。<ruby>体<rt>からだ</rt></ruby>がリラックスした<ruby>安静<rt>あんせい</rt></ruby><ruby>時<rt>じ</rt></ruby>には<ruby>神経<rt>しんけい</rt></ruby><ruby>細胞<rt>さいぼう</rt></ruby>が<span class="hl"><ruby>同期<rt>どうき</rt></ruby></span>して<ruby>活動<rt>かつどう</rt></ruby>するため<span class="hl"><ruby>振幅<rt>しんぷく</rt></ruby></span>が<ruby>大<rt>おお</rt></ruby>きくなり、<ruby>逆<rt>ぎゃく</rt></ruby>に<ruby>運動<rt>うんどう</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>や<ruby>実行<rt>じっこう</rt></ruby>した<ruby>際<rt>さい</rt></ruby>には<ruby>活動<rt>かつどう</rt></ruby>が<ruby>脱<rt>だつ</rt></ruby><ruby>同期化<rt>どうきか</rt></ruby>して<ruby>振幅<rt>しんぷく</rt></ruby>が<ruby>小<rt>ちい</rt></ruby>さくなる。</p>
+        <p><ruby>研究<rt>けんきゅう</rt></ruby>チームはこの<ruby>性質<rt>せいしつ</rt></ruby>を<ruby>利用<rt>りよう</rt></ruby>し、<ruby>脳<rt>のう</rt></ruby>のオンとオフの<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>画面<rt>がめん</rt></ruby><ruby>上<rt>じょう</rt></ruby>の<ruby>赤<rt>あか</rt></ruby>いバーの<ruby>動<rt>うご</rt></ruby>きに<ruby>変換<rt>へんかん</rt></ruby>して<ruby>参加者<rt>さんかしゃ</rt></ruby>に<span class="hl"><ruby>提示<rt>ていじ</rt></ruby></span>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>該研究在大腦狀態視覺化方面所關注的是被稱為「感覺運動節奏」的腦波成分。當身體放鬆處於安靜狀態時，神經細胞會同步活動，因此振幅會變大；相反地，當準備或執行運動時，活動會呈現「去同步化」，導致振幅變小。</p>
+        <p>研究團隊利用此特性，將大腦的開與關狀態轉換成螢幕上紅條的移動，並呈現給參與者看。</p>
+      </div>
+    </div>
+    <!-- 圖2：BCI訓練畫面模式圖 -->
+    <div class="fig-block">
+      <img src="fig2_bci_screen.jpg" alt="BCI訓練画面の模式図">
+      <p class="fig-caption"><strong>圖2｜BCI 訓練畫面模式圖</strong><br>運動意象時紅條向上延伸（大腦「開」），放鬆時向下延伸（大腦「關」），感覺運動節奏的強弱被即時視覺化。</p>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>着目<rt>ちゃくもく</rt></ruby>する</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">關注、著眼。指特別留意某個特定的現象、數據或事實。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>同期<rt>どうき</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">同步。在神經科學中指神經細胞同時產生放電活動的現象。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>提示<rt>ていじ</rt></ruby>する</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">出示、提示、呈現。指將資訊或證據有目的地展示給他人看。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>振幅<rt>しんぷく</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">振幅。物理學名詞，指波動的最大位移，此處指腦波訊號的強度。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">実験手法と二重盲検試験</span>
+      <span class="section-title-zh">實驗方法與雙盲測試</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>実験<rt>じっけん</rt></ruby>では、<ruby>高密度<rt>こうみつど</rt></ruby><ruby>頭皮<rt>とうひ</rt></ruby><ruby>脳波計<rt>のうはけい</rt></ruby>を<span class="hl"><ruby>装着<rt>そうちゃく</rt></ruby></span>した<ruby>参加者<rt>さんかしゃ</rt></ruby>の<ruby>右手<rt>みぎて</rt></ruby>に<ruby>電動<rt>でんどう</rt></ruby><span class="hl"><ruby>装具<rt>そうぐ</rt></ruby></span>を<ruby>取<rt>と</rt></ruby>り<ruby>付<rt>つ</rt></ruby>けたうえで、<ruby>画面<rt>がめん</rt></ruby>のバーを<ruby>見<rt>み</rt></ruby>ながら、<ruby>自<rt>みずか</rt></ruby>らの<ruby>意思<rt>いし</rt></ruby>で<ruby>脳<rt>のう</rt></ruby>の<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>素早<rt>すばや</rt></ruby>く<ruby>切<rt>き</rt></ruby>り<ruby>替<rt>か</rt></ruby>えてバーを<ruby>目標<rt>もくひょう</rt></ruby><ruby>位置<rt>いち</rt></ruby>へと<ruby>動<rt>うご</rt></ruby>かす<ruby>訓練<rt>くんれん</rt></ruby>を2<ruby>日間<rt>にちかん</rt></ruby><ruby>行<rt>おこな</rt></ruby>った。</p>
+        <p>その<ruby>際<rt>さい</rt></ruby>、<ruby>本物<rt>ほんもの</rt></ruby>の<ruby>脳波<rt>のうは</rt></ruby>を<ruby>提示<rt>ていじ</rt></ruby>されるグループと、<ruby>偽<rt>にせ</rt></ruby>の<ruby>映像<rt>えいぞう</rt></ruby>を<ruby>見<rt>み</rt></ruby>せられる<ruby>対照<rt>たいしょう</rt></ruby>グループに<ruby>分<rt>わ</rt></ruby>け、<ruby>二重<rt>にじゅう</rt></ruby><ruby>盲検<rt>もうけん</rt></ruby>ランダム<ruby>化<rt>か</rt></ruby><ruby>比較<rt>ひかく</rt></ruby><ruby>試験<rt>しけん</rt></ruby>による<span class="hl"><ruby>検証<rt>けんしょう</rt></ruby></span>を<ruby>実施<rt>じっし</rt></ruby>した。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>實驗中，佩戴高密度頭皮腦波儀的參與者右手安裝了電動輔具，並在觀看螢幕長條的同時，練習用自己的意志快速切換大腦狀態，使長條移動到目標位置，訓練為期兩天。</p>
+        <p>當時，研究將人員分為呈現真實腦波的組別，以及觀看他人腦波偽影像的對照組，並透過「隨機雙盲對照試驗」進行驗證。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>意思<rt>いし</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">意志、意向。指內心想做某事的念頭或決心。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>検証<rt>けんしょう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">驗證、檢驗。指透過實驗或證據來確認某種假設或理論是否正確。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>装着<rt>そうちゃく</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">佩戴、安裝。指將裝備或零件正確地固定在身體或機器上。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>装具<rt>そうぐ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">輔具、支具。醫學上用於輔助身體功能或固定患部的外部裝置。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">訓練の成果と脳内ネットワークの再編成</span>
+      <span class="section-title-zh">訓練成果與大腦網絡重組</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>その<ruby>結果<rt>けっか</rt></ruby>、<ruby>本物<rt>ほんもの</rt></ruby>の<ruby>脳波<rt>のうは</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<ruby>訓練<rt>くんれん</rt></ruby>したグループは、<ruby>自<rt>みずか</rt></ruby>らの<ruby>意思<rt>いし</rt></ruby>で<ruby>脳<rt>のう</rt></ruby>の<ruby>状態<rt>じょうたい</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>替<rt>か</rt></ruby>える<ruby>能力<rt>のうりょく</rt></ruby>が<span class="hl"><ruby>有意<rt>ゆうい</rt></ruby></span>に<ruby>向上<rt>こうじょう</rt></ruby>することが<ruby>確認<rt>かくにん</rt></ruby>された。</p>
+        <p>さらに、<ruby>実際<rt>じっさい</rt></ruby>の<ruby>運動<rt>うんどう</rt></ruby>パフォーマンスにも<ruby>好<rt>こう</rt></ruby><ruby>影響<rt>えいきょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>え、<ruby>筋肉<rt>きんにく</rt></ruby>を<ruby>素早<rt>すばや</rt></ruby>く<span class="hl"><ruby>収縮<rt>しゅうしゅく</rt></ruby></span>させる<ruby>反応<rt>はんのう</rt></ruby><ruby>時間<rt>じかん</rt></ruby>や、<ruby>力<rt>ちから</rt></ruby>を<ruby>抜<rt>ぬ</rt></ruby>いて<span class="hl"><ruby>弛緩<rt>しかん</rt></ruby></span>させる<ruby>際<rt>さい</rt></ruby>の<ruby>反応<rt>はんのう</rt></ruby><ruby>時間<rt>じかん</rt></ruby>も<ruby>短縮<rt>たんしゅく</rt></ruby>されることが<ruby>確認<rt>かくにん</rt></ruby>された。<ruby>本<rt>ほん</rt></ruby><ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>用<rt>もち</rt></ruby>いれば、<ruby>脳<rt>のう</rt></ruby>そのものを<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>鍛<rt>きた</rt></ruby>えるため、<ruby>人間<rt>にんげん</rt></ruby>の<ruby>能力<rt>のうりょく</rt></ruby>を<span class="hl"><ruby>拡張<rt>かくちょう</rt></ruby></span>できる<ruby>可能性<rt>かのうせい</rt></ruby>がある。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>結果顯示，觀看真實腦波進行訓練的組別，其自主切換大腦狀態的能力有顯著提升。</p>
+        <p>此外，這也對實際的運動表現產生了正面影響，經確認肌肉快速收縮的反應時間，以及放鬆力量使其鬆弛時的反應時間皆有所縮短。透過這項技術，由於是直接鍛鍊大腦本身，未來極有可能實現擴展人類能力的可能性。</p>
+      </div>
+    </div>
+    <!-- 圖3：BCI成績推移 -->
+    <div class="fig-block">
+      <img src="fig3_bci_score.jpg" alt="BCI操作成績の推移">
+      <p class="fig-caption"><strong>圖3｜兩天訓練中 BCI 操作成績的推移</strong><br>實驗群（綠）的目標到達次數有顯著增加，對照群（黑）則未見同樣的提升。</p>
+    </div>
+    <!-- 圖4 & 圖5：並排 -->
+    <div class="fig-row">
+      <div class="fig-item">
+        <img src="fig4_brain_change.jpg" alt="脳の活動パターンの変化">
+        <p class="fig-caption"><strong>圖4｜訓練後大腦廣泛區域的活動模式變化</strong><br>周期成分（上）與非周期成分（下）的活動皆在 BCI 訓練後出現明顯改變。</p>
+      </div>
+      <div class="fig-item">
+        <img src="fig5_muscle.jpg" alt="筋肉の収縮・弛緩反応時間">
+        <p class="fig-caption"><strong>圖5｜肌肉收縮與弛緩反應時間的變化</strong><br>實驗群（左組）在 Day 1 → Day 2 間，收縮（左）與弛緩（右）的反應時間皆縮短，對照群則無此改善。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>収縮<rt>しゅうしゅく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">收縮。指體積變小或肌肉緊縮，與「拡張」相反。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>弛緩<rt>しかん</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">弛緩、放鬆。醫學上指肌肉張力降低或神經放鬆的狀態。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>拡張<rt>かくちょう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">擴張、擴展。指擴大範圍、功能或能力，此處指「增強人類原本的能力」。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>有意<rt>ゆうい</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">顯著、有意義。統計學用語，指結果並非偶然發生，具備科學上的有效性。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：理解「提示（ていじ）」與「示唆（しさ）」</div>
+  <div class="note-body">
+    <p>這篇科學報導中提到了研究團隊如何將數據「呈現」給受試者。在日文中，這兩個字都跟「展現」有關，但層次不同：</p>
+    <p><span class="note-term">提示（ていじ）</span>　側重於「攤開、展示證據或具體數據」。例如文中將腦波轉換成「紅條」展示給受試者看，這是一種物理上的、直接的呈現。</p>
+    <p><span class="note-term">示唆（しさ）</span>　側重於「暗示、啟發、建議」。例如實驗結果「示唆」了腦內網絡發生了重編，這不是直接肉眼看到的數據，而是根據結果推論出的可能性或背後的含義。</p>
+    <p>總結：看到數據用「提示」，解讀數據背後的意義用「示唆」。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  科学・医療ニュース 學習教材　｜　慶應大 PNAS 研究・BCI・脳波・運動能力向上精讀
+</footer>
+
+</body>
+</html>
