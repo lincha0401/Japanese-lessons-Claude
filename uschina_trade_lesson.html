@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>米中 韓国で閣僚級協議｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">国際・経済ニュース｜學習教材</div>
+    <div class="header-title">米中、韓国で閣僚級協議　首脳会談控え、貿易５兆円拡大か</div>
+    <div class="header-subtitle">美中於韓國舉行部長級會議：首腦會談前夕，貿易額或將擴大 5 兆日圓</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">外交・通商用語</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">閣僚級協議の終結と首脳会談への準備</span>
+      <span class="section-title-zh">部長級會議結束與首腦會談之準備</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>米<rt>べい</rt></ruby><ruby>中<rt>ちゅう</rt></ruby><ruby>両国<rt>りょうこく</rt></ruby>は13<ruby>日<rt>にち</rt></ruby>、<ruby>韓国<rt>かんこく</rt></ruby>で<ruby>開<rt>ひら</rt></ruby>いた7<ruby>回<rt>かい</rt></ruby><ruby>目<rt>め</rt></ruby>の<span class="hl"><ruby>閣僚<rt>かくりょう</rt></ruby><ruby>級<rt>きゅう</rt></ruby></span><ruby>貿易<rt>ぼうえき</rt></ruby><ruby>協議<rt>きょうぎ</rt></ruby>を<ruby>終<rt>お</rt></ruby>えた。14、15<ruby>両日<rt>りょうじつ</rt></ruby>に<ruby>北京<rt>ぺきん</rt></ruby>で<ruby>予定<rt>よてい</rt></ruby>する<ruby>米<rt>べい</rt></ruby><ruby>中<rt>ちゅう</rt></ruby><ruby>首脳<rt>しゅのう</rt></ruby><ruby>会談<rt>かいだん</rt></ruby>を<span class="hl"><ruby>控<rt>ひか</rt></ruby>え</span>、<ruby>貿易<rt>ぼうえき</rt></ruby><ruby>拡大<rt>かくだい</rt></ruby>に<ruby>向<rt>む</rt></ruby>けた<ruby>新<rt>あら</rt></ruby>たな<span class="hl"><ruby>枠組<rt>わくぐ</rt></ruby>み</span>の<ruby>創設<rt>そうせつ</rt></ruby>など、<ruby>合意<rt>ごうい</rt></ruby><ruby>内容<rt>ないよう</rt></ruby>について<ruby>最終<rt>さいしゅう</rt></ruby><ruby>調整<rt>ちょうせい</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めた<span class="hl">とみられる</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>美中兩國於 13 日結束了在韓國舉行的第 7 次部長級貿易協議。據研判，在即將於 14、15 兩日在北京舉行的美中首腦會談前夕，雙方已針對建立貿易擴大新框架及具體協議內容進行了最終調整。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>閣僚<rt>かくりょう</rt></ruby><ruby>級<rt>きゅう</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">部長級。指由政府各部會首長（部長）參加的談判級別，高於官員級、低於首腦級。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>控<rt>ひか</rt></ruby>える</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">面臨、靠近、前夕。在新聞中常用於表達重大事件即將發生前的狀態。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>枠組<rt>わくぐ</rt></ruby>み</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">框架、架構。常用於法律、政策或國際協議的基本結構。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～とみられる</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">被研判、據觀察。用於新聞報導中對不確定事實的推論陳述。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">貿易拡大枠組みと具体的な合意内容</span>
+      <span class="section-title-zh">貿易擴大框架與具體協議內容</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>ロイター<ruby>通信<rt>つうしん</rt></ruby>は、<ruby>米<rt>べい</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>が<ruby>互<rt>たが</rt></ruby>いに300<ruby>億<rt>おく</rt></ruby>ドル（4<ruby>兆<rt>ちょう</rt></ruby>7000<ruby>億円<rt>おくえん</rt></ruby>）<ruby>相当<rt>そうとう</rt></ruby>の<ruby>貿易<rt>ぼうえき</rt></ruby><ruby>拡大<rt>かくだい</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>す<ruby>枠組<rt>わくぐ</rt></ruby>みで<span class="hl"><ruby>合意<rt>ごうい</rt></ruby>に<ruby>至<rt>いた</rt></ruby>る</span><ruby>可能性<rt>かのうせい</rt></ruby>を<ruby>報<rt>ほう</rt></ruby>じた。<ruby>具体的<rt>ぐたいてき</rt></ruby>な<span class="hl"><ruby>品目<rt>ひんもく</rt></ruby></span>は<ruby>明<rt>あき</rt></ruby>らかになっていない。</p>
+        <p><ruby>対面<rt>たいめん</rt></ruby>による<ruby>閣僚<rt>かくりょう</rt></ruby><ruby>級<rt>きゅう</rt></ruby>の<ruby>協議<rt>きょうぎ</rt></ruby>は3<ruby>月<rt>がつ</rt></ruby><ruby>以来<rt>いらい</rt></ruby>ほぼ2カ<ruby>月<rt>げつ</rt></ruby>ぶりで、<ruby>米<rt>べい</rt></ruby>メディアによると、<ruby>両者<rt>りょうしゃ</rt></ruby>の<ruby>協議<rt>きょうぎ</rt></ruby>は<ruby>約<rt>やく</rt></ruby>3<ruby>時間<rt>じかん</rt></ruby>に<span class="hl"><ruby>及<rt>およ</rt></ruby>んだ</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>路透社報導，美中雙方有可能達成一項旨在互相擴大價值約 300 億美元（約 4.7 兆日圓）貿易額的框架協議。目前具體品項尚未明確。</p>
+        <p>這是自 3 月以來，雙方睽違近兩個月的面對面部長級會議，據美媒報導，雙方的會談持續了約 3 個小時。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>合意<rt>ごうい</rt></ruby>に<ruby>至<rt>いた</rt></ruby>る</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">達成協議。形容經過談判最終取得共識，語氣正式。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>品目<rt>ひんもく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">品項、品目。在貿易中指商品的種類或項目。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>及<rt>およ</rt></ruby>ぶ</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">長達、涉及、波及。此處指會談的時間延伸到約 3 小時之久。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～によると</span><span class="vocab-level">N3 文法</span>
+          <span class="vocab-meaning">根據……。用於標示資訊或報導的來源，後方常接「～そうだ」或「～という」。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">対立軸の解消と国際情勢への対応</span>
+      <span class="section-title-zh">消除對立點與應對國際局勢</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>最大<rt>さいだい</rt></ruby>の<span class="hl"><ruby>対立<rt>たいりつ</rt></ruby><ruby>軸<rt>じく</rt></ruby></span>とされてきた<ruby>関税<rt>かんぜい</rt></ruby>の<ruby>引<rt>ひ</rt></ruby>き<ruby>下<rt>さ</rt></ruby>げについては、<ruby>前回<rt>ぜんかい</rt></ruby><ruby>協議<rt>きょうぎ</rt></ruby>で<span class="hl"><ruby>大枠<rt>おおわく</rt></ruby></span><ruby>合意<rt>ごうい</rt></ruby>したとみられている。<ruby>今回<rt>こんかい</rt></ruby>は、<ruby>世界的<rt>せかいてき</rt></ruby>なサプライチェーン<ruby>混乱<rt>こんらん</rt></ruby>の<ruby>主因<rt>しゅいん</rt></ruby>となっている<ruby>中東<rt>ちゅうとう</rt></ruby><ruby>情勢<rt>じょうせい</rt></ruby>の<span class="hl"><ruby>沈静化<rt>ちんせいか</rt></ruby></span>に<ruby>向<rt>む</rt></ruby>け、<ruby>意見<rt>いけん</rt></ruby><ruby>交換<rt>こうかん</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>った<ruby>可能性<rt>かのうせい</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い。</p>
+        <p><ruby>中国<rt>ちゅうごく</rt></ruby><ruby>国営<rt>こくえい</rt></ruby><ruby>通信<rt>つうしん</rt></ruby>は「<ruby>実質的<rt>じっしつてき</rt></ruby>な<ruby>協力<rt>きょうりょく</rt></ruby>の<ruby>発展<rt>はってん</rt></ruby>に<ruby>向<rt>む</rt></ruby>け、<ruby>率直<rt>そっちょく</rt></ruby>で<span class="hl"><ruby>建設的<rt>けんせつてき</rt></ruby></span>な<ruby>協議<rt>きょうぎ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>った」と<ruby>伝<rt>つた</rt></ruby>えた。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>關於曾被視為最大對立點的調降關稅問題，據信已在上次會議達成大致協議。此次雙方極有可能針對如何平息導致全球供應鏈混亂的主因——中東情勢，進行了意見交換。</p>
+        <p>中國官方通訊社報導稱：「雙方為了發展實質性的合作，進行了坦率且具建設性的會談。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>対立<rt>たいりつ</rt></ruby><ruby>軸<rt>じく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">對立點、矛盾焦點。指雙方意見最不合、最具爭議的核心問題。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>沈静化<rt>ちんせいか</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">平息、冷靜下來。常用於描述騷亂、局勢或物價上漲趨於平緩。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>建設的<rt>けんせつてき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">建設性的。形容討論或提議有助於問題解決或進步，外交聲明中的常用套語。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>大枠<rt>おおわく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">大框架、基本方向。指不涉及細節，但在整體方針上達成共識。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  国際・経済ニュース 學習教材　｜　米中閣僚協議・通商外交・国際情勢用語精讀
+</footer>
+
+</body>
+</html>
