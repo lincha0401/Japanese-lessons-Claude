@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石垣島竜巻注意情報｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">気象・防災ニュース｜學習教材</div>
+    <div class="header-title">〔竜巻目撃情報〕石垣島地方で竜巻発生か　周囲の状況に注意し安全確保を</div>
+    <div class="header-subtitle">〔龍捲風目擊情報〕石垣島地區疑發生龍捲風　請注意周遭狀況並確保安全</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">防災用語</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">竜巻注意情報の発表</span>
+      <span class="section-title-zh">龍捲風注意情報之發布</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>11<ruby>日<rt>にち</rt></ruby>11:08、<ruby>沖縄<rt>おきなわ</rt></ruby><ruby>地方<rt>ちほう</rt></ruby><ruby>気象台<rt>きしょうだい</rt></ruby>は、<ruby>石垣島<rt>いしがきじま</rt></ruby><ruby>地方<rt>ちほう</rt></ruby>で<span class="hl"><ruby>竜巻<rt>たつまき</rt></ruby></span>などの<ruby>激<rt>はげ</rt></ruby>しい<span class="hl"><ruby>突風<rt>とっぷう</rt></ruby></span>が<ruby>発生<rt>はっせい</rt></ruby>した<span class="hl">とみられる</span>として、<ruby>八重山<rt>やえやま</rt></ruby><ruby>地方<rt>ちほう</rt></ruby>に<ruby>竜巻<rt>たつまき</rt></ruby><span class="hl"><ruby>注意<rt>ちゅうい</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby></span>を<ruby>発表<rt>はっぴょう</rt></ruby>しました。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>11 日 11 時 08 分，沖繩地方氣象台因研判石垣島地區疑似發生龍捲風等強烈陣風，針對八重山地區發布了「龍捲風注意情報」。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>竜巻<rt>たつまき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">龍捲風。由積亂雲發展而成的強烈上升旋風，破壞力極強。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>突風<rt>とっぷう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">陣風、突發強風。指突然颳起的強烈風勢，無明顯前兆。</span>
+        </div>
+        <div class="vocab-item grammar">
+          <span class="vocab-term">～とみられる</span><span class="vocab-level">N2 文法</span>
+          <span class="vocab-meaning">被認為、被研判為。常用於新聞報導，對不確定的事實進行推測性的陳述。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>注意<rt>ちゅうい</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">注意情報。日本氣象廳發布的一種警報級別，提醒民眾注意可能發生的災害。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">安全確保と積乱雲の兆し</span>
+      <span class="section-title-zh">確保安全與積亂雲的徵兆</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>同<rt>どう</rt></ruby><ruby>気象台<rt>きしょうだい</rt></ruby>では<ruby>雷<rt>かみなり</rt></ruby>や<ruby>急<rt>きゅう</rt></ruby>な<ruby>風<rt>かぜ</rt></ruby>の<ruby>変化<rt>へんか</rt></ruby>など<ruby>積乱雲<rt>せきらんうん</rt></ruby>が<ruby>近<rt>ちか</rt></ruby>づく<span class="hl"><ruby>兆<rt>きざ</rt></ruby>し</span>がある<ruby>場合<rt>ばあい</rt></ruby>には、<span class="hl"><ruby>頑丈<rt>がんじょう</rt></ruby></span>な<ruby>建物<rt>たてもの</rt></ruby><ruby>内<rt>ない</rt></ruby>に<ruby>移動<rt>いどう</rt></ruby>するなど、<ruby>安全<rt>あんぜん</rt></ruby><ruby>確保<rt>かくほ</rt></ruby>に<span class="hl"><ruby>努<rt>つと</rt></ruby>める</span>とともに<ruby>落雷<rt>らくらい</rt></ruby>、ひょう、<ruby>急<rt>きゅう</rt></ruby>な<ruby>強<rt>つよ</rt></ruby>い<ruby>雨<rt>あめ</rt></ruby>にも<ruby>注意<rt>ちゅうい</rt></ruby>するよう<span class="hl"><ruby>呼<rt>よ</rt></ruby>びかけています</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>該氣象台呼籲，若出現打雷或風向突然改變等積亂雲接近的徵兆時，請移動至堅固的建築物內以努力確保安全，同時也要注意落雷、冰雹及突如其來的強降雨。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>兆<rt>きざ</rt></ruby>し</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">徵兆、跡象。指事物即將發生前顯露出來的跡象，常用於自然現象或抽象事物。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>頑丈<rt>がんじょう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">堅固、結實。形容建築物或物品構造強韌，不易損壞。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>努<rt>つと</rt></ruby>める</span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">努力、盡力。指為了達成某個目標而付出心力，常見於官方文書。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>呼<rt>よ</rt></ruby>びかける</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">呼籲、號召。官方對大眾進行提醒或請求採取行動時常用。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">注意情報の定義と有効期間</span>
+      <span class="section-title-zh">注意情報的定義與有效期間</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>※<ruby>竜巻<rt>たつまき</rt></ruby><ruby>注意<rt>ちゅうい</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>は、<ruby>積乱雲<rt>せきらんうん</rt></ruby>の<ruby>下<rt>した</rt></ruby>で<ruby>発生<rt>はっせい</rt></ruby>する<ruby>竜巻<rt>たつまき</rt></ruby>、ダウンバースト<ruby>等<rt>とう</rt></ruby>による<ruby>激<rt>はげ</rt></ruby>しい<ruby>突風<rt>とっぷう</rt></ruby>が<ruby>発生<rt>はっせい</rt></ruby>しやすい<ruby>気象<rt>きしょう</rt></ruby><ruby>状況<rt>じょうきょう</rt></ruby>になったと<span class="hl"><ruby>判断<rt>はんだん</rt></ruby></span>された<ruby>場合<rt>ばあい</rt></ruby>に<ruby>発表<rt>はっぴょう</rt></ruby>。</p>
+        <p><ruby>情報<rt>じょうほう</rt></ruby>の<span class="hl"><ruby>有効<rt>ゆうこう</rt></ruby></span><ruby>期間<rt>きかん</rt></ruby>は、<ruby>発表<rt>はっぴょう</rt></ruby>から<ruby>約<rt>やく</rt></ruby>1<ruby>時間<rt>じかん</rt></ruby>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>※「龍捲風注意情報」是在研判氣象狀況已變為積亂雲下容易發生龍捲風、下擊暴流等強烈陣風時所發布。</p>
+        <p>該情報的有效期間自發布起約 1 小時。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>判断<rt>はんだん</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">判斷。指根據資料或狀況做出決定或結論。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>有効<rt>ゆうこう</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">有效。指在特定的範圍或期間內具有效力。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ダウンバースト</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">下擊暴流（Downburst）。積亂雲下方冷空氣急速下沉後向四方擴散的強烈氣流，危險性高。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：理解「兆し（きざし）」與「兆候（ちょうこう）」</div>
+  <div class="note-body">
+    <p>在描述災害或變化的跡象時，這兩個詞常被提及，看似相近，實則有語感上的差異：</p>
+    <p><span class="note-term">兆し（きざし）</span>　語氣較為文學性或一般性，常用於自然現象或抽象事物的開端。例如「<ruby>春<rt>はる</rt></ruby>の<ruby>兆<rt>きざ</rt></ruby>し（春天的氣息）」。在防災新聞中，指感官能察覺到的前兆（如天色變暗、冷風吹來）。</p>
+    <p><span class="note-term">兆候（ちょうこう）</span>　語氣較為生硬、科學或醫學化，側重於透過分析、診斷得出的徵兆。例如「<ruby>景気<rt>けいき</rt></ruby><ruby>後退<rt>こうたい</rt></ruby>の<ruby>兆候<rt>ちょうこう</rt></ruby>（景氣衰退的徵兆）」、「<ruby>病気<rt>びょうき</rt></ruby>の<ruby>兆候<rt>ちょうこう</rt></ruby>（疾病的徵兆）」。</p>
+    <p>本文使用「<ruby>積乱雲<rt>せきらんうん</rt></ruby>が<ruby>近<rt>ちか</rt></ruby>づく<ruby>兆<rt>きざ</rt></ruby>し」，強調的是一般民眾可以透過觀察雲層、風向等感官變化來預警，因此用「兆し」而非「兆候」更自然。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  気象・防災ニュース 學習教材　｜　石垣島竜巻・気象警報用語・防災表現精讀
+</footer>
+
+</body>
+</html>
