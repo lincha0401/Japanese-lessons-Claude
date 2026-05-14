@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京都心「日傘男子」急増中｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">ライフスタイル・トレンド｜學習教材</div>
+    <div class="header-title">東京都心で「日傘男子」が急増中　直撃ルポでわかった「帽子じゃダメな理由」と「女性からの評判」</div>
+    <div class="header-subtitle">東京都心「陽傘男子」正急增中　直擊採訪揭曉「不能只靠帽子」的理由與「女性的評價」</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">「男の日傘」の市民権獲得</span>
+      <span class="section-title-zh">「男性陽傘」獲得社會認可</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>日本<rt>にほん</rt></ruby><ruby>全域<rt>ぜんいき</rt></ruby>で<ruby>記録的<rt>きろくてき</rt></ruby>な<span class="hl"><ruby>猛暑<rt>もうしょ</rt></ruby></span>がつづくなか、<ruby>日傘<rt>ひがさ</rt></ruby>を<ruby>差<rt>さ</rt></ruby>す<ruby>男性<rt>だんせい</rt></ruby>の<ruby>姿<rt>すがた</rt></ruby>を<ruby>多<rt>おお</rt></ruby>くみかけるようになった。かつては<ruby>少数派<rt>しょうすうは</rt></ruby>だった「<ruby>男<rt>おとこ</rt></ruby>の<ruby>日傘<rt>ひがさ</rt></ruby>」は、ここ<ruby>最近<rt>さいきん</rt></ruby>は<ruby>完全<rt>かんぜん</rt></ruby>に<span class="hl"><ruby>市民権<rt>しみんけん</rt></ruby>を<ruby>得<rt>え</rt></ruby>た</span>ようにみえる。ルポでわかった「<ruby>男<rt>おとこ</rt></ruby>の<ruby>日傘<rt>ひがさ</rt></ruby>」の<span class="hl"><ruby>最前線<rt>さいぜんせん</rt></ruby></span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在日本全境持續紀錄性酷暑的情況下，開始能頻繁看到撐著陽傘的男性身影。過去曾是少數派的「男性陽傘」，最近似乎已完全獲得了社會認可（市民權）。這是一則揭開「男性陽傘」最前線實況的採訪報導。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>市民権<rt>しみんけん</rt></ruby>を<ruby>得<rt>え</rt></ruby>る</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">獲得社會認可。原指獲得公民權，引申為某種事物或行為被社會大眾普遍接受。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>猛暑<rt>もうしょ</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">酷暑、嚴暑。指極度炎熱的天氣，日本氣象廳定義為最高氣溫達 35°C 以上的日子。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>最前線<rt>さいぜんせん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">最前線。除了軍事意義外，也指某個領域、流行或研究的最前端、第一線。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">ルポ</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">紀實採訪（ルポルタージュ之縮寫）。指深入現場進行的採訪報導。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">利用者の本音：抵抗感と実用性</span>
+      <span class="section-title-zh">使用者的真心話：排斥感與實用性</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>「もう、<ruby>暑<rt>あつ</rt></ruby>いとかじゃなくて、<ruby>痛<rt>いた</rt></ruby>いじゃないですか」。<ruby>取材<rt>しゅざい</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じた<ruby>男性<rt>だんせい</rt></ruby>は、<ruby>日差<rt>ひざ</rt></ruby>しを「<ruby>痛<rt>いた</rt></ruby>み」として<span class="hl"><ruby>捉<rt>とら</rt></ruby>え</span>、<ruby>日傘<rt>ひがさ</rt></ruby>の<ruby>有用性<rt>ゆうようせい</rt></ruby>を<ruby>強調<rt>きょうちょう</rt></ruby>する。</p>
+        <p><ruby>他<rt>ほか</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby>もさしているので「<ruby>恥<rt>はず</rt></ruby>ずかしくない」という<ruby>声<rt>こえ</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>折<rt>お</rt></ruby>りたたんでカバンにしまえるサイズが<span class="hl"><ruby>重宝<rt>ちょうほう</rt></ruby>されている</span>ようだ。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>「這已經不是熱不熱的問題，而是很痛吧」。受訪男性將強烈陽光視為一種「痛楚」，並強調了陽傘的實用性。</p>
+        <p>許多人表示「因為其他男性也在撐，所以不會覺得丟臉」，且能折疊收進包包的大小似乎特別受到重用。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>抵抗感<rt>ていこうかん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">排斥感、抵抗感。指對於做某件事感到不自然或心裡有所抗拒的感覺。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>重宝<rt>ちょうほう</rt></ruby>する</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">珍視、重用、覺得很方便。形容因為某物非常好用、能解決問題而經常使用。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>捉<rt>とら</rt></ruby>える</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">認知、捕捉、視為。此處指將抽象的陽光感覺「定義」或「視為」痛覺。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">女性や家族からの肯定的な反応</span>
+      <span class="section-title-zh">來自女性及家人的肯定反應</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>女性<rt>じょせい</rt></ruby>からみても<ruby>日傘<rt>ひがさ</rt></ruby>をさす<ruby>男性<rt>だんせい</rt></ruby>に<ruby>抵抗<rt>ていこう</rt></ruby>はないようだ。「<span class="hl"><ruby>老化<rt>ろうか</rt></ruby></span>の<ruby>対策<rt>たいさく</rt></ruby>にもなりますし、さしてもらったほうがいい」という<ruby>妻<rt>つま</rt></ruby>の<ruby>言葉<rt>ことば</rt></ruby>もあり、<span class="hl"><ruby>熱中症<rt>ねっちゅうしょう</rt></ruby></span><ruby>対策<rt>たいさく</rt></ruby>や<ruby>美肌<rt>びはだ</rt></ruby>のため、<ruby>男性<rt>だんせい</rt></ruby>の<ruby>日傘<rt>ひがさ</rt></ruby>は<span class="hl"><ruby>好意的<rt>こういてき</rt></ruby></span>に<span class="hl"><ruby>受<rt>う</rt></ruby>け<ruby>止<rt>と</rt></ruby>められている</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>即使從女性的角度來看，對於撐陽傘的男性似乎也沒有排斥感。有妻子表示「這也能作為抗老對策，希望他能撐傘」，為了預防中暑與美肌，男性陽傘正受到正面、好意的看待。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>受<rt>う</rt></ruby>け<ruby>止<rt>と</rt></ruby>める</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">看待、接受。指對外界的意見、情況或情感進行理解與回應。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>熱中症<rt>ねっちゅうしょう</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">中暑。因高溫環境導致體溫調節功能失調的症狀，嚴重時有生命危險。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>好意的<rt>こういてき</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">好意的、正面的。形容帶著善意或認同的態度看待某事物。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>老化<rt>ろうか</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">老化。指隨年齡增長身體機能衰退，亦常用於護膚語境（如紫外線造成的肌膚老化）。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">帽子ではなく日傘を選ぶ理由と商務場合</span>
+      <span class="section-title-zh">選擇陽傘而非帽子的理由與商務場合</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>「<ruby>帽子<rt>ぼうし</rt></ruby>は<ruby>頭<rt>あたま</rt></ruby>に<ruby>熱<rt>ねつ</rt></ruby>がたまってしまう」。<ruby>帽子<rt>ぼうし</rt></ruby>による<ruby>蒸<rt>む</rt></ruby>れを<ruby>避<rt>さ</rt></ruby>け、より<ruby>直接的<rt>ちょくせつてき</rt></ruby>に<ruby>温度<rt>おんど</rt></ruby>を<ruby>下<rt>さ</rt></ruby>げる<ruby>手段<rt>しゅだん</rt></ruby>として<ruby>日傘<rt>ひがさ</rt></ruby>が<ruby>選<rt>えら</rt></ruby>ばれている。</p>
+        <p>また、スーツ<ruby>姿<rt>すがた</rt></ruby>のビジネスマンにとっても、<ruby>帽子<rt>ぼうし</rt></ruby>より<ruby>日傘<rt>ひがさ</rt></ruby>の<ruby>方<rt>ほう</rt></ruby>がビジネスシーンに<span class="hl"><ruby>馴染<rt>なじ</rt></ruby>む</span>というポジティブなメッセージに<ruby>変<rt>か</rt></ruby>わりつつある。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>「帽子會讓熱氣堆積在頭部」。陽傘被選為一種能避免帽子帶來的悶熱，且能更直接降低溫度的手段。</p>
+        <p>此外，對於穿著西裝的商務人士而言，比起帽子，陽傘正轉變為一種更能融入商務場合、且代表「注重健康管理」的正向訊息。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>馴染<rt>なじ</rt></ruby>む</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">適應、融入。指與周遭環境或場合變得和諧、不突兀。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term">～に<ruby>気<rt>き</rt></ruby>を<ruby>遣<rt>つか</rt></ruby>う</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">留心、注意、注重。指為了某個目的（如健康、人際關係）而耗費心思。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>主流<rt>しゅりゅう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">主流。指在某個時期最普遍、佔據多數地位的傾向或產品。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：對比「重宝（ちょうほう）する」與「便利（べんり）」</div>
+  <div class="note-body">
+    <p>在描述陽傘好用時，這兩個詞的語感有所不同：</p>
+    <p><span class="note-term">便利（べんり）</span>　側重於事物「功能上」的方便。例如這支傘「很輕、很好開」，這是一種客觀的評價，不帶有個人情感。</p>
+    <p><span class="note-term">重宝（ちょうほう）する</span>　側重於使用者「主觀上的重用」。因為這支傘很好用（便利），所以我「非常依賴它、覺得它解決了我的大問題」。例如文中男性因為陽傘能折疊且遮光，而在酷暑中「重宝」它——這是一種帶有感情的珍視。</p>
+    <p>簡單來說：東西本身很「便利」，所以我「重宝」它。前者是物的屬性，後者是人的態度。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  ライフスタイル・トレンド 學習教材　｜　日傘男子・都心トレンド・慣用表現精讀
+</footer>
+
+</body>
+</html>
