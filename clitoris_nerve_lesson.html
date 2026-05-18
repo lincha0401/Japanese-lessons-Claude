@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クリトリス神経構造の発見｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-pale: #e8edf5;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    margin: 0 40px 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">科学・医学ニュース｜學習教材</div>
+    <div class="header-title">「クリトリス×粒子加速器」で先端部の神経に『5本の樹』を世界で初めて発見</div>
+    <div class="header-subtitle">「陰蒂×粒子加速器」世界首度於尖端神經發現『5棵樹』結構</div>
+    <div class="header-meta">
+      <span class="badge">N1–N2 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 1 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">歴史的背景と画期的な発見</span>
+      <span class="section-title-zh">歷史背景與突破性發現</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>オランダのアムステルダム<ruby>大学<rt>だいがく</rt></ruby><ruby>医療<rt>いりょう</rt></ruby>センターで<ruby>行われた<rt>おこなわれた</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>によって、<ruby>粒子<rt>りゅうし</rt></ruby><ruby>加速器<rt>かそくき</rt></ruby>から<ruby>発生<rt>はっせい</rt></ruby>した<ruby>強力<rt>きょうりょく</rt></ruby>なX<ruby>線<rt>せん</rt></ruby>をクリトリスを<ruby>含む<rt>ふくむ</rt></ruby><ruby>腰部<rt>ようぶ</rt></ruby>に<span class="hl"><ruby>照射<rt>しょうしゃ</rt></ruby></span>したところ、これまでで<ruby>最も<rt>もっとも</rt></ruby><ruby>精密<rt>せいみつ</rt></ruby>な<ruby>神経<rt>しんけい</rt></ruby><ruby>構造<rt>こうぞう</rt></ruby>が3Dで<ruby>描き出す<rt>えがきだす</rt></ruby>ことに<ruby>成功<rt>せいこう</rt></ruby>しました。</p>
+        <p>500<ruby>年<rt>ねん</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>「<ruby>恥ずべき<rt>はずべき</rt></ruby><ruby>器官<rt>きかん</rt></ruby>」と<ruby>呼ばれ<rt>よばれ</rt></ruby>、<ruby>医学<rt>いがく</rt></ruby>の<span class="hl"><ruby>権威<rt>けんい</rt></ruby></span>ある<ruby>教科書<rt>きょうかしょ</rt></ruby>からも<ruby>削除<rt>さくじょ</rt></ruby>されるなど、<ruby>関心<rt>かんしん</rt></ruby>の<span class="hl"><ruby>不均衡<rt>ふきんこう</rt></ruby></span>な<ruby>状況<rt>じょうきょう</rt></ruby>が<ruby>続いて<rt>つづいて</rt></ruby>いましたが、<ruby>今回<rt>こんかい</rt></ruby>の<ruby>成果<rt>せいか</rt></ruby>は「<ruby>科学<rt>かがく</rt></ruby>の<ruby>出発<rt>しゅっぱつ</rt></ruby><ruby>点<rt>てん</rt></ruby>」と<ruby>述べられて<rt>のべられて</rt></ruby>います。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在荷蘭阿姆斯特丹大學醫療中心所進行的研究中，透過將粒子加速器產生的強力 X 光照射包含陰蒂在內的腰部，成功以 3D 繪製出迄今最精密的神經結構。</p>
+        <p>500 多年來它曾被稱為「可恥的器官」，甚至被從具權威性的醫學教科書中刪除，關注度的分配一直處於不均衡的狀況，但此次成果被研究者譽為「科學的起點」。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>照射<rt>しょうしゃ</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">照射。指光線、放射線等投射到物體上。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>権威<rt>けんい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">權威。指在某個領域中具有絕對的公信力或影響力。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>不均衡<rt>ふきんこう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">不均衡、不平等。指事物之間的比例或分配失去平衡。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>粒子<rt>りゅうし</rt></ruby><ruby>加速器<rt>かそくき</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">粒子加速器。利用電場與磁場將帶電粒子加速至接近光速的高科技物理設備。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 2 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">テクノロジーの応用と5本の神経幹</span>
+      <span class="section-title-zh">科技應用與5條神經幹</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>今回<rt>こんかい</rt></ruby>の<ruby>研究<rt>けんきゅう</rt></ruby>チームが<ruby>使った<rt>つかった</rt></ruby>のが、シンクロトロンと<ruby>呼ばれる<rt>よばれる</rt></ruby><ruby>粒子<rt>りゅうし</rt></ruby><ruby>加速器<rt>かそくき</rt></ruby>です。<ruby>標本<rt>ひょうほん</rt></ruby><ruby>全体<rt>ぜんたい</rt></ruby>は20マイクロメートルというミクロン<ruby>単位<rt>たんい</rt></ruby>で<ruby>撮影<rt>さつえい</rt></ruby>されました。<ruby>亀頭<rt>きとう</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で「<span class="hl"><ruby>先細り<rt>さきぼそり</rt></ruby></span>して<ruby>消える<rt>きえる</rt></ruby>」とされてきた<ruby>神経<rt>しんけい</rt></ruby>が、<ruby>実<rt>じつ</rt></ruby>は5<ruby>本<rt>ほん</rt></ruby>の<ruby>太い<rt>ふとい</rt></ruby><ruby>幹<rt>みき</rt></ruby>に<ruby>分かれて<rt>わかれて</rt></ruby><ruby>樹木<rt>じゅもく</rt></ruby>のように<ruby>広がり<rt>ひろがり</rt></ruby>、<ruby>神経<rt>しんけい</rt></ruby>の<ruby>集中<rt>しゅうちゅう</rt></ruby><ruby>度<rt>ど</rt></ruby>は<ruby>極めて<rt>きわめて</rt></ruby><span class="hl"><ruby>異例<rt>いれい</rt></ruby></span>のレベルに<ruby>達して<rt>たっして</rt></ruby>いると<ruby>言えます<rt>いえます</rt></ruby>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>本次研究團隊使用的是被稱為「同步輻射」的粒子加速器。整個標本以 20 微米這種微米單位進行了拍攝。過去被認為在龜頭中會「逐漸變細並消失」的神經，實際上分成了 5 條粗大的主幹並如樹木般展開，其神經集中度可以說達到了極度罕見的水平。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>先細り<rt>さきぼそり</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">逐漸變細、日益衰退。原指物體尖端變細，也常用於形容業績或前景逐漸惡化。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>異例<rt>いれい</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">破例、罕見。指打破常規、極其少見的事例或狀態。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term">シンクロトロン</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">同步輻射加速器。一種能產生極高亮度 X 光的環形粒子加速器。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">神経ネットワークの広がり</span>
+      <span class="section-title-zh">神經網絡的延伸</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>3<ruby>次元<rt>じげん</rt></ruby>データをさらに<span class="hl"><ruby>たどって<rt>たどって</rt></ruby></span>いくと、クリトリス<ruby>背側<rt>はいそく</rt></ruby><ruby>神経<rt>しんけい</rt></ruby>の<ruby>一部<rt>いちぶ</rt></ruby>の<ruby>枝<rt>えだ</rt></ruby>が、これまで<ruby>考えられて<rt>かんがえられて</rt></ruby>いたよりもずっと<ruby>遠く<rt>とおく</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>まで<ruby>伸びて<rt>のびて</rt></ruby>いたことが<span class="hl"><ruby>判明<rt>はんめい</rt></ruby></span>したのです。おなかに<ruby>近い<rt>ちかい</rt></ruby>「<ruby>恥丘<rt>ちきゅう</rt></ruby>」と<ruby>呼ばれる<rt>よばれる</rt></ruby><ruby>部分<rt>ぶぶん</rt></ruby>と、クリトリスを<span class="hl"><ruby>覆う<rt>おおう</rt></ruby></span>「<ruby>包皮<rt>ほうひ</rt></ruby>」へと<ruby>届いて<rt>とどいて</rt></ruby>おり、これは<ruby>解剖<rt>かいぼう</rt></ruby><ruby>学的<rt>がくてき</rt></ruby>に<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>発見<rt>はっけん</rt></ruby>です。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>進一步追蹤 3D 數據後查明，陰蒂背神經的部分分支，延伸到了比過去所認為的還要遙遠的地方。這些分支延伸至靠近腹部被稱為「陰阜」的部位，以及覆蓋陰蒂的「包皮」，這在解剖學上是重要的發現。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>たどる<rt>たどる</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">追溯、探索。指順著線索、路徑尋找或回顧事物的發展過程。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>判明<rt>はんめい</rt></ruby>する</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">查明、判明。指隱藏或不明確的事實經過調查後變得清晰。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>覆う<rt>おおう</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">覆蓋、遮蓋。指從上方將某物掩蓋起來。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>背側神経<rt>はいそくしんけい</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">背神經。解剖學名詞，分布於器官背側的主要感覺神經幹。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 4 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <span class="section-title-jp">手術の「危険ゾーン」の書き換え</span>
+      <span class="section-title-zh">醫療手術風險區的改寫</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>これら<span class="hl"><ruby>一連<rt>いちれん</rt></ruby></span>の<ruby>発見<rt>はっけん</rt></ruby>は、<ruby>女性器<rt>じょせいき</rt></ruby><ruby>切除<rt>せつじょ</rt></ruby>（FGM）からの<ruby>再建<rt>さいけん</rt></ruby><ruby>手術<rt>しゅじゅつ</rt></ruby>や<ruby>美容<rt>びよう</rt></ruby><ruby>整形<rt>せいけい</rt></ruby><ruby>手術<rt>しゅじゅつ</rt></ruby>に<ruby>直接<rt>ちょくせつ</rt></ruby>の<ruby>影響<rt>えいきょう</rt></ruby>を<ruby>持ちうる<rt>もちうる</rt></ruby>ものです。これまで<ruby>包皮<rt>ほうひ</rt></ruby>までとされていた「<ruby>危険<rt>きけん</rt></ruby>ゾーン」の<ruby>外側<rt>そとがわ</rt></ruby>にも<ruby>神経<rt>しんけい</rt></ruby>の<ruby>枝<rt>えだ</rt></ruby>が<ruby>伸びて<rt>のびて</rt></ruby>いた<ruby>可能性<rt>かのうせい</rt></ruby>が<ruby>示され<rt>しめされ</rt></ruby>、<ruby>外科医<rt>げかい</rt></ruby>にとっては<ruby>長らく<rt>ながらく</rt></ruby><ruby>信頼<rt>しんらい</rt></ruby>されてきた<span class="hl"><ruby>線引き<rt>せんびき</rt></ruby></span>が<ruby>書き換えられる<rt>かきかえられる</rt></ruby>ことを<ruby>意味<rt>いみ</rt></ruby>します。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>這一連串的發現，可能對女性生殖器切割（FGM）的重建手術及美容整形手術產生直接的影響。研究顯示，過去被認為僅至包皮為止的「危險區（Danger Zone）」外側，也可能有神經分支延伸，對外科醫生而言，這意味著長期被信賴的危險界線將被改寫。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 04</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>一連<rt>いちれん</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">一連串、一系列。指多個相關聯的事件或行為連續發生。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>線引き<rt>せんびき</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">劃定界線、區分。指設定規則的邊界或安全／危險的範圍。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>女性器切除<rt>じょせいきせつじょ</rt></ruby>（FGM）</span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">女性生殖器切割（Female Genital Mutilation）。基於文化或宗教理由切除女性部分外生殖器的習俗。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>再建手術<rt>さいけんしゅじゅつ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">重建手術。外科手術的一種，目的在於恢復受損或被切除組織的外觀與功能。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note">
+  <div class="note-head">💡 老師的小筆記：從「先細り」到「枝分かれ」</div>
+  <div class="note-body">
+    <p>這篇科學報導透過兩個具有強烈畫面感的詞彙，展現了醫學史上的認知翻轉：</p>
+    <p><span class="note-term">先細り（さきぼそり）</span>：過去的教科書認為神經是「先細りして消える（逐漸變細然後消失）」。這個詞不僅用於物理形狀，也常用於經濟學形容「業績日益衰退」。</p>
+    <p><span class="note-term">枝分かれ（えだわかれ）</span>：新發現證實神經其實是像樹木一樣「枝分かれして広がる（分枝並向外擴展）」。</p>
+    <p>這對詞彙的對比，完美地凸顯了 3D 顯影技術如何打破了 500 年來的解剖學迷思。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  科学・医学ニュース 學習教材　｜　クリトリス神経構造・粒子加速器応用・解剖学精讀
+</footer>
+
+</body>
+</html>
