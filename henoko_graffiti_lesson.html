@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>辺野古漁港そばのテント落書き事件｜日語學習教材</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+TC:wght@400;600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2c3e6b;
+    --navy-light: #3d5491;
+    --navy-ultra: #f0f3f9;
+    --ink: #1a1a1a;
+    --ink-mid: #3a3a3a;
+    --ink-light: #6a6a6a;
+    --rule: #c8cdd8;
+    --bg: #fafaf8;
+    --white: #ffffff;
+    --highlight-word: #2c3e6b;
+    --highlight-bg: #dde4f0;
+    --n1-color: #8b1a1a;
+    --n1-bg: #fdf0f0;
+    --n2-color: #7a4a00;
+    --n2-bg: #fdf5e6;
+    --n3-color: #1a5c2a;
+    --n3-bg: #edf7f0;
+    --grammar-color: #4a2080;
+    --grammar-bg: #f3eeff;
+    --specialist-color: #1a4a6b;
+    --specialist-bg: #e6f2fb;
+    --note-color: #3d5a3e;
+    --note-bg: #eef6ef;
+    --note-border: #7aaa7c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', 'Noto Serif TC', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.85;
+    font-size: 15px;
+  }
+
+  .site-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 28px 40px 24px;
+    border-bottom: 3px solid var(--navy-light);
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .header-eyebrow {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    margin-bottom: 8px;
+  }
+  .header-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.65;
+  }
+  .header-subtitle {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 8px;
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+  }
+  .header-meta { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; }
+  .badge {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.85);
+  }
+
+  .legend-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 40px;
+  }
+  .legend-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    font-size: 11.5px;
+    color: var(--ink-light);
+  }
+  .legend-label { font-weight: 700; letter-spacing: 0.06em; color: var(--ink-mid); }
+  .leg { display: flex; align-items: center; gap: 5px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 1px; display: inline-block; flex-shrink: 0; }
+
+  .main { max-width: 900px; margin: 0 auto; padding: 36px 40px 60px; }
+
+  .section-block {
+    margin-bottom: 48px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 1px 4px rgba(44,62,107,0.06);
+  }
+
+  .section-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-num {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    opacity: 0.6;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .section-title-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .section-title-zh {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .bilingual { display: grid; grid-template-columns: 1fr 1fr; }
+  .col-jp {
+    padding: 22px 24px;
+    border-right: 1px solid var(--rule);
+    background: var(--white);
+  }
+  .col-zh { padding: 22px 24px; background: var(--navy-ultra); }
+  .col-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .col-jp p {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14.5px;
+    line-height: 2.1;
+    color: var(--ink);
+  }
+  .col-jp p + p { margin-top: 14px; }
+  .col-zh p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13.5px;
+    line-height: 1.95;
+    color: var(--ink-mid);
+  }
+  .col-zh p + p { margin-top: 12px; }
+
+  ruby { ruby-align: center; }
+  rt {
+    font-size: 0.55em;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--ink-light);
+    letter-spacing: 0.02em;
+  }
+
+  .hl {
+    color: var(--highlight-word);
+    font-weight: 700;
+    background: var(--highlight-bg);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
+  .vocab-section {
+    border-top: 1px solid var(--rule);
+    padding: 18px 22px 20px;
+    background: var(--bg);
+  }
+  .vocab-head {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 8px;
+  }
+  .vocab-item {
+    border-radius: 3px;
+    padding: 9px 12px;
+    font-size: 12.5px;
+    line-height: 1.65;
+    border-left: 3px solid transparent;
+  }
+  .vocab-item.n1 { background: var(--n1-bg); border-color: var(--n1-color); }
+  .vocab-item.n2 { background: var(--n2-bg); border-color: var(--n2-color); }
+  .vocab-item.n3 { background: var(--n3-bg); border-color: var(--n3-color); }
+  .vocab-item.grammar { background: var(--grammar-bg); border-color: var(--grammar-color); }
+  .vocab-item.specialist { background: var(--specialist-bg); border-color: var(--specialist-color); }
+
+  .vocab-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    display: inline;
+  }
+  .vocab-term ruby { font-family: 'Noto Serif JP', serif; }
+  .vocab-level {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 5px;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  .n1 .vocab-level { background: var(--n1-color); color: #fff; }
+  .n2 .vocab-level { background: var(--n2-color); color: #fff; }
+  .n3 .vocab-level { background: var(--n3-color); color: #fff; }
+  .grammar .vocab-level { background: var(--grammar-color); color: #fff; }
+  .specialist .vocab-level { background: var(--specialist-color); color: #fff; }
+
+  .vocab-meaning {
+    display: block;
+    margin-top: 3px;
+    font-family: 'Noto Serif TC', serif;
+    color: var(--ink-mid);
+    font-size: 12px;
+  }
+
+  .teacher-note {
+    max-width: 900px;
+    margin: 0 auto 48px;
+    border: 1.5px solid var(--note-border);
+    border-radius: 4px;
+    background: var(--note-bg);
+    overflow: hidden;
+  }
+  .note-head {
+    background: var(--note-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .note-body {
+    padding: 16px 20px;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-mid);
+  }
+  .note-body p + p { margin-top: 10px; }
+  .note-term {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    color: var(--note-color);
+    font-size: 13.5px;
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+  }
+
+  @media print {
+    body { background: #fff; font-size: 12px; }
+    .site-header { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-head { background: #000 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .note-head { background: #333 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .section-block { break-inside: avoid; box-shadow: none; border: 1px solid #bbb; }
+    .teacher-note { break-inside: avoid; }
+    .col-zh { background: #f5f5f5 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .vocab-section { background: #fff !important; }
+    .vocab-item { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .main { padding: 16px; max-width: 100%; }
+    .site-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-eyebrow">社会・沖縄ニュース｜學習教材</div>
+    <div class="header-title">座り込みの看板や献花台に落書き　「命」を「意地」に書き換え運動をやゆ　辺野古漁港そばのテント</div>
+    <div class="header-subtitle">靜坐抗議看板與獻花台遭塗鴉　將「生命」竄改為「面子」藉此嘲諷抗議活動　位於邊野古漁港旁的帳篷</div>
+    <div class="header-meta">
+      <span class="badge">N1–N3 語彙</span>
+      <span class="badge">ルビ付き</span>
+      <span class="badge">日中對照</span>
+      <span class="badge">Print Ready</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">凡例</span>
+    <span class="leg"><span class="leg-dot" style="background:#8b1a1a"></span>N1 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#7a4a00"></span>N2 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a5c2a"></span>N3 單字</span>
+    <span class="leg"><span class="leg-dot" style="background:#4a2080"></span>文法</span>
+    <span class="leg"><span class="leg-dot" style="background:#1a4a6b"></span>專業詞語</span>
+    <span class="leg"><span class="leg-dot" style="background:#dde4f0; border:1px solid #2c3e6b"></span>重點單字（原文中標色）</span>
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- ===== SECTION 01 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <span class="section-title-jp">事故後の誹謗中傷と現場の被害</span>
+      <span class="section-title-zh">事故後的惡意抹黑與現場受害狀況</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><ruby>名護市<rt>なごし</rt></ruby><ruby>辺野古<rt>へのこ</rt></ruby><ruby>沖<rt>おき</rt></ruby>で<ruby>修学<rt>しゅうがく</rt></ruby><ruby>旅行<rt>りょこう</rt></ruby><ruby>生<rt>せい</rt></ruby>らを<ruby>乗<rt>の</rt></ruby>せた<ruby>船<rt>ふね</rt></ruby>が<span class="hl"><ruby>転覆<rt>てんぷく</rt></ruby></span>し2<ruby>人<rt>にん</rt></ruby>が<ruby>死亡<rt>しぼう</rt></ruby>した<ruby>事故<rt>じこ</rt></ruby>のあと、SNS<ruby>上<rt>じょう</rt></ruby>で、<ruby>普天間<rt>ふてんま</rt></ruby><ruby>基地<rt>きち</rt></ruby>の<ruby>辺野古<rt>へのこ</rt></ruby><ruby>移設<rt>いせつ</rt></ruby>に<ruby>反対<rt>はんたい</rt></ruby>する<ruby>市民<rt>しみん</rt></ruby>への<span class="hl"><ruby>誹謗<rt>ひぼう</rt></ruby><ruby>中傷<rt>ちゅうしょう</rt></ruby></span>が<span class="hl"><ruby>相次<rt>あいつ</rt></ruby>いで</span>います。</p>
+        <p>19<ruby>日<rt>にち</rt></ruby>、<ruby>市民<rt>しみん</rt></ruby>らが<ruby>活動<rt>かつどう</rt></ruby>する<ruby>現場<rt>げんば</rt></ruby>でも、<span class="hl"><ruby>座<rt>すわ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>み</span><ruby>日数<rt>にっすう</rt></ruby>などを<ruby>掲<rt>かか</rt></ruby>げた<ruby>看板<rt>かんばん</rt></ruby>と<ruby>献花台<rt>けんかだい</rt></ruby>に<ruby>落書<rt>らくが</rt></ruby>きがされているのが<ruby>見<rt>み</rt></ruby>つかりました。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>在名護市邊野古外海發生載有修學旅行學生等人的船隻翻覆、導致 2 人死亡的事故後，社群網路上針對反對普天間基地遷至邊野古之市民的誹謗中傷接連不斷。</p>
+        <p>19 日，在市民們進行活動的現場，也發現標示靜坐天數的看板與獻花台遭到塗鴉。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 01</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>転覆<rt>てんぷく</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">翻覆、傾覆。常用於船隻、車輛翻覆，或指政權被推翻。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>誹謗<rt>ひぼう</rt></ruby><ruby>中傷<rt>ちゅうしょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">誹謗中傷、惡意抹黑。指毫無根據地說人壞話，損害他人名譽。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>相次<rt>あいつ</rt></ruby>ぐ</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">接連發生。指同樣的事情一個接一個地不斷發生。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>座<rt>すわ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>み</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">靜坐抗議。勞工或市民運動中，坐在特定場所不走以示抗議的行為。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>移設<rt>いせつ</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">遷設、移建。指將設施（如基地、工廠）遷移到其他地方。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 02 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <span class="section-title-jp">悪意ある書き換えと落書きの実態</span>
+      <span class="section-title-zh">惡意竄改與塗鴉的實際狀況</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p>「<ruby>命<rt>いのち</rt></ruby>」の<ruby>文字<rt>もじ</rt></ruby>がバツ<ruby>印<rt>じるし</rt></ruby>で<ruby>消<rt>け</rt></ruby>され、「<span class="hl"><ruby>意地<rt>いじ</rt></ruby></span>を<ruby>守<rt>まも</rt></ruby>る<ruby>会<rt>かい</rt></ruby>の<ruby>闘<rt>たたか</rt></ruby>い」と<ruby>書<rt>か</rt></ruby>き<ruby>換<rt>か</rt></ruby>えられた<ruby>看板<rt>かんばん</rt></ruby>。</p>
+        <p><ruby>落書<rt>らくが</rt></ruby>きは19<ruby>日<rt>にち</rt></ruby>、<ruby>米軍<rt>べいぐん</rt></ruby><ruby>普天間<rt>ふてんま</rt></ruby><ruby>基地<rt>きち</rt></ruby>の<ruby>辺野古<rt>へのこ</rt></ruby>への<ruby>移設<rt>いせつ</rt></ruby>に<ruby>反対<rt>はんたい</rt></ruby>する<ruby>市民<rt>しみん</rt></ruby>が<ruby>使<rt>つか</rt></ruby>う、<ruby>辺野古<rt>へのこ</rt></ruby><ruby>漁港<rt>ぎょこう</rt></ruby>のそばにある<span class="hl"><ruby>通称<rt>つうしょう</rt></ruby></span>「<ruby>浜<rt>はま</rt></ruby>テント」で<ruby>見<rt>み</rt></ruby>つかりました。<ruby>座<rt>すわ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>み<ruby>日数<rt>にっすう</rt></ruby>を<span class="hl"><ruby>掲示<rt>けいじ</rt></ruby></span>する<ruby>看板<rt>かんばん</rt></ruby>のほか、<ruby>転覆<rt>てんぷく</rt></ruby><ruby>事故<rt>じこ</rt></ruby>で<ruby>亡<rt>な</rt></ruby>くなった<ruby>武石<rt>たけいし</rt></ruby>さんらへのメッセージを<ruby>書<rt>か</rt></ruby>く<span class="hl"><ruby>献花台<rt>けんかだい</rt></ruby></span>にも<ruby>複数<rt>ふくすう</rt></ruby>の<ruby>落書<rt>らくが</rt></ruby>きが<ruby>確認<rt>かくにん</rt></ruby>されました。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>看板上「生命」的字樣被畫上叉叉抹除，並被竄改為「守護面子之會的戰鬥」。</p>
+        <p>塗鴉是於 19 日，在反對美軍普天間基地遷至邊野古的市民所使用、位於邊野古漁港旁俗稱「海灘帳篷」的地方被發現。除了標示靜坐天數的看板外，供人們寫下給在翻覆事故中罹難的武石小姐等人留言的獻花台上，也確認到多處塗鴉。</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 02</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>揶揄<rt>やゆ</rt></ruby>する</span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">嘲弄、揶揄。指故意用言語捉弄、嘲笑對方。（出現於標題）</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>意地<rt>いじ</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">固執、面子、骨氣。指不肯退讓的倔強心態。</span>
+        </div>
+        <div class="vocab-item n1">
+          <span class="vocab-term"><ruby>通称<rt>つうしょう</rt></ruby></span><span class="vocab-level">N1</span>
+          <span class="vocab-meaning">俗稱、通稱。非正式名稱，但被一般大眾廣泛使用的稱呼。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>掲示<rt>けいじ</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">揭示、公告。將文字或物品張貼在顯眼處讓大眾知曉。</span>
+        </div>
+        <div class="vocab-item specialist">
+          <span class="vocab-term"><ruby>献花台<rt>けんかだい</rt></ruby></span><span class="vocab-level">專業</span>
+          <span class="vocab-meaning">獻花台。在事故或災難現場設置，供民眾擺放鮮花哀悼的平台。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 03 ===== -->
+  <div class="section-block">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <span class="section-title-jp">地元住民の悲痛な訴え</span>
+      <span class="section-title-zh">當地居民的悲痛訴求</span>
+    </div>
+    <div class="bilingual">
+      <div class="col-jp">
+        <span class="col-label">日文原文</span>
+        <p><span class="hl"><ruby>長年<rt>ながねん</rt></ruby></span><ruby>辺野古<rt>へのこ</rt></ruby>に<ruby>住<rt>す</rt></ruby>み、この<ruby>看板<rt>かんばん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>った<ruby>金城<rt>きんじょう</rt></ruby>さんは、「<span class="hl"><ruby>抗議<rt>こうぎ</rt></ruby></span><ruby>活動<rt>かつどう</rt></ruby>をしている<ruby>人<rt>ひと</rt></ruby>は<ruby>危<rt>あぶ</rt></ruby>ない<ruby>人<rt>ひと</rt></ruby>のようにSNSなどで<ruby>言<rt>い</rt></ruby>われているが、<ruby>私<rt>わたし</rt></ruby>のように<ruby>辺野古<rt>へのこ</rt></ruby>で<ruby>育<rt>そだ</rt></ruby>った<ruby>人<rt>ひと</rt></ruby>も<ruby>参加<rt>さんか</rt></ruby>している。<ruby>献花<rt>けんか</rt></ruby>するテーブルに<ruby>落書<rt>らくが</rt></ruby>きをすることは<ruby>墓<rt>はか</rt></ruby>に<ruby>落書<rt>らくが</rt></ruby>きすることと<ruby>同<rt>おな</rt></ruby>じことなのでやめてほしい」と<span class="hl"><ruby>訴<rt>うった</rt></ruby>えました</span>。</p>
+      </div>
+      <div class="col-zh">
+        <span class="col-label">中文翻譯</span>
+        <p>長年居住在邊野古並製作了該看板的金城先生訴求道：「雖然在社群網路上，從事抗議活動的人被說得像是危險分子，但也有像我這樣在邊野古長大的人參與其中。在獻花的桌子上塗鴉，就等同於在墳墓上塗鴉，希望他們停止這種行為。」</p>
+      </div>
+    </div>
+    <div class="vocab-section">
+      <div class="vocab-head">學習重點 — § 03</div>
+      <div class="vocab-grid">
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>訴<rt>うった</rt></ruby>える</span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">訴求、控訴、呼籲。強烈地向外界表達不滿、悲痛，或尋求理解與幫助。</span>
+        </div>
+        <div class="vocab-item n3">
+          <span class="vocab-term"><ruby>抗議<rt>こうぎ</rt></ruby></span><span class="vocab-level">N3</span>
+          <span class="vocab-meaning">抗議。對認為不合理的事物表達反對意見。</span>
+        </div>
+        <div class="vocab-item n2">
+          <span class="vocab-term"><ruby>長年<rt>ながねん</rt></ruby></span><span class="vocab-level">N2</span>
+          <span class="vocab-meaning">長年、多年。經歷了很長一段歲月。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ===== TEACHER NOTE ===== -->
+<div class="teacher-note" style="margin-left:40px; margin-right:40px;">
+  <div class="note-head">💡 老師的小筆記：解碼「命」與「意地」的語感對立</div>
+  <div class="note-body">
+    <p>這篇新聞的標題非常精準地抓住了塗鴉者「<span class="note-term"><ruby>揶揄<rt>やゆ</rt></ruby>（嘲諷）</span>」的核心手法。</p>
+    <p>抗議看板原本寫的應該是「<span class="note-term"><ruby>命<rt>いのち</rt></ruby>を<ruby>守<rt>まも</rt></ruby>る<ruby>会<rt>かい</rt></ruby></span>」（守護生命之會），這代表著一種崇高的社會責任感（守護和平、環境或當地人的生活）。</p>
+    <p>但塗鴉者將其改成了「<span class="note-term"><ruby>意地<rt>いじ</rt></ruby>を<ruby>守<rt>まも</rt></ruby>る<ruby>会<rt>かい</rt></ruby></span>」（守護面子之會）。「意地」在這裡帶有非常強烈的負面意涵，暗示抗議者「根本不是為了什麼生命與大義，只是為了自己的面子、拉不下臉而在那邊死撐著」。</p>
+    <p>僅僅替換了一個詞，就把一場嚴肅的抗議活動貶低為自私的意氣之爭。這種透過文字進行的心理戰與抹黑，正是這則新聞中極具深度的日語文化現象。</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  社会・沖縄ニュース 學習教材　｜　辺野古基地問題・市民運動・SNS誹謗中傷精讀
+</footer>
+
+</body>
+</html>
